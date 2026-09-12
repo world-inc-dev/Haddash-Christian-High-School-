@@ -3,466 +3,2531 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dashian International School — nurturing excellence, character, faith and leadership. Motto: And Stand We Shall.">
-  <meta name="keywords" content="Dashian International School, international school, Christian school, education, admissions">
-  <meta name="author" content="Dashian International School">
-  <meta name="theme-color" content="#0b1f3a">
-  <meta property="og:title" content="Dashian International School | And Stand We Shall">
-  <meta property="og:description" content="A modern learning community built on excellence, character, faith and leadership.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <title>Dashian International School | And Stand We Shall</title>
 
-  <style>
-    :root{
-      --navy:#0b1f3a;
-      --navy2:#102d52;
-      --gold:#d7ad4b;
-      --gold2:#f2d27b;
-      --cream:#f8f6f0;
-      --white:#ffffff;
-      --text:#172235;
-      --muted:#647084;
-      --line:#e6e9ef;
-      --shadow:0 20px 55px rgba(11,31,58,.12);
-      --radius:22px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);background:#fff;line-height:1.6;overflow-x:hidden
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(var(--max),92%);margin:auto}
-    .topbar{background:var(--navy);color:#dfe8f4;font-size:13px}
-    .topbar .container{display:flex;justify-content:space-between;gap:20px;padding:9px 0}
-    header{
-      position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);
-      backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,31,58,.08)
-    }
-    nav{height:78px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy)}
-    .crest{
-      width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,var(--navy),#174477);
-      color:var(--gold2);display:grid;place-items:center;font-size:20px;box-shadow:0 8px 22px rgba(11,31,58,.2)
-    }
-    .brand span{display:block}
-    .brand-name{font-size:16px;letter-spacing:.3px}
-    .brand-motto{font-size:10px;color:var(--gold);letter-spacing:1.4px;text-transform:uppercase}
-    .links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700;color:#334155}
-    .links a:hover{color:var(--gold)}
-    .nav-cta{background:var(--navy);color:#fff!important;padding:12px 18px;border-radius:999px}
-    .menu{display:none;background:none;border:0;font-size:27px;color:var(--navy)}
-    .hero{
-      min-height:700px;display:flex;align-items:center;position:relative;overflow:hidden;
-      background:
-        radial-gradient(circle at 82% 18%,rgba(215,173,75,.24),transparent 25%),
-        linear-gradient(120deg,#07182d 0%,#0b1f3a 52%,#12345e 100%);
-      color:white;
-    }
-    .hero:before{
-      content:"";position:absolute;inset:0;opacity:.16;
-      background-image:linear-gradient(rgba(255,255,255,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.18) 1px,transparent 1px);
-      background-size:60px 60px;mask-image:linear-gradient(to bottom,#000,transparent)
-    }
-    .hero .container{position:relative;z-index:2}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--gold2);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:18px}
-    .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
-    h1{font-size:clamp(44px,6vw,78px);line-height:.98;letter-spacing:-3px;max-width:800px}
-    .hero h1 span{color:var(--gold2)}
-    .hero p{font-size:18px;color:#d8e2ef;max-width:640px;margin:25px 0 32px}
-    .buttons{display:flex;flex-wrap:wrap;gap:13px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s}
-    .btn-primary{background:var(--gold);color:#0b1f3a}
-    .btn-primary:hover{transform:translateY(-2px);background:var(--gold2)}
-    .btn-light{border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.07)}
-    .hero-card{
-      min-height:410px;border:1px solid rgba(255,255,255,.17);border-radius:30px;
-      background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
-      box-shadow:0 35px 90px rgba(0,0,0,.28);padding:32px;display:flex;flex-direction:column;justify-content:flex-end;
-      backdrop-filter:blur(12px)
-    }
-    .hero-card .symbol{font-size:72px;color:var(--gold2);margin-bottom:auto}
-    .hero-card h3{font-size:28px;margin-bottom:7px}
-    .hero-card p{font-size:14px;margin:0;color:#cbd8e8}
-    .stats{background:var(--cream);border-bottom:1px solid var(--line)}
-    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .stat{padding:27px 20px;text-align:center;border-right:1px solid var(--line)}
-    .stat:last-child{border:0}.stat strong{display:block;font-size:27px;color:var(--navy)}.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-    section{padding:92px 0}
-    .section-head{max-width:720px;margin-bottom:42px}
-    .kicker{color:#9b7624;font-weight:900;text-transform:uppercase;letter-spacing:1.8px;font-size:11px}
-    h2{font-size:clamp(34px,4vw,52px);line-height:1.08;letter-spacing:-1.8px;color:var(--navy);margin:9px 0 15px}
-    .lead{font-size:17px;color:var(--muted)}
-    .about{background:#fff}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-    .visual{
-      min-height:470px;border-radius:30px;background:linear-gradient(145deg,#102d52,#07182d);
-      padding:35px;display:flex;align-items:flex-end;position:relative;overflow:hidden;box-shadow:var(--shadow)
-    }
-    .visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(242,210,123,.25);border-radius:50%}
-    .visual:before{width:430px;height:430px;right:-180px;top:-150px}
-    .visual:after{width:270px;height:270px;left:-130px;bottom:-120px}
-    .quote{position:relative;z-index:2;color:white;border-left:4px solid var(--gold);padding-left:20px}
-    .quote strong{display:block;font-size:25px}.quote small{color:#d7e2ef}
-    .values{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px}
-    .value{padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}
-    .value b{color:var(--navy);display:block;margin-bottom:4px}.value span{font-size:13px;color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff;box-shadow:0 8px 30px rgba(11,31,58,.05);transition:.25s}
-    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-    .icon{width:48px;height:48px;border-radius:14px;background:#eef3f9;color:var(--navy);display:grid;place-items:center;font-size:23px;margin-bottom:20px}
-    .card h3{font-size:20px;color:var(--navy);margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
-    .academics{background:var(--cream)}
-    .programs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .program{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px;display:flex;gap:18px}
-    .program-number{font-weight:900;font-size:30px;color:var(--gold)}
-    .program h3{color:var(--navy);margin-bottom:4px}
-    .admissions{background:var(--navy);color:#fff}
-    .admissions h2{color:#fff}.admissions .lead{color:#cbd8e8}
-    .admission-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-    .steps{display:grid;gap:13px;margin-top:30px}
-    .step{display:flex;gap:15px;align-items:flex-start;padding:17px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.05)}
-    .step-num{min-width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:900}
-    .step h4{margin-bottom:2px}.step p{font-size:13px;color:#b9c7d8}
-    .apply-box{background:#fff;color:var(--text);padding:30px;border-radius:24px;box-shadow:0 25px 70px rgba(0,0,0,.18)}
-    .apply-box h3{color:var(--navy);font-size:27px;margin-bottom:6px}.apply-box p{color:var(--muted);font-size:14px;margin-bottom:20px}
-    form{display:grid;gap:12px}.field{width:100%;border:1px solid #dfe4eb;padding:13px 14px;border-radius:12px;font:inherit;outline:none}.field:focus{border-color:var(--gold)}
-    textarea.field{min-height:120px;resize:vertical}
-    .submit{border:0;cursor:pointer;font:inherit}
-    .life-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .life-card{min-height:220px;border-radius:22px;padding:28px;color:#fff;background:linear-gradient(135deg,#0b1f3a,#19477a);position:relative;overflow:hidden}
-    .life-card:nth-child(2){background:linear-gradient(135deg,#6d541d,#b68e36)}
-    .life-card:nth-child(3){background:linear-gradient(135deg,#163d39,#287168)}
-    .life-card:nth-child(4){background:linear-gradient(135deg,#3e254f,#75478f)}
-    .life-card span{font-size:40px}.life-card h3{font-size:22px;margin:15px 0 5px}.life-card p{color:#e2e9f2;font-size:14px;max-width:480px}
-    .leadership{background:var(--cream)}
-    .leader{display:grid;grid-template-columns:260px 1fr;gap:35px;align-items:center;background:#fff;padding:25px;border-radius:24px;border:1px solid var(--line)}
-    .portrait{height:290px;border-radius:20px;background:linear-gradient(145deg,#e8edf4,#cbd6e3);display:grid;place-items:center;color:#738196;font-size:65px}
-    .leader h3{font-size:28px;color:var(--navy)}.leader .role{color:#9b7624;font-weight:800;margin:4px 0 15px}.leader p{color:var(--muted)}
-    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .news{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
-    .news-image{height:170px;background:linear-gradient(135deg,#102d52,#e0b84e);display:grid;place-items:center;color:#fff;font-size:42px}
-    .news-body{padding:23px}.date{font-size:11px;color:#9b7624;font-weight:800;text-transform:uppercase}.news h3{color:var(--navy);margin:7px 0}.news p{color:var(--muted);font-size:14px}
-    .contact{background:#f8f9fb}
-    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
-    .contact-items{display:grid;gap:14px;margin-top:25px}
-    .contact-item{display:flex;gap:14px;align-items:flex-start;padding:17px;background:#fff;border:1px solid var(--line);border-radius:16px}
-    .contact-item b{display:block;color:var(--navy)}.contact-item span{font-size:13px;color:var(--muted)}
-    .footer{background:#07182d;color:#b8c6d7;padding:55px 0 25px}
-    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
-    .footer h3{color:#fff;font-size:14px;margin-bottom:14px}.footer p,.footer a{font-size:13px}.footer a{display:block;margin:7px 0}.footer a:hover{color:var(--gold2)}
-    .footer-brand{color:#fff;font-size:20px;font-weight:900;margin-bottom:8px}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:18px;font-size:12px;display:flex;justify-content:space-between;gap:20px}
-    .floaters{position:fixed;right:18px;bottom:18px;z-index:999;display:grid;gap:10px}
-    .float{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:23px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
-    .wa{background:#1fae62}.call{background:var(--navy)}
-    .gallery-note{padding:35px;border:1px dashed #cfd6df;border-radius:20px;text-align:center;color:var(--muted);background:#fff}
-    .gallery-note strong{display:block;color:var(--navy);font-size:20px;margin-bottom:5px}
-    @media(max-width:900px){
-      .links{display:none}.menu{display:block}.hero{min-height:650px}.hero-grid,.about-grid,.admission-grid,.contact-grid{grid-template-columns:1fr}.hero-card{min-height:300px}.cards,.news-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat{border-bottom:1px solid var(--line)}
-    }
-    @media(max-width:620px){
-      .topbar .container{font-size:11px;justify-content:center}.topbar .container span:last-child{display:none}
-      nav{height:68px}.brand-name{font-size:14px}.crest{width:41px;height:41px}
-      h1{letter-spacing:-2px}.hero p{font-size:16px}.hero-card{padding:24px}.cards,.programs,.life-grid,.news-grid,.footer-grid,.stats-grid{grid-template-columns:1fr}
-      section{padding:68px 0}.values{grid-template-columns:1fr}.leader{grid-template-columns:1fr}.portrait{height:240px}
-      .copyright{flex-direction:column}.buttons .btn{width:100%}
-    }
-  </style>
+  <title>EarnQube — Turn Time Into Money</title>
+
+  <meta name="description"
+    content="EarnQube helps users explore digital activities and online earning opportunities through chat, videos, music, surveys, gaming and referrals.">
+
+  <meta name="keywords"
+    content="EarnQube, EarnQube Uganda, earn money online Uganda, online earning Africa, digital tasks, online opportunities">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://earnqube.site/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EarnQube — Turn Time Into Money">
+  <meta property="og:description"
+    content="Explore digital activities and online earning opportunities with EarnQube.">
+  <meta property="og:url" content="https://earnqube.site/">
+  <meta property="og:site_name" content="EarnQube">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EarnQube — Turn Time Into Money">
+  <meta name="twitter:description"
+    content="Explore digital activities and online earning opportunities with EarnQube.">
 
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"School",
-    "name":"Dashian International School",
-    "description":"A modern learning community focused on excellence, character, faith and leadership.",
-    "url":"https://example.com/",
-    "slogan":"And Stand We Shall"
+    "@type":"WebSite",
+    "name":"EarnQube",
+    "url":"https://earnqube.site/",
+    "description":"EarnQube helps users explore digital activities and online earning opportunities."
   }
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    :root{
+      --bg:#020617;
+      --bg2:#07111f;
+      --card:rgba(15,23,42,.78);
+      --card2:rgba(15,23,42,.55);
+      --green:#10b981;
+      --green2:#34d399;
+      --blue:#3b82f6;
+      --white:#f8fafc;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --border:rgba(255,255,255,.09);
+      --shadow:0 20px 60px rgba(0,0,0,.28);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Inter,Arial,sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%,rgba(16,185,129,.12),transparent 30%),
+        radial-gradient(circle at 90% 15%,rgba(59,130,246,.10),transparent 28%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button{
+      font-family:inherit;
+    }
+
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    /* NAVIGATION */
+
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:10000;
+      border-bottom:1px solid var(--border);
+      background:rgba(2,6,23,.82);
+      backdrop-filter:blur(18px);
+    }
+
+    .nav-inner{
+      min-height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:-1px;
+    }
+
+    .logo span{
+      color:var(--green);
+    }
+
+    .desktop-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+    }
+
+    .desktop-links a{
+      color:#cbd5e1;
+      font-size:13px;
+      font-weight:600;
+      transition:.2s;
+    }
+
+    .desktop-links a:hover{
+      color:var(--green2);
+    }
+
+    .nav-actions{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .login-btn,
+    .join-btn{
+      padding:10px 15px;
+      border-radius:9px;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .login-btn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+
+    .join-btn{
+      background:var(--green);
+      color:#022c22;
+    }
+
+    .menu-button{
+      display:none;
+      width:40px;
+      height:40px;
+      border:1px solid var(--border);
+      border-radius:9px;
+      background:rgba(255,255,255,.04);
+      color:white;
+      font-size:20px;
+    }
+
+    .mobile-menu{
+      display:none;
+      padding:12px;
+      border-top:1px solid var(--border);
+      background:#06101e;
+    }
+
+    .mobile-menu a{
+      display:block;
+      padding:12px;
+      border-radius:8px;
+      font-size:13px;
+    }
+
+    .mobile-menu a:hover{
+      background:rgba(16,185,129,.08);
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:95px 0 75px;
+      position:relative;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border:1px solid rgba(16,185,129,.25);
+      background:rgba(16,185,129,.07);
+      color:var(--green2);
+      border-radius:50px;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+
+    .status-dot{
+      width:7px;
+      height:7px;
+      background:var(--green);
+      border-radius:50%;
+      box-shadow:0 0 15px rgba(16,185,129,.9);
+    }
+
+    h1{
+      font-size:clamp(42px,6vw,72px);
+      line-height:1.02;
+      letter-spacing:-3px;
+      margin-bottom:20px;
+    }
+
+    .green{
+      color:var(--green);
+    }
+
+    .hero-text{
+      max-width:620px;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:48px;
+      padding:12px 20px;
+      border-radius:10px;
+      font-size:13px;
+      font-weight:800;
+      transition:.2s;
+    }
+
+    .primary-btn{
+      background:var(--green);
+      color:#022c22;
+    }
+
+    .primary-btn:hover{
+      background:var(--green2);
+      transform:translateY(-1px);
+    }
+
+    .secondary-btn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+
+    .secondary-btn:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    .hero-note{
+      margin-top:17px;
+      color:#64748b;
+      font-size:11px;
+    }
+
+    /* DASHBOARD PREVIEW */
+
+    .dashboard{
+      border:1px solid var(--border);
+      background:
+        linear-gradient(145deg,rgba(16,185,129,.10),rgba(59,130,246,.05)),
+        var(--card);
+      border-radius:20px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(15px);
+      transform:rotate(1deg);
+    }
+
+    .dashboard-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding-bottom:16px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .avatar{
+      width:40px;
+      height:40px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:rgba(16,185,129,.12);
+      border:1px solid rgba(16,185,129,.2);
+      font-size:18px;
+    }
+
+    .profile small,
+    .stat small{
+      color:var(--muted);
+      font-size:9px;
+      display:block;
+    }
+
+    .profile strong{
+      font-size:13px;
+    }
+
+    .online{
+      font-size:9px;
+      color:var(--green);
+      font-weight:800;
+    }
+
+    .balance{
+      padding:20px 0;
+    }
+
+    .balance small{
+      color:var(--muted);
+      font-size:10px;
+    }
+
+    .balance h2{
+      font-size:34px;
+      margin:3px 0 0;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+
+    .stat{
+      padding:13px;
+      border-radius:10px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .stat strong{
+      font-size:15px;
+    }
+
+    .dashboard-task{
+      margin-top:12px;
+      padding:13px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .task-icon{
+      width:35px;
+      height:35px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:9px;
+      background:rgba(16,185,129,.10);
+    }
+
+    .task-info{
+      flex:1;
+    }
+
+    .task-info strong{
+      display:block;
+      font-size:11px;
+    }
+
+    .task-info small{
+      color:var(--muted);
+      font-size:9px;
+    }
+
+    .task-price{
+      color:var(--green2);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:75px 0;
+    }
+
+    .section-header{
+      max-width:650px;
+      margin-bottom:32px;
+    }
+
+    .section-label{
+      color:var(--green);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:1.5px;
+      margin-bottom:7px;
+    }
+
+    h2.section-title{
+      font-size:clamp(28px,4vw,42px);
+      letter-spacing:-1.5px;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    .section-description{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* HOW IT WORKS */
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .step{
+      padding:22px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:var(--card2);
+    }
+
+    .step-number{
+      width:35px;
+      height:35px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:9px;
+      background:rgba(16,185,129,.11);
+      color:var(--green2);
+      font-weight:800;
+      font-size:12px;
+      margin-bottom:18px;
+    }
+
+    .step h3{
+      font-size:14px;
+      margin-bottom:7px;
+    }
+
+    .step p{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* ACTIVITIES */
+
+    .activity-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
+    }
+
+    .activity-card{
+      padding:22px;
+      border:1px solid var(--border);
+      border-radius:15px;
+      background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
+      transition:.25s;
+    }
+
+    .activity-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(16,185,129,.25);
+    }
+
+    .activity-icon{
+      width:44px;
+      height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      background:rgba(16,185,129,.09);
+      font-size:21px;
+      margin-bottom:16px;
+    }
+
+    .activity-card h3{
+      font-size:15px;
+      margin-bottom:6px;
+    }
+
+    .activity-card p{
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:15px;
+    }
+
+    .activity-link{
+      color:var(--green2);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    /* FEATURES */
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:13px;
+    }
+
+    .feature{
+      padding:22px;
+      border:1px solid var(--border);
+      border-radius:15px;
+      background:var(--card2);
+    }
+
+    .feature h3{
+      font-size:14px;
+      margin-bottom:6px;
+    }
+
+    .feature p{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* INTERACTIVE DEMO */
+
+    .demo{
+      background:
+        radial-gradient(circle at 80% 10%,rgba(16,185,129,.12),transparent 30%),
+        #06101c;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+
+    .demo-box{
+      border:1px solid var(--border);
+      background:rgba(15,23,42,.72);
+      border-radius:17px;
+      padding:22px;
+      max-width:700px;
+    }
+
+    .demo-tabs{
+      display:flex;
+      gap:7px;
+      overflow:auto;
+      margin-bottom:15px;
+    }
+
+    .demo-tab{
+      flex-shrink:0;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:white;
+      border-radius:8px;
+      padding:9px 12px;
+      font-size:10px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .demo-tab.active{
+      background:var(--green);
+      color:#022c22;
+    }
+
+    .demo-panel{
+      display:none;
+    }
+
+    .demo-panel.active{
+      display:block;
+    }
+
+    .chat-window{
+      height:210px;
+      overflow:auto;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      padding:8px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:#020617;
+    }
+
+    .message{
+      max-width:82%;
+      padding:8px 10px;
+      border-radius:9px;
+      font-size:11px;
+    }
+
+    .incoming{
+      align-self:flex-start;
+      background:#111827;
+    }
+
+    .outgoing{
+      align-self:flex-end;
+      background:var(--green);
+      color:#022c22;
+      font-weight:700;
+    }
+
+    .chat-form{
+      display:flex;
+      gap:7px;
+      margin-top:8px;
+    }
+
+    .chat-form input{
+      flex:1;
+      min-width:0;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:white;
+      padding:11px;
+      border-radius:8px;
+      outline:none;
+    }
+
+    .chat-form button{
+      border:0;
+      background:var(--green);
+      border-radius:8px;
+      padding:0 15px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .demo-description{
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:13px;
+    }
+
+    /* FAQ */
+
+    .faq{
+      max-width:800px;
+    }
+
+    .faq-item{
+      border:1px solid var(--border);
+      border-radius:11px;
+      margin-bottom:8px;
+      overflow:hidden;
+      background:rgba(255,255,255,.025);
+    }
+
+    .faq-question{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      text-align:left;
+      padding:16px;
+      color:white;
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .faq-answer{
+      display:none;
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .faq-item.open .faq-answer{
+      display:block;
+    }
+
+    /* CTA */
+
+    .cta{
+      text-align:center;
+      padding:85px 20px;
+      border:1px solid var(--border);
+      border-radius:22px;
+      background:
+        radial-gradient(circle at center,rgba(16,185,129,.11),transparent 55%),
+        rgba(15,23,42,.7);
+    }
+
+    .cta h2{
+      font-size:clamp(28px,5vw,45px);
+      letter-spacing:-1.5px;
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      color:var(--muted);
+      max-width:580px;
+      margin:auto;
+      font-size:13px;
+    }
+
+    .cta .hero-actions{
+      justify-content:center;
+    }
+
+    /* SUPPORT */
+
+    .support-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .support-card{
+      border:1px solid var(--border);
+      border-radius:15px;
+      padding:23px;
+      background:var(--card2);
+    }
+
+    .support-card h3{
+      font-size:15px;
+      margin-bottom:7px;
+    }
+
+    .support-card p{
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:15px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      margin-top:75px;
+      border-top:1px solid var(--border);
+      padding:40px 0 28px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr 1fr;
+      gap:30px;
+    }
+
+    .footer-brand p{
+      color:var(--muted);
+      font-size:11px;
+      max-width:280px;
+      margin-top:10px;
+    }
+
+    .footer-column h4{
+      font-size:11px;
+      margin-bottom:12px;
+    }
+
+    .footer-column a{
+      display:block;
+      color:#94a3b8;
+      font-size:10px;
+      margin-bottom:8px;
+    }
+
+    .footer-column a:hover{
+      color:var(--green2);
+    }
+
+    .copyright{
+      border-top:1px solid var(--border);
+      margin-top:30px;
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      color:#64748b;
+      font-size:9px;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      background:#25D366;
+      color:white;
+      padding:12px 16px;
+      border-radius:50px;
+      font-size:11px;
+      font-weight:800;
+      box-shadow:0 12px 35px rgba(0,0,0,.4);
+    }
+
+    /* ACTIVITY NOTICE */
+
+    .activity-notice{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      z-index:9998;
+      width:min(340px,calc(100vw - 36px));
+      padding:12px;
+      border:1px solid rgba(16,185,129,.25);
+      border-radius:12px;
+      background:rgba(3,10,20,.96);
+      box-shadow:var(--shadow);
+      display:none;
+    }
+
+    .activity-notice.show{
+      display:flex;
+      gap:10px;
+      animation:slideIn .35s ease;
+    }
+
+    .notice-icon{
+      width:35px;
+      height:35px;
+      flex-shrink:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:9px;
+      background:rgba(16,185,129,.1);
+    }
+
+    .notice-content{
+      font-size:10px;
+    }
+
+    .notice-label{
+      color:var(--green);
+      font-weight:800;
+      font-size:8px;
+      margin-bottom:2px;
+    }
+
+    .notice-content p{
+      color:#cbd5e1;
+    }
+
+    .notice-content small{
+      display:block;
+      color:#64748b;
+      margin-top:2px;
+    }
+
+    @keyframes slideIn{
+      from{
+        opacity:0;
+        transform:translateY(15px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:850px){
+
+      .desktop-links,
+      .nav-actions{
+        display:none;
+      }
+
+      .menu-button{
+        display:block;
+      }
+
+      .hero{
+        padding:65px 0 45px;
+      }
+
+      .hero-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+      }
+
+      .dashboard{
+        transform:none;
+      }
+
+      .steps{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .activity-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .container{
+        width:min(94%,520px);
+      }
+
+      .hero{
+        padding-top:48px;
+      }
+
+      h1{
+        font-size:42px;
+        letter-spacing:-2px;
+      }
+
+      .hero-text{
+        font-size:14px;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .primary-btn,
+      .secondary-btn{
+        width:100%;
+      }
+
+      section{
+        padding:55px 0;
+      }
+
+      .steps,
+      .activity-grid,
+      .feature-grid,
+      .support-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .copyright{
+        flex-direction:column;
+      }
+
+      .whatsapp{
+        right:12px;
+        bottom:12px;
+        padding:11px 14px;
+      }
+
+      .activity-notice{
+        left:12px;
+        bottom:70px;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="container">
-      <span>Welcome to Dashian International School</span>
-      <span>Excellence • Character • Faith • Leadership</span>
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+
+  <div class="container nav-inner">
+
+    <a href="#" class="logo">
+      Earn<span>Qube</span>
+    </a>
+
+    <nav class="desktop-links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#activities">Activities</a>
+      <a href="#why-earnqube">Why EarnQube</a>
+      <a href="#faq">FAQ</a>
+      <a href="#support">Support</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <a
+        href="https://stateflix.com/user/login.php"
+        target="_blank"
+        rel="noopener"
+        class="login-btn">
+        Login
+      </a>
+
+      <a
+        href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+        target="_blank"
+        rel="noopener"
+        class="join-btn">
+        Create Account
+      </a>
+
     </div>
+
+    <button
+      class="menu-button"
+      onclick="toggleMobileMenu()"
+      aria-label="Open menu">
+      ☰
+    </button>
+
   </div>
 
-  <header>
+  <div id="mobileMenu" class="mobile-menu">
+
     <div class="container">
-      <nav>
-        <a class="brand" href="#home" aria-label="Dashian International School home">
-          <div class="crest">✦</div>
-          <div>
-            <div class="brand-name">DASHIAN INTERNATIONAL SCHOOL</div>
-            <div class="brand-motto">And Stand We Shall</div>
-          </div>
+
+      <a href="#how-it-works" onclick="closeMobileMenu()">
+        How It Works
+      </a>
+
+      <a href="#activities" onclick="closeMobileMenu()">
+        Activities
+      </a>
+
+      <a href="#why-earnqube" onclick="closeMobileMenu()">
+        Why EarnQube
+      </a>
+
+      <a href="#faq" onclick="closeMobileMenu()">
+        FAQ
+      </a>
+
+      <a href="#support" onclick="closeMobileMenu()">
+        Support
+      </a>
+
+      <a
+        href="https://stateflix.com/user/login.php"
+        target="_blank"
+        rel="noopener">
+        Login
+      </a>
+
+      <a
+        href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+        target="_blank"
+        rel="noopener"
+        style="background:#10b981;color:#022c22;font-weight:800;text-align:center;">
+        Create Account
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<main>
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        DIGITAL OPPORTUNITIES
+      </div>
+
+      <h1>
+        Turn time into
+        <span class="green">money.</span>
+      </h1>
+
+      <p class="hero-text">
+        EarnQube brings different digital activities together in one
+        convenient platform. Explore opportunities through chatting,
+        watching, music, surveys, gaming and referrals.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="primary-btn">
+          Create Your Account →
         </a>
-        <div class="links">
-          <a href="#about">About</a>
-          <a href="#academics">Academics</a>
-          <a href="#admissions">Admissions</a>
-          <a href="#life">Student Life</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#contact">Contact</a>
-          <a class="nav-cta" href="#admissions">Apply / Inquire</a>
-        </div>
-        <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-      </nav>
-    </div>
-  </header>
 
-  <div id="mobileMenu" style="display:none;background:#fff;border-bottom:1px solid #e6e9ef">
-    <div class="container" style="padding:10px 0 18px">
-      <a href="#about" onclick="toggleMenu()" style="display:block;padding:10px">About</a>
-      <a href="#academics" onclick="toggleMenu()" style="display:block;padding:10px">Academics</a>
-      <a href="#admissions" onclick="toggleMenu()" style="display:block;padding:10px">Admissions</a>
-      <a href="#life" onclick="toggleMenu()" style="display:block;padding:10px">Student Life</a>
-      <a href="#leadership" onclick="toggleMenu()" style="display:block;padding:10px">Leadership</a>
-      <a href="#contact" onclick="toggleMenu()" style="display:block;padding:10px">Contact</a>
+        <a
+          href="https://stateflix.com/user/login.php"
+          target="_blank"
+          rel="noopener"
+          class="secondary-btn">
+          Member Login
+        </a>
+
+      </div>
+
+      <p class="hero-note">
+        Access available activities through your member account.
+      </p>
+
     </div>
+
+
+    <!-- DASHBOARD PREVIEW -->
+
+    <div class="dashboard">
+
+      <div class="dashboard-top">
+
+        <div class="profile">
+
+          <div class="avatar">
+            👤
+          </div>
+
+          <div>
+            <small>Member account</small>
+            <strong>EarnQube User</strong>
+          </div>
+
+        </div>
+
+        <span class="online">
+          ● ACTIVE
+        </span>
+
+      </div>
+
+      <div class="balance">
+
+        <small>Account overview</small>
+
+        <h2>
+          <span class="green">Explore</span>
+        </h2>
+
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <small>Chat</small>
+          <strong>Available</strong>
+        </div>
+
+        <div class="stat">
+          <small>Videos</small>
+          <strong>Available</strong>
+        </div>
+
+        <div class="stat">
+          <small>Music</small>
+          <strong>Available</strong>
+        </div>
+
+        <div class="stat">
+          <small>Referrals</small>
+          <strong>Available</strong>
+        </div>
+
+      </div>
+
+      <div class="dashboard-task">
+
+        <div class="task-icon">💬</div>
+
+        <div class="task-info">
+          <strong>Chat Activity</strong>
+          <small>Explore available chat opportunities</small>
+        </div>
+
+        <span class="task-price">OPEN</span>
+
+      </div>
+
+      <div class="dashboard-task">
+
+        <div class="task-icon">🎬</div>
+
+        <div class="task-info">
+          <strong>Video Activity</strong>
+          <small>Explore available video activities</small>
+        </div>
+
+        <span class="task-price">OPEN</span>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-grid">
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="how-it-works">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-label">
+        SIMPLE PROCESS
+      </div>
+
+      <h2 class="section-title">
+        How EarnQube works
+      </h2>
+
+      <p class="section-description">
+        Get started with a simple process designed for mobile users.
+      </p>
+
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="step-number">01</div>
+
+        <h3>Create an account</h3>
+
+        <p>
+          Register through the member registration page and activate
+          your account where required.
+        </p>
+
+      </div>
+
+      <div class="step">
+
+        <div class="step-number">02</div>
+
+        <h3>Explore activities</h3>
+
+        <p>
+          Access the activities available to you through your member
+          dashboard.
+        </p>
+
+      </div>
+
+      <div class="step">
+
+        <div class="step-number">03</div>
+
+        <h3>Complete activities</h3>
+
+        <p>
+          Participate in available digital activities according to
+          the applicable activity requirements.
+        </p>
+
+      </div>
+
+      <div class="step">
+
+        <div class="step-number">04</div>
+
+        <h3>Manage your account</h3>
+
+        <p>
+          Keep track of your member account and follow the applicable
+          platform procedures for earnings and withdrawals.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-label">
+        OPPORTUNITIES
+      </div>
+
+      <h2 class="section-title">
+        Explore activities
+      </h2>
+
+      <p class="section-description">
+        Discover different types of digital activities available
+        through the EarnQube experience.
+      </p>
+
+    </div>
+
+    <div class="activity-grid">
+
+      <div class="activity-card">
+
+        <div class="activity-icon">💬</div>
+
+        <h3>Chat Activities</h3>
+
+        <p>
+          Explore chat-based activities and conversations available
+          through your member account.
+        </p>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="activity-link">
+          Explore activity →
+        </a>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <div class="activity-icon">🎬</div>
+
+        <h3>Video Activities</h3>
+
+        <p>
+          Explore available video and promotional content activities.
+        </p>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="activity-link">
+          Explore activity →
+        </a>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <div class="activity-icon">🎵</div>
+
+        <h3>Music Activities</h3>
+
+        <p>
+          Discover music-related activities available through the
+          member experience.
+        </p>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="activity-link">
+          Explore activity →
+        </a>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <div class="activity-icon">📊</div>
+
+        <h3>Surveys & Offers</h3>
+
+        <p>
+          Explore surveys and digital offers that may be available
+          in your member account.
+        </p>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="activity-link">
+          Explore activity →
+        </a>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <div class="activity-icon">🎮</div>
+
+        <h3>Gaming Activities</h3>
+
+        <p>
+          Explore interactive gaming activities and experiences.
+        </p>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="activity-link">
+          Explore activity →
+        </a>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <div class="activity-icon">👥</div>
+
+        <h3>Referral Activities</h3>
+
+        <p>
+          Invite people through your referral system where available.
+        </p>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="activity-link">
+          Get started →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY EARNQUBE -->
+
+<section id="why-earnqube">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-label">
+        WHY EARNQUBE
+      </div>
+
+      <h2 class="section-title">
+        Built around digital opportunities
+      </h2>
+
+      <p class="section-description">
+        EarnQube is designed to give users a simple place to discover
+        different online activity opportunities.
+      </p>
+
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+
+        <h3>📱 Mobile-first experience</h3>
+
+        <p>
+          The website is designed to work comfortably on smartphones,
+          tablets and desktop devices.
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+        <h3>🌍 Africa-focused</h3>
+
+        <p>
+          EarnQube is designed with users in Uganda and other African
+          markets in mind.
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+        <h3>⚡ Multiple activity categories</h3>
+
+        <p>
+          Explore different types of digital activities from one
+          central experience.
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+        <h3>💬 Support available</h3>
+
+        <p>
+          Contact the EarnQube support team when you need assistance
+          accessing the platform.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INTERACTIVE DEMO -->
+
+<section class="demo">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-label">
+        PLATFORM PREVIEW
+      </div>
+
+      <h2 class="section-title">
+        Try the experience
+      </h2>
+
+      <p class="section-description">
+        These interactive elements demonstrate how digital activities
+        can be presented. They are website demonstrations and do not
+        represent actual earnings or transactions.
+      </p>
+
+    </div>
+
+    <div class="demo-box">
+
+      <div class="demo-tabs">
+
+        <button
+          class="demo-tab active"
+          onclick="showDemo('chat',this)">
+          💬 Chat
+        </button>
+
+        <button
+          class="demo-tab"
+          onclick="showDemo('watch',this)">
+          🎬 Watch
+        </button>
+
+        <button
+          class="demo-tab"
+          onclick="showDemo('music',this)">
+          🎵 Music
+        </button>
+
+        <button
+          class="demo-tab"
+          onclick="showDemo('game',this)">
+          🎮 Game
+        </button>
+
+      </div>
+
+
+      <!-- CHAT DEMO -->
+
+      <div id="demo-chat" class="demo-panel active">
+
+        <p class="demo-description">
+          Try a simple demonstration of a chat activity.
+        </p>
+
+        <div id="chatWindow" class="chat-window">
+
+          <div class="message incoming">
+            Hello! Welcome to the EarnQube demo. 👋
+          </div>
+
+          <div class="message incoming">
+            How is your day going?
+          </div>
+
+        </div>
+
+        <div class="chat-form">
+
+          <input
+            id="chatInput"
+            type="text"
+            placeholder="Type a message...">
+
+          <button onclick="sendDemoMessage()">
+            Send
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- WATCH DEMO -->
+
+      <div id="demo-watch" class="demo-panel">
+
+        <p class="demo-description">
+          Demonstration of a video activity interface.
+        </p>
+
+        <div style="
+          height:190px;
+          border-radius:12px;
+          background:
+          linear-gradient(135deg,#06251e,#07152a);
+          border:1px solid var(--border);
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          padding:20px;">
+
           <div>
-            <div class="eyebrow">A place to learn. A place to stand.</div>
-            <h1>Building <span>tomorrow's</span> leaders.</h1>
-            <p>Welcome to Dashian International School — a forward-looking learning community where academic excellence, strong character, Christian values and leadership come together.</p>
-            <div class="buttons">
-              <a class="btn btn-primary" href="#admissions">Start an Inquiry</a>
-              <a class="btn btn-light" href="#about">Discover Dashian</a>
+
+            <div style="font-size:45px;">
+              ▶
             </div>
-          </div>
-          <div class="hero-card">
-            <div class="symbol">✦</div>
-            <h3>And Stand We Shall.</h3>
-            <p>A school identity built around resilience, integrity, purpose and the courage to stand for what is right.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <div class="stats">
-      <div class="container stats-grid">
-        <div class="stat"><strong>01</strong><span>Purpose-driven learning</span></div>
-        <div class="stat"><strong>02</strong><span>Character development</span></div>
-        <div class="stat"><strong>03</strong><span>Future-ready skills</span></div>
-        <div class="stat"><strong>04</strong><span>Whole-child education</span></div>
+            <strong>
+              Video Activity Demo
+            </strong>
+
+            <p style="
+              color:var(--muted);
+              font-size:10px;
+              margin-top:5px;">
+              Demonstration only
+            </p>
+
+          </div>
+
+        </div>
+
+        <button
+          class="primary-btn"
+          style="border:0;margin-top:12px;width:100%;cursor:pointer;"
+          onclick="startWatchDemo()">
+          Start Demonstration
+        </button>
+
+        <div
+          id="watchStatus"
+          style="
+            color:var(--green2);
+            text-align:center;
+            font-size:11px;
+            margin-top:9px;">
+        </div>
+
       </div>
+
+
+      <!-- MUSIC DEMO -->
+
+      <div id="demo-music" class="demo-panel">
+
+        <p class="demo-description">
+          Demonstration of a music activity interface.
+        </p>
+
+        <div class="mobile-card"
+             style="background:rgba(255,255,255,.025);">
+
+          <div style="
+            display:flex;
+            align-items:center;
+            gap:12px;">
+
+            <div class="activity-icon"
+                 style="margin:0;">
+              🎵
+            </div>
+
+            <div style="flex:1;">
+
+              <strong style="font-size:12px;">
+                Music Activity
+              </strong>
+
+              <small style="
+                display:block;
+                color:var(--muted);
+                font-size:9px;">
+                40-second demonstration
+              </small>
+
+            </div>
+
+          </div>
+
+          <button
+            class="primary-btn"
+            style="
+              border:0;
+              width:100%;
+              margin-top:14px;
+              cursor:pointer;"
+            onclick="startMusicDemo()">
+            ▶ Start Demo
+          </button>
+
+          <div
+            id="musicStatus"
+            style="
+              color:var(--green2);
+              text-align:center;
+              font-size:11px;
+              margin-top:9px;">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- GAME DEMO -->
+
+      <div id="demo-game" class="demo-panel">
+
+        <p class="demo-description">
+          A simple football interaction demonstrating an activity
+          interface.
+        </p>
+
+        <div style="
+          text-align:center;
+          border:1px solid var(--border);
+          border-radius:12px;
+          padding:25px;
+          background:#020617;">
+
+          <div style="font-size:42px;">
+            ⚽
+          </div>
+
+          <h3 style="margin:8px 0;">
+            Football Challenge
+          </h3>
+
+          <div id="score"
+               style="
+               color:var(--green);
+               font-size:30px;
+               font-weight:800;">
+            0 - 0
+          </div>
+
+          <button
+            class="primary-btn"
+            style="
+              border:0;
+              margin-top:12px;
+              cursor:pointer;"
+            onclick="playGame()">
+            Play
+          </button>
+
+          <p
+            id="gameStatus"
+            style="
+              color:var(--muted);
+              font-size:10px;
+              margin-top:8px;">
+            Demonstration only
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <section class="about" id="about">
-      <div class="container about-grid">
-        <div class="visual">
-          <div class="quote">
-            <strong>“And Stand We Shall.”</strong>
-            <small>Our promise of resilience, excellence and purpose.</small>
-          </div>
-        </div>
-        <div>
-          <div class="kicker">Who we are</div>
-          <h2>Education with purpose.</h2>
-          <p class="lead">Dashian International School is designed as a community where learners are encouraged to think deeply, serve others, discover their gifts and prepare confidently for a changing world.</p>
-          <div class="values">
-            <div class="value"><b>Excellence</b><span>We pursue high standards in learning and conduct.</span></div>
-            <div class="value"><b>Integrity</b><span>We teach honesty, responsibility and accountability.</span></div>
-            <div class="value"><b>Faith</b><span>We nurture values that give learning meaning and purpose.</span></div>
-            <div class="value"><b>Leadership</b><span>We develop confident learners who positively influence others.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="academics" class="academics">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Academics</div>
-          <h2>Learning designed for the future.</h2>
-          <p class="lead">A balanced educational experience combining strong academic foundations with creativity, technology, communication and personal development.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="icon">⌘</div><h3>Core Academics</h3><p>Structured learning that builds strong foundations in literacy, numeracy, sciences, humanities and languages.</p></article>
-          <article class="card"><div class="icon">◈</div><h3>STEM & Technology</h3><p>Encouraging curiosity, problem-solving, digital literacy and practical technology skills.</p></article>
-          <article class="card"><div class="icon">✎</div><h3>Creative Learning</h3><p>Opportunities for art, music, communication, innovation and creative expression.</p></article>
-        </div>
-        <div class="programs" style="margin-top:20px">
-          <div class="program"><div class="program-number">01</div><div><h3>Primary / Foundation</h3><p class="lead" style="font-size:14px">A supportive environment for foundational knowledge, confidence and curiosity.</p></div></div>
-          <div class="program"><div class="program-number">02</div><div><h3>Secondary Education</h3><p class="lead" style="font-size:14px">Rigorous preparation for examinations, higher education and responsible adulthood.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="admissions" id="admissions">
-      <div class="container admission-grid">
-        <div>
-          <div class="kicker" style="color:var(--gold2)">Admissions</div>
-          <h2>Take the next step.</h2>
-          <p class="lead">Begin your journey with Dashian International School. Send an inquiry and the admissions team can provide the appropriate information for your learner.</p>
-          <div class="steps">
-            <div class="step"><div class="step-num">1</div><div><h4>Make an inquiry</h4><p>Tell us about the learner and the class or programme of interest.</p></div></div>
-            <div class="step"><div class="step-num">2</div><div><h4>Receive information</h4><p>Get guidance on requirements, availability and the next steps.</p></div></div>
-            <div class="step"><div class="step-num">3</div><div><h4>Complete admission</h4><p>Follow the school's official admission process and documentation requirements.</p></div></div>
-          </div>
-        </div>
-        <div class="apply-box">
-          <h3>Admissions Inquiry</h3>
-          <p>Send a message and the school can follow up with you.</p>
-          <form onsubmit="sendInquiry(event)">
-            <input class="field" id="parentName" required placeholder="Parent / Guardian name">
-            <input class="field" id="studentName" required placeholder="Student name">
-            <input class="field" id="classLevel" required placeholder="Class / level of interest">
-            <input class="field" id="contactInfo" required placeholder="Phone or email">
-            <textarea class="field" id="message" placeholder="Your message"></textarea>
-            <button class="btn btn-primary submit" type="submit">Send Inquiry</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section id="life">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Student Life</div>
-          <h2>More than the classroom.</h2>
-          <p class="lead">Learners grow through participation, teamwork, creativity, service and healthy competition.</p>
-        </div>
-        <div class="life-grid">
-          <div class="life-card"><span>⚽</span><h3>Sports & Games</h3><p>Developing teamwork, discipline, confidence and healthy competition.</p></div>
-          <div class="life-card"><span>♫</span><h3>Music & Arts</h3><p>Creating space for talent, creativity and self-expression.</p></div>
-          <div class="life-card"><span>♟</span><h3>Leadership</h3><p>Student leadership opportunities that encourage responsibility and service.</p></div>
-          <div class="life-card"><span>✦</span><h3>Faith & Community</h3><p>Building compassion, purpose and a culture of positive contribution.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="leadership" id="leadership">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Leadership</div>
-          <h2>Leading with vision and purpose.</h2>
-          <p class="lead">Our leadership section is ready for the school's official names, titles, biographies and photographs.</p>
-        </div>
-        <div class="leader">
-          <div class="portrait">✦</div>
-          <div>
-            <div class="kicker">School Leadership</div>
-            <h3>Leadership Team</h3>
-            <div class="role">Guiding the Dashian community</div>
-            <p>This placeholder can be replaced with the official headteacher/principal, directors and senior leadership profiles when the school's details and photographs are available.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="facilities">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Campus & Facilities</div>
-          <h2>A learning environment built to inspire.</h2>
-          <p class="lead">The gallery and facility details can be updated with the school's real campus information whenever it is available.</p>
-        </div>
-        <div class="gallery-note">
-          <strong>Campus Gallery</strong>
-          Add real school photographs here later — classrooms, laboratories, library, ICT facilities, accommodation, sports grounds and other facilities.
-        </div>
-      </div>
-    </section>
-
-    <section class="academics" id="news">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">News & Announcements</div>
-          <h2>What's happening at Dashian.</h2>
-          <p class="lead">A dedicated space for school announcements, events, academic updates and community news.</p>
-        </div>
-        <div class="news-grid">
-          <article class="news"><div class="news-image">✦</div><div class="news-body"><div class="date">School News</div><h3>Welcome to Dashian International School</h3><p>Use this area for the latest official school announcement.</p></div></article>
-          <article class="news"><div class="news-image">⌘</div><div class="news-body"><div class="date">Academics</div><h3>Academic Updates</h3><p>Publish examination notices, academic calendars and important learning updates here.</p></div></article>
-          <article class="news"><div class="news-image">◈</div><div class="news-body"><div class="date">Events</div><h3>Upcoming School Events</h3><p>Keep parents and learners informed about meetings, activities and school events.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container contact-grid">
-        <div>
-          <div class="kicker">Contact</div>
-          <h2>Let's connect.</h2>
-          <p class="lead">For admissions, school information, visits and general inquiries, use the contact options below.</p>
-          <div class="contact-items">
-            <div class="contact-item"><div class="icon" style="margin:0">☎</div><div><b>Phone</b><span>School contact number to be added</span></div></div>
-            <div class="contact-item"><div class="icon" style="margin:0">✉</div><div><b>Email</b><span>Official school email to be added</span></div></div>
-            <div class="contact-item"><div class="icon" style="margin:0">⌖</div><div><b>Location</b><span>School address / campus location to be added</span></div></div>
-          </div>
-        </div>
-        <div class="apply-box">
-          <h3>Send a Message</h3>
-          <p>Use this form for general questions. Connect it to the school's email/backend when deploying the site.</p>
-          <form onsubmit="sendGeneral(event)">
-            <input class="field" id="name2" required placeholder="Your name">
-            <input class="field" id="email2" type="email" required placeholder="Email address">
-            <input class="field" id="subject2" required placeholder="Subject">
-            <textarea class="field" id="message2" required placeholder="How can we help?"></textarea>
-            <button class="btn btn-primary submit" type="submit">Submit Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">DASHIAN INTERNATIONAL SCHOOL</div>
-          <p>And Stand We Shall.</p>
-          <p style="margin-top:10px">Excellence, character, faith and leadership for a changing world.</p>
-        </div>
-        <div><h3>Explore</h3><a href="#about">About Us</a><a href="#academics">Academics</a><a href="#admissions">Admissions</a><a href="#life">Student Life</a></div>
-        <div><h3>School</h3><a href="#leadership">Leadership</a><a href="#facilities">Facilities</a><a href="#news">News</a><a href="#contact">Contact</a></div>
-        <div><h3>Admissions</h3><a href="#admissions">Make an Inquiry</a><a href="#contact">Contact School</a><a href="#home">Back to Top ↑</a></div>
-      </div>
-      <div class="copyright"><span>© <span id="year"></span> Dashian International School. All rights reserved.</span><span>And Stand We Shall.</span></div>
-    </div>
-  </footer>
-
-  <div class="floaters" aria-label="Quick contact">
-    <a class="float wa" href="https://wa.me/256000000000" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
-    <a class="float call" href="tel:+256000000000" aria-label="Call">☎</a>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+</section>
 
-    function toggleMenu(){
-      const m=document.getElementById("mobileMenu");
-      m.style.display=m.style.display==="none" ? "block" : "none";
+
+<!-- FAQ -->
+
+<section id="faq">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-label">
+        FAQ
+      </div>
+
+      <h2 class="section-title">
+        Frequently asked questions
+      </h2>
+
+    </div>
+
+    <div class="faq">
+
+      <div class="faq-item">
+
+        <button class="faq-question"
+                onclick="toggleFaq(this)">
+          What is EarnQube?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          EarnQube is a platform that helps users explore different
+          digital activities and online earning opportunities through
+          a mobile-friendly experience.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question"
+                onclick="toggleFaq(this)">
+          How do I get started?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Select Create Account and follow the registration process.
+          After accessing your member account, you can explore the
+          activities available to you.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question"
+                onclick="toggleFaq(this)">
+          What activities are available?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Depending on availability, activities may include chat,
+          videos, music, surveys, offers, gaming and referrals.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question"
+                onclick="toggleFaq(this)">
+          Does EarnQube guarantee earnings?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          No. Available activities, eligibility, earnings and
+          withdrawal conditions depend on the applicable member
+          platform and its terms. EarnQube does not guarantee a
+          specific income.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question"
+                onclick="toggleFaq(this)">
+          How can I get support?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          You can contact EarnQube support through WhatsApp or email
+          using the contact options below.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <div class="section-label">
+        GET STARTED
+      </div>
+
+      <h2>
+        Ready to explore <span class="green">EarnQube?</span>
+      </h2>
+
+      <p>
+        Create your account and explore the activities available
+        through your member experience.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener"
+          class="primary-btn">
+          Create Account →
+        </a>
+
+        <a
+          href="https://stateflix.com/user/login.php"
+          target="_blank"
+          rel="noopener"
+          class="secondary-btn">
+          Login
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section id="support">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-label">
+        SUPPORT
+      </div>
+
+      <h2 class="section-title">
+        Need help?
+      </h2>
+
+      <p class="section-description">
+        Reach out to EarnQube support for assistance with accessing
+        the platform.
+      </p>
+
+    </div>
+
+    <div class="support-grid">
+
+      <div class="support-card">
+
+        <h3>💬 WhatsApp Support</h3>
+
+        <p>
+          Chat with EarnQube support directly on WhatsApp.
+        </p>
+
+        <a
+          href="https://wa.me/256746673971?text=Hello%20EarnQube,%20I%20need%20assistance%20with%20my%20account."
+          target="_blank"
+          rel="noopener"
+          class="primary-btn">
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+
+      <div class="support-card">
+
+        <h3>✉️ Email Support</h3>
+
+        <p>
+          Send your question to the EarnQube support team.
+        </p>
+
+        <a
+          href="mailto:support@earnqube.site"
+          class="secondary-btn">
+          support@earnqube.site
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <div class="logo">
+          Earn<span>Qube</span>
+        </div>
+
+        <p>
+          Turn time into money. Explore digital activities and
+          online earning opportunities through EarnQube.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Platform</h4>
+
+        <a href="#how-it-works">
+          How It Works
+        </a>
+
+        <a href="#activities">
+          Activities
+        </a>
+
+        <a href="#why-earnqube">
+          Why EarnQube
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Account</h4>
+
+        <a
+          href="https://stateflix.com/user/login.php"
+          target="_blank"
+          rel="noopener">
+          Login
+        </a>
+
+        <a
+          href="https://stateflix.com/user/register.php?ref=Earnqubesite"
+          target="_blank"
+          rel="noopener">
+          Create Account
+        </a>
+
+        <a href="#faq">
+          FAQ
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Support</h4>
+
+        <a href="#support">
+          Contact
+        </a>
+
+        <a
+          href="mailto:support@earnqube.site">
+          Email
+        </a>
+
+        <a
+          href="https://wa.me/256746673971"
+          target="_blank"
+          rel="noopener">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      <span>
+        © 2026 EarnQube.site. All rights reserved.
+      </span>
+
+      <span>
+        Turn time into money.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/256746673971?text=Hello%20EarnQube,%20I%20need%20assistance%20with%20my%20account."
+  target="_blank"
+  rel="noopener"
+  aria-label="EarnQube WhatsApp support">
+
+  💬 WhatsApp
+
+</a>
+
+
+<!-- ACTIVITY NOTICE -->
+
+<div id="activityNotice" class="activity-notice">
+
+  <div class="notice-icon">
+    ℹ️
+  </div>
+
+  <div class="notice-content">
+
+    <div class="notice-label">
+      EARNQUBE UPDATE
+    </div>
+
+    <p id="noticeText">
+      Explore the activities available through your member account.
+    </p>
+
+    <small>
+      Information notice
+    </small>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMobileMenu(){
+
+  const menu =
+    document.getElementById("mobileMenu");
+
+  menu.style.display =
+    menu.style.display === "block"
+      ? "none"
+      : "block";
+}
+
+
+function closeMobileMenu(){
+
+  document.getElementById("mobileMenu")
+    .style.display = "none";
+}
+
+
+/* DEMO TABS */
+
+function showDemo(name,button){
+
+  document.querySelectorAll(".demo-panel")
+    .forEach(panel=>{
+      panel.classList.remove("active");
+    });
+
+  document.querySelectorAll(".demo-tab")
+    .forEach(tab=>{
+      tab.classList.remove("active");
+    });
+
+  document.getElementById("demo-"+name)
+    .classList.add("active");
+
+  button.classList.add("active");
+}
+
+
+/* CHAT DEMO */
+
+let chatMessages = 0;
+
+function sendDemoMessage(){
+
+  const input =
+    document.getElementById("chatInput");
+
+  const text =
+    input.value.trim();
+
+  if(!text) return;
+
+  const windowBox =
+    document.getElementById("chatWindow");
+
+  const userMessage =
+    document.createElement("div");
+
+  userMessage.className =
+    "message outgoing";
+
+  userMessage.textContent =
+    text;
+
+  windowBox.appendChild(userMessage);
+
+  input.value = "";
+
+  chatMessages++;
+
+  setTimeout(()=>{
+
+    const response =
+      document.createElement("div");
+
+    response.className =
+      "message incoming";
+
+    const responses = [
+      "Thanks for your message!",
+      "That's interesting. 👍",
+      "Great! Keep exploring the platform.",
+      "Thanks for trying the demonstration."
+    ];
+
+    response.textContent =
+      responses[
+        Math.floor(Math.random()*responses.length)
+      ];
+
+    windowBox.appendChild(response);
+
+    windowBox.scrollTop =
+      windowBox.scrollHeight;
+
+  },500);
+
+}
+
+
+/* VIDEO DEMO */
+
+function startWatchDemo(){
+
+  const status =
+    document.getElementById("watchStatus");
+
+  let seconds = 10;
+
+  status.textContent =
+    "▶ Demonstration started — 10 seconds";
+
+  const timer =
+    setInterval(()=>{
+
+      seconds--;
+
+      status.textContent =
+        "▶ Demonstration running — "
+        + seconds
+        + " seconds";
+
+      if(seconds <= 0){
+
+        clearInterval(timer);
+
+        status.textContent =
+          "✓ Demonstration completed.";
+
+      }
+
+    },1000);
+
+}
+
+
+/* MUSIC DEMO */
+
+function startMusicDemo(){
+
+  const status =
+    document.getElementById("musicStatus");
+
+  let seconds = 10;
+
+  status.textContent =
+    "🎵 Music demonstration — 10 seconds";
+
+  const timer =
+    setInterval(()=>{
+
+      seconds--;
+
+      status.textContent =
+        "🎵 Playing demonstration — "
+        + seconds
+        + " seconds";
+
+      if(seconds <= 0){
+
+        clearInterval(timer);
+
+        status.textContent =
+          "✓ Music demonstration completed.";
+
+      }
+
+    },1000);
+
+}
+
+
+/* GAME DEMO */
+
+function playGame(){
+
+  const score =
+    document.getElementById("score");
+
+  const status =
+    document.getElementById("gameStatus");
+
+  const user =
+    Math.floor(Math.random()*5);
+
+  const opponent =
+    Math.floor(Math.random()*5);
+
+  score.textContent =
+    user + " - " + opponent;
+
+  if(user > opponent){
+
+    status.textContent =
+      "🏆 Demonstration result: You won!";
+
+  }else if(user < opponent){
+
+    status.textContent =
+      "⚽ Demonstration result: Try again!";
+
+  }else{
+
+    status.textContent =
+      "🤝 Demonstration result: Draw!";
+
+  }
+
+}
+
+
+/* FAQ */
+
+function toggleFaq(button){
+
+  const item =
+    button.parentElement;
+
+  item.classList.toggle("open");
+
+  const symbol =
+    button.querySelector("span");
+
+  symbol.textContent =
+    item.classList.contains("open")
+      ? "−"
+      : "+";
+
+}
+
+
+/* INFORMATION NOTIFICATIONS */
+
+const notices = [
+
+  "Explore available chat activities through your member account.",
+
+  "Video activities may be available through the member dashboard.",
+
+  "Explore music-related activities where available.",
+
+  "Check your member dashboard regularly for available activities.",
+
+  "Referral opportunities may be available depending on your account."
+];
+
+let noticeIndex = 0;
+
+
+function showNotice(){
+
+  const box =
+    document.getElementById("activityNotice");
+
+  const text =
+    document.getElementById("noticeText");
+
+  text.textContent =
+    notices[noticeIndex];
+
+  box.classList.add("show");
+
+  noticeIndex++;
+
+  if(noticeIndex >= notices.length){
+    noticeIndex = 0;
+  }
+
+  setTimeout(()=>{
+
+    box.classList.remove("show");
+
+  },5000);
+
+}
+
+
+window.addEventListener("load",()=>{
+
+  setTimeout(showNotice,4000);
+
+  setInterval(showNotice,11000);
+
+});
+
+
+/* ENTER KEY FOR CHAT */
+
+document.getElementById("chatInput")
+  .addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+
+      sendDemoMessage();
+
     }
 
-    function sendInquiry(e){
-      e.preventDefault();
-      const n=document.getElementById("parentName").value;
-      const s=document.getElementById("studentName").value;
-      const c=document.getElementById("contactInfo").value;
-      const l=document.getElementById("classLevel").value;
-      const msg=document.getElementById("message").value;
-      const text=`Hello Dashian International School.%0A%0AAdmissions Inquiry%0AParent/Guardian: ${encodeURIComponent(n)}%0AStudent: ${encodeURIComponent(s)}%0AClass/Level: ${encodeURIComponent(l)}%0AContact: ${encodeURIComponent(c)}%0AMessage: ${encodeURIComponent(msg)}`;
-      alert("Your inquiry form is ready. Connect it to the school's official email, WhatsApp or backend before launch.");
-    }
+  });
 
-    function sendGeneral(e){
-      e.preventDefault();
-      alert("Your contact form is ready. Connect it to the school's official email or backend before launch.");
-    }
-  </script>
+</script>
+
 </body>
 </html>
