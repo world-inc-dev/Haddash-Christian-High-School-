@@ -1,1227 +1,1530 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Dashan International School | Haddash Christian High School</title>
-  <meta name="description" content="Website concept demo for Dashan International School and Haddash Christian High School in Opuyo, Soroti, Uganda.">
-
-  <style>
-    :root {
-      --navy: #09233f;
-      --blue: #0b4f8a;
-      --sky: #eaf5ff;
-      --gold: #d8a928;
-      --gold-light: #f7e5a3;
-      --white: #ffffff;
-      --dark: #17202a;
-      --text: #526170;
-      --light: #f7f9fc;
-      --border: #e5eaf0;
-      --shadow: 0 15px 45px rgba(9, 35, 63, .10);
-      --radius: 18px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
-
-    .demo-bar {
-      background: #111827;
-      color: #fff;
-      text-align: center;
-      padding: 8px 15px;
-      font-size: 12px;
-      letter-spacing: .2px;
-    }
-
-    .demo-bar strong {
-      color: #f7d76b;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-
-    .brand-logo {
-      width: 45px;
-      height: 45px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--navy), var(--blue));
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 16px;
-    }
-
-    .brand-text strong {
-      display: block;
-      color: var(--navy);
-      font-size: 14px;
-    }
-
-    .brand-text span {
-      font-size: 11px;
-      color: var(--text);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 600;
-      color: #394957;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    .menu-btn {
-      display: none;
-      border: 0;
-      background: var(--navy);
-      color: #fff;
-      width: 43px;
-      height: 43px;
-      border-radius: 10px;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(4,25,46,.96), rgba(4,25,46,.72), rgba(4,25,46,.28)),
-        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-    }
-
-    .hero-content {
-      max-width: 1180px;
-      width: 100%;
-      margin: auto;
-      padding: 80px 20px;
-      color: white;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 7px 13px;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 50px;
-      background: rgba(255,255,255,.10);
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      max-width: 750px;
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1.05;
-      margin-bottom: 20px;
-      letter-spacing: -2px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero p {
-      max-width: 650px;
-      font-size: 18px;
-      color: #e7eef5;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 50px;
-      padding: 0 21px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 14px;
-      border: 1px solid transparent;
-      transition: .25s;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #17202a;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #e6bd40;
-    }
-
-    .btn-outline {
-      border-color: rgba(255,255,255,.55);
-      color: white;
-      background: rgba(255,255,255,.08);
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--navy);
-    }
-
-    .school-cards {
-      max-width: 1180px;
-      margin: -80px auto 0;
-      position: relative;
-      z-index: 3;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .school-card {
-      background: white;
-      padding: 28px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .school-card .number {
-      font-size: 12px;
-      color: var(--blue);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .school-card h3 {
-      color: var(--navy);
-      font-size: 24px;
-      margin: 8px 0;
-    }
-
-    .school-card p {
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .school-card .tag {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 7px 11px;
-      border-radius: 7px;
-      background: var(--sky);
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    section {
-      padding: 90px 20px;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 45px;
-    }
-
-    .section-heading .small-title {
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .section-heading h2 {
-      color: var(--navy);
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
-      color: var(--text);
-      font-size: 16px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 430px;
-      border-radius: 24px;
-      background:
-        linear-gradient(rgba(9,35,63,.15), rgba(9,35,63,.15)),
-        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
-      box-shadow: var(--shadow);
-    }
-
-    .about-copy h3 {
-      color: var(--navy);
-      font-size: 29px;
-      margin-bottom: 15px;
-    }
-
-    .about-copy p {
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-
-    .demo-note {
-      margin-top: 20px;
-      padding: 14px 16px;
-      background: #fff9e7;
-      border-left: 4px solid var(--gold);
-      border-radius: 8px;
-      font-size: 13px;
-      color: #66521a;
-    }
-
-    .programmes {
-      background: var(--light);
-    }
-
-    .programme-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .programme {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      box-shadow: 0 8px 30px rgba(9,35,63,.05);
-    }
-
-    .programme-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      background: var(--sky);
-      color: var(--blue);
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-
-    .programme h3 {
-      color: var(--navy);
-      margin-bottom: 10px;
-      font-size: 23px;
-    }
-
-    .programme p {
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .programme ul {
-      margin: 18px 0 0 18px;
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .admissions {
-      background:
-        linear-gradient(100deg, rgba(9,35,63,.97), rgba(11,79,138,.90)),
-        url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
-      color: white;
-    }
-
-    .admissions .section-heading h2,
-    .admissions .section-heading p {
-      color: white;
-    }
-
-    .admission-box {
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.20);
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 800px;
-    }
-
-    .admission-box p {
-      color: #e6edf4;
-      margin-bottom: 22px;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      padding: 25px 20px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      background: white;
-    }
-
-    .feature-icon {
-      font-size: 27px;
-      margin-bottom: 12px;
-    }
-
-    .feature h3 {
-      color: var(--navy);
-      font-size: 17px;
-      margin-bottom: 7px;
-    }
-
-    .feature p {
-      color: var(--text);
-      font-size: 13px;
-    }
-
-    .gallery {
-      background: var(--light);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      grid-template-rows: 210px 210px;
-      gap: 15px;
-    }
-
-    .gallery-item {
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .gallery-item:first-child {
-      grid-row: span 2;
-      background-image: url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85");
-    }
-
-    .gallery-item:nth-child(2) {
-      background-image: url("https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=85");
-    }
-
-    .gallery-item:nth-child(3) {
-      background-image: url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85");
-    }
-
-    .gallery-item:nth-child(4) {
-      background-image: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=85");
-    }
-
-    .gallery-item:nth-child(5) {
-      background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85");
-    }
-
-    .gallery-label {
-      position: absolute;
-      bottom: 12px;
-      left: 12px;
-      right: 12px;
-      padding: 8px 10px;
-      background: rgba(0,0,0,.62);
-      color: white;
-      border-radius: 7px;
-      font-size: 11px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 30px;
-    }
-
-    .contact-card {
-      background: var(--light);
-      padding: 30px;
-      border-radius: 20px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 23px;
-    }
-
-    .contact-icon {
-      width: 43px;
-      height: 43px;
-      border-radius: 10px;
-      background: var(--sky);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: var(--navy);
-      font-size: 14px;
-    }
-
-    .contact-item span {
-      color: var(--text);
-      font-size: 13px;
-    }
-
-    .contact-form {
-      border: 1px solid var(--border);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .field {
-      margin-bottom: 16px;
-    }
-
-    .field label {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .field input,
-    .field textarea,
-    .field select {
-      width: 100%;
-      border: 1px solid #dce3ea;
-      border-radius: 9px;
-      padding: 13px;
-      font-family: inherit;
-      outline: none;
-      font-size: 14px;
-      background: white;
-    }
-
-    .field textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus {
-      border-color: var(--blue);
-    }
-
-    .form-message {
-      display: none;
-      margin-top: 14px;
-      padding: 12px;
-      background: #eef9f1;
-      color: #25643b;
-      border-radius: 8px;
-      font-size: 13px;
-    }
-
-    footer {
-      background: #061a2d;
-      color: white;
-      padding: 55px 20px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1180px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
-      padding-bottom: 35px;
-    }
-
-    .footer-brand h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .footer-brand p,
-    footer li,
-    footer a {
-      color: #b9c7d4;
-      font-size: 13px;
-    }
-
-    footer h4 {
-      margin-bottom: 13px;
-      font-size: 14px;
-    }
-
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
-      margin-bottom: 8px;
-    }
-
-    .copyright {
-      max-width: 1180px;
-      margin: auto;
-      border-top: 1px solid rgba(255,255,255,.10);
-      padding-top: 20px;
-      text-align: center;
-      color: #91a1b1;
-      font-size: 11px;
-    }
-
-    .floating {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-    }
-
-    .float-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      box-shadow: 0 8px 25px rgba(0,0,0,.20);
-      font-size: 22px;
-    }
-
-    .whatsapp {
-      background: #25d366;
-    }
-
-    .call {
-      background: var(--blue);
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        left: 15px;
-        right: 15px;
-        top: 72px;
-        background: white;
-        border-radius: 13px;
-        padding: 15px;
-        box-shadow: var(--shadow);
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .features {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 220px 180px 180px;
-      }
-
-      .gallery-item:first-child {
-        grid-row: span 2;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .hero {
-        min-height: 590px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .school-cards,
-      .programme-grid,
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .school-cards {
-        margin-top: -50px;
-      }
-
-      section {
-        padding: 65px 17px;
-      }
-
-      .about-image {
-        min-height: 300px;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 180px 180px 180px;
-      }
-
-      .gallery-item:first-child {
-        grid-column: span 2;
-        grid-row: auto;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashan International School & Haddash Christian High School | Opuyo, Soroti</title>
+
+<meta name="description"
+content="Concept website for Dashan International School and Haddash Christian High School in Opuyo, Soroti, Uganda.">
+
+<style>
+:root{
+  --navy:#071b33;
+  --navy2:#0d2948;
+  --gold:#c9a45c;
+  --gold2:#e0bd72;
+  --cream:#f7f4ed;
+  --white:#ffffff;
+  --text:#243447;
+  --muted:#6b7785;
+  --line:#e5e1d8;
+  --shadow:0 18px 50px rgba(7,27,51,.12);
+  --radius:18px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.7;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* DEMO BAR */
+.demo-bar{
+  background:#102f50;
+  color:#fff;
+  text-align:center;
+  padding:8px 15px;
+  font-size:12px;
+  letter-spacing:.3px;
+}
+
+.demo-bar strong{
+  color:var(--gold2);
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--navy);
+  color:#dce5ee;
+  font-size:13px;
+}
+
+.topbar-inner{
+  min-height:38px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.top-links{
+  display:flex;
+  gap:20px;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid rgba(0,0,0,.07);
+}
+
+.nav{
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--navy);
+  color:var(--gold2);
+  display:grid;
+  place-items:center;
+  font-family:Georgia,serif;
+  font-weight:bold;
+  font-size:18px;
+  border:2px solid var(--gold);
+}
+
+.logo-text strong{
+  display:block;
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:18px;
+  line-height:1.15;
+}
+
+.logo-text span{
+  display:block;
+  color:#788392;
+  font-size:10px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-top:4px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:27px;
+}
+
+.nav-links a{
+  font-size:13px;
+  font-weight:600;
+  color:#27384a;
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:var(--gold);
+}
+
+.nav-admissions{
+  background:var(--gold);
+  color:var(--navy)!important;
+  padding:12px 18px;
+  border-radius:3px;
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  color:var(--navy);
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(4,18,35,.95) 0%,rgba(4,18,35,.78) 43%,rgba(4,18,35,.18) 100%),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content{
+  max-width:720px;
+  padding:90px 0;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.eyebrow:before{
+  content:"";
+  width:38px;
+  height:1px;
+  background:var(--gold2);
+}
+
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(42px,6vw,74px);
+  line-height:1.03;
+  font-weight:500;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--gold2);
+}
+
+.hero p{
+  max-width:650px;
+  color:#e7edf3;
+  font-size:17px;
+  margin-bottom:34px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 24px;
+  border-radius:3px;
+  font-size:13px;
+  font-weight:bold;
+  transition:.25s;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:var(--navy);
+}
+
+.btn-gold:hover{
+  background:var(--gold2);
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border-color:rgba(255,255,255,.6);
+  color:#fff;
+  background:rgba(255,255,255,.04);
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:var(--navy);
+}
+
+/* QUICK STRIP */
+.quick-strip{
+  background:var(--navy);
+  color:#fff;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.quick-item{
+  padding:25px 22px;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+
+.quick-item:last-child{
+  border-right:0;
+}
+
+.quick-item small{
+  color:#aab8c7;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  font-size:10px;
+}
+
+.quick-item strong{
+  display:block;
+  margin-top:4px;
+  font-family:Georgia,serif;
+  font-size:18px;
+}
+
+/* SECTION */
+section{
+  padding:95px 0;
+}
+
+.section-head{
+  max-width:700px;
+  margin-bottom:50px;
+}
+
+.section-head.center{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.section-kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:bold;
+  font-size:11px;
+  margin-bottom:12px;
+}
+
+.section-title{
+  color:var(--navy);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.15;
+  font-weight:500;
+  margin-bottom:16px;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* SCHOOL INTRO */
+.school-intro{
+  background:var(--cream);
+}
+
+.school-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.school-card{
+  position:relative;
+  min-height:430px;
+  overflow:hidden;
+  border-radius:5px;
+  box-shadow:var(--shadow);
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
+}
+
+.school-card:first-child{
+  background:
+    linear-gradient(0deg,rgba(3,19,36,.95),rgba(3,19,36,.1)),
+    url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80")
+    center/cover;
+}
+
+.school-card:last-child{
+  background:
+    linear-gradient(0deg,rgba(3,19,36,.95),rgba(3,19,36,.08)),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80")
+    center/cover;
+}
+
+.school-content{
+  padding:34px;
+}
+
+.school-tag{
+  display:inline-block;
+  color:var(--gold2);
+  border:1px solid rgba(224,189,114,.6);
+  padding:6px 10px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.3px;
+  margin-bottom:15px;
+}
+
+.school-content h3{
+  font-family:Georgia,serif;
+  font-size:31px;
+  font-weight:500;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+
+.school-content p{
+  color:#dce5ee;
+  font-size:14px;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:75px;
+  align-items:center;
+}
+
+.about-photo{
+  min-height:510px;
+  background:
+    linear-gradient(0deg,rgba(7,27,51,.18),rgba(7,27,51,.02)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  border-radius:5px;
+  position:relative;
+}
+
+.photo-caption{
+  position:absolute;
+  bottom:25px;
+  left:25px;
+  right:25px;
+  background:rgba(7,27,51,.9);
+  color:#fff;
+  padding:18px;
+  border-left:3px solid var(--gold);
+}
+
+.photo-caption strong{
+  display:block;
+  font-family:Georgia,serif;
+}
+
+.photo-caption span{
+  color:#bdc8d4;
+  font-size:12px;
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.about-points{
+  margin:30px 0;
+  display:grid;
+  gap:15px;
+}
+
+.about-point{
+  display:flex;
+  gap:13px;
+}
+
+.check{
+  width:27px;
+  height:27px;
+  flex:none;
+  border-radius:50%;
+  background:#f1e8d3;
+  color:#85631d;
+  display:grid;
+  place-items:center;
+  font-weight:bold;
+}
+
+/* PROGRAMMES */
+.programmes{
+  background:#f8f8f7;
+}
+
+.programme-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.programme{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:35px;
+  position:relative;
+  transition:.25s;
+}
+
+.programme:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.programme-number{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:38px;
+  position:absolute;
+  top:25px;
+  right:28px;
+}
+
+.programme h3{
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:25px;
+  margin-bottom:12px;
+  padding-right:50px;
+}
+
+.programme p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.programme ul{
+  margin-top:20px;
+  padding-left:17px;
+  color:#566474;
+  font-size:13px;
+}
+
+/* ADMISSIONS */
+.admissions{
+  background:var(--navy);
+  color:#fff;
+}
+
+.admissions .section-title{
+  color:#fff;
+}
+
+.admissions .section-head p{
+  color:#b7c4d2;
+}
+
+.admissions-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.steps{
+  display:grid;
+  gap:20px;
+}
+
+.step{
+  display:flex;
+  gap:18px;
+  padding:22px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.step-number{
+  width:38px;
+  height:38px;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  flex:none;
+  font-weight:bold;
+}
+
+.step h4{
+  margin-bottom:4px;
+}
+
+.step p{
+  color:#aebdcb;
+  font-size:13px;
+}
+
+.admission-box{
+  background:#fff;
+  color:var(--text);
+  padding:35px;
+  border-radius:4px;
+}
+
+.admission-box h3{
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.admission-box p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:22px;
+}
+
+.notice{
+  background:#f6f0e3;
+  border-left:3px solid var(--gold);
+  padding:15px;
+  font-size:12px;
+  color:#6a5b3e;
+  margin-bottom:20px;
+}
+
+/* FACILITIES */
+.facilities-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.facility{
+  min-height:250px;
+  position:relative;
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  border-radius:4px;
+}
+
+.facility:nth-child(1){
+  background:
+    linear-gradient(0deg,rgba(5,22,40,.9),rgba(5,22,40,.05)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80") center/cover;
+}
+
+.facility:nth-child(2){
+  background:
+    linear-gradient(0deg,rgba(5,22,40,.9),rgba(5,22,40,.05)),
+    url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80") center/cover;
+}
+
+.facility:nth-child(3){
+  background:
+    linear-gradient(0deg,rgba(5,22,40,.9),rgba(5,22,40,.05)),
+    url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80") center/cover;
+}
+
+.facility:nth-child(4){
+  background:
+    linear-gradient(0deg,rgba(5,22,40,.9),rgba(5,22,40,.05)),
+    url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80") center/cover;
+}
+
+.facility:nth-child(5){
+  background:
+    linear-gradient(0deg,rgba(5,22,40,.9),rgba(5,22,40,.05)),
+    url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80") center/cover;
+}
+
+.facility:nth-child(6){
+  background:
+    linear-gradient(0deg,rgba(5,22,40,.9),rgba(5,22,40,.05)),
+    url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80") center/cover;
+}
+
+.facility-content{
+  padding:23px;
+}
+
+.facility h3{
+  font-family:Georgia,serif;
+  font-size:21px;
+}
+
+.facility p{
+  font-size:12px;
+  color:#d3dde6;
+}
+
+/* LIFE */
+.life{
+  background:var(--cream);
+}
+
+.life-grid{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:20px;
+}
+
+.life-main{
+  min-height:500px;
+  background:
+    linear-gradient(0deg,rgba(7,27,51,.9),rgba(7,27,51,.05)),
+    url("https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
+  padding:35px;
+}
+
+.life-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:20px;
+}
+
+.life-small{
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
+  padding:25px;
+}
+
+.life-small:nth-child(1){
+  background:
+    linear-gradient(0deg,rgba(7,27,51,.88),rgba(7,27,51,.05)),
+    url("https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.life-small:nth-child(2){
+  background:
+    linear-gradient(0deg,rgba(7,27,51,.88),rgba(7,27,51,.05)),
+    url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.life h3{
+  font-family:Georgia,serif;
+  font-size:27px;
+}
+
+/* NEWS */
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.news-card{
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+}
+
+.news-img{
+  height:190px;
+  background-size:cover;
+  background-position:center;
+}
+
+.news-card:nth-child(1) .news-img{
+  background-image:url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80");
+}
+
+.news-card:nth-child(2) .news-img{
+  background-image:url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80");
+}
+
+.news-card:nth-child(3) .news-img{
+  background-image:url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80");
+}
+
+.news-content{
+  padding:25px;
+}
+
+.news-date{
+  color:var(--gold);
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:1.4px;
+  font-weight:bold;
+}
+
+.news-content h3{
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:21px;
+  margin:10px 0;
+}
+
+.news-content p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CTA */
+.cta{
+  padding:75px 0;
+  background:
+    linear-gradient(90deg,rgba(7,27,51,.96),rgba(7,27,51,.75)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=80")
+    center/cover;
+  color:#fff;
+}
+
+.cta-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+}
+
+.cta h2{
+  font-family:Georgia,serif;
+  font-size:clamp(32px,4vw,48px);
+  font-weight:500;
+  line-height:1.1;
+}
+
+.cta p{
+  color:#bdc9d5;
+  margin-top:10px;
+  max-width:650px;
+}
+
+/* CONTACT */
+.contact{
+  background:#f8f8f7;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:50px;
+}
+
+.contact-details{
+  display:grid;
+  gap:18px;
+}
+
+.contact-item{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:22px;
+}
+
+.contact-item small{
+  display:block;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:10px;
+  margin-bottom:4px;
+}
+
+.contact-item strong{
+  color:var(--navy);
+}
+
+.contact-form{
+  background:#fff;
+  padding:35px;
+  box-shadow:var(--shadow);
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  margin-bottom:15px;
+}
+
+.field label{
+  display:block;
+  color:#415163;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:1px solid #d9dde2;
+  padding:13px;
+  font:inherit;
+  outline:none;
+  background:#fff;
+}
+
+.field textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--gold);
+}
+
+/* FOOTER */
+footer{
+  background:#041426;
+  color:#b8c4d0;
+  padding:65px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+footer h3{
+  color:#fff;
+  font-family:Georgia,serif;
+  font-size:19px;
+  margin-bottom:17px;
+}
+
+footer p,
+footer li{
+  font-size:13px;
+}
+
+footer ul{
+  list-style:none;
+  display:grid;
+  gap:8px;
+}
+
+footer a:hover{
+  color:var(--gold2);
+}
+
+.footer-bottom{
+  margin-top:45px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:11px;
+}
+
+.footer-brand{
+  color:var(--gold2);
+}
+
+/* FLOATING CONTACT */
+.float-contact{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999;
+  display:grid;
+  gap:9px;
+}
+
+.float-contact a{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.whatsapp{
+  background:#159447;
+}
+
+.call{
+  background:var(--navy);
+}
+
+/* MOBILE */
+@media(max-width:950px){
+
+  .nav-links{
+    position:absolute;
+    left:0;
+    right:0;
+    top:84px;
+    background:#fff;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    padding:20px 5%;
+    border-top:1px solid var(--line);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px 0;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .topbar-inner{
+    justify-content:center;
+  }
+
+  .top-links{
+    display:none;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .quick-item:nth-child(2){
+    border-right:0;
+  }
+
+  .quick-item:nth-child(3),
+  .quick-item:nth-child(4){
+    border-top:1px solid rgba(255,255,255,.1);
+  }
+
+  .about-grid,
+  .admissions-grid{
+    grid-template-columns:1fr;
+  }
+
+  .programme-grid{
+    grid-template-columns:1fr;
+  }
+
+  .facilities-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .news-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .hero-content{
+    padding:70px 0;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .school-grid,
+  .facilities-grid,
+  .life-grid{
+    grid-template-columns:1fr;
+  }
+
+  .life-side{
+    grid-template-rows:250px 250px;
+  }
+
+  .life-main{
+    min-height:380px;
+  }
+
+  .cta-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+  .topbar{
+    display:none;
+  }
+
+  .quick-item{
+    padding:18px 14px;
+  }
+
+  .quick-item strong{
+    font-size:15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- DEMO NOTICE -->
-  <div class="demo-bar">
-    <strong>WEBSITE CONCEPT DEMO</strong> — School information, contacts, fees and images should be replaced with official details.
+<!-- DEMO NOTICE -->
+<div class="demo-bar">
+  <strong>WEBSITE CONCEPT / DEMO</strong> — Information, images, contacts and dates on this page should be replaced with the schools' official details before launch.
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div>📍 Opuyo, Soroti, Uganda</div>
+
+    <div class="top-links">
+      <span>Admissions Information</span>
+      <span>School Enquiries</span>
+    </div>
   </div>
+</div>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav">
+<!-- HEADER -->
+<header>
+  <div class="container nav">
 
-      <a href="#home" class="brand">
-        <div class="brand-logo">D&H</div>
-        <div class="brand-text">
-          <strong>Dashan & Haddash</strong>
-          <span>Opuyo, Soroti, Uganda</span>
-        </div>
+    <a href="#home" class="logo">
+      <div class="logo-mark">D&H</div>
+
+      <div class="logo-text">
+        <strong>Dashan & Haddash</strong>
+        <span>Education • Excellence • Character</span>
+      </div>
+    </a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#schools">Schools</a>
+      <a href="#academics">Academics</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#facilities">Campus</a>
+      <a href="#life">School Life</a>
+      <a href="#news">News</a>
+      <a href="#contact" class="nav-admissions">Enquire Now</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="container hero-content">
+
+    <div class="eyebrow">A place to learn, grow & thrive</div>
+
+    <h1>
+      Inspiring the next generation of <span>leaders.</span>
+    </h1>
+
+    <p>
+      A premium digital home for Dashan International School and
+      Haddash Christian High School — bringing two educational
+      pathways together in Opuyo, Soroti.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#admissions" class="btn btn-gold">
+        Request Admissions Information
       </a>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#academics">Academics</a>
-        <a href="#admissions">Admissions</a>
-        <a href="#facilities">Facilities</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-
-      <span class="eyebrow">A WEBSITE CONCEPT FOR TWO EDUCATIONAL PATHWAYS</span>
-
-      <h1>
-        Inspiring <span>Excellence.</span><br>
-        Building Tomorrow.
-      </h1>
-
-      <p>
-        A modern digital home designed to help parents discover,
-        understand and connect with Dashan International School and
-        Haddash Christian High School.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#admissions" class="btn btn-primary">
-          Request Admissions Information →
-        </a>
-
-        <a href="#schools" class="btn btn-outline">
-          Explore Our Schools
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SCHOOL CARDS -->
-  <div class="school-cards" id="schools">
-
-    <div class="school-card">
-      <span class="number">01 · International Pathway</span>
-      <h3>Dashan International School</h3>
-      <p>
-        A proposed digital presentation for a school offering
-        the Cambridge International Curriculum.
-      </p>
-      <span class="tag">Cambridge International Curriculum</span>
-    </div>
-
-    <div class="school-card">
-      <span class="number">02 · National Pathway</span>
-      <h3>Haddash Christian High School</h3>
-      <p>
-        A proposed digital presentation for a school following
-        Uganda's national curriculum pathway.
-      </p>
-      <span class="tag">Uganda National Curriculum</span>
+      <a href="#schools" class="btn btn-outline">
+        Explore Our Schools
+      </a>
     </div>
 
   </div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
+</section>
 
-      <div class="about-grid">
+<!-- QUICK INFO -->
+<div class="quick-strip">
+  <div class="container quick-grid">
 
-        <div class="about-image"></div>
-
-        <div class="about-copy">
-
-          <div class="section-heading">
-            <div class="small-title">About the Institutions</div>
-            <h2>One digital home for your school community.</h2>
-          </div>
-
-          <h3>Education. Character. Opportunity.</h3>
-
-          <p>
-            This website concept is designed to give parents,
-            students and visitors a clear way to discover the
-            educational opportunities available at the institutions.
-          </p>
-
-          <p>
-            The final website can be customized with the school's
-            real history, leadership, academic programmes,
-            facilities, achievements, school calendar, news and
-            admissions information.
-          </p>
-
-          <div class="demo-note">
-            <strong>Demo information:</strong>
-            This section contains proposed website wording and is
-            not an official statement from the school.
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="quick-item">
+      <small>Location</small>
+      <strong>Opuyo, Soroti</strong>
     </div>
-  </section>
 
-  <!-- ACADEMICS -->
-  <section class="programmes" id="academics">
+    <div class="quick-item">
+      <small>International Pathway</small>
+      <strong>Cambridge Curriculum</strong>
+    </div>
 
-    <div class="container">
+    <div class="quick-item">
+      <small>National Pathway</small>
+      <strong>Uganda Curriculum</strong>
+    </div>
 
-      <div class="section-heading">
-        <div class="small-title">Academic Programmes</div>
-        <h2>Different pathways. A focus on learning.</h2>
-        <p>
-          The final website can present the exact subjects,
-          classes and programmes offered by each institution.
-        </p>
-      </div>
+    <div class="quick-item">
+      <small>Admissions</small>
+      <strong>Enquire Today</strong>
+    </div>
 
-      <div class="programme-grid">
+  </div>
+</div>
 
-        <div class="programme">
+<!-- SCHOOLS -->
+<section class="school-intro" id="schools">
 
-          <div class="programme-icon">🌍</div>
+  <div class="container">
 
-          <h3>Dashan International School</h3>
+    <div class="section-head center">
+      <div class="section-kicker">Our Schools</div>
+
+      <h2 class="section-title">
+        Two pathways. One educational community.
+      </h2>
+
+      <p>
+        This concept brings the two institutions together under one
+        professional digital experience while allowing each school
+        to maintain its own identity and academic pathway.
+      </p>
+    </div>
+
+    <div class="school-grid">
+
+      <article class="school-card">
+
+        <div class="school-content">
+
+          <span class="school-tag">
+            International School
+          </span>
+
+          <h3>
+            Dashan International School
+          </h3>
 
           <p>
             Cambridge International Curriculum pathway.
-            Official programme details can be added after
-            confirmation by the school.
+            Official programme details, year groups, admissions
+            requirements and school information can be added here.
           </p>
-
-          <ul>
-            <li>Curriculum information</li>
-            <li>Subjects and learning areas</li>
-            <li>Academic stages</li>
-            <li>Assessment information</li>
-          </ul>
 
         </div>
 
-        <div class="programme">
+      </article>
 
-          <div class="programme-icon">📚</div>
+      <article class="school-card">
 
-          <h3>Haddash Christian High School</h3>
+        <div class="school-content">
+
+          <span class="school-tag">
+            National Curriculum
+          </span>
+
+          <h3>
+            Haddash Christian High School
+          </h3>
 
           <p>
             Uganda National Curriculum pathway.
-            Exact classes, subjects and examination details
-            can be added after confirmation.
+            Official academic programmes, departments and
+            admissions information can be added here.
           </p>
-
-          <ul>
-            <li>Curriculum information</li>
-            <li>Subjects and combinations</li>
-            <li>Academic stages</li>
-            <li>Examination information</li>
-          </ul>
 
         </div>
 
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-photo">
+
+      <div class="photo-caption">
+        <strong>Education with purpose</strong>
+        <span>Concept photography — replace with official campus photography.</span>
       </div>
 
     </div>
 
-  </section>
+    <div class="about-text">
 
-  <!-- WHY CHOOSE US -->
-  <section>
+      <div class="section-kicker">About the Schools</div>
 
-    <div class="container">
+      <h2 class="section-title">
+        A modern platform for a growing educational community.
+      </h2>
 
-      <div class="section-heading">
-        <div class="small-title">Why Choose Us</div>
-        <h2>A school website built around what parents need.</h2>
-        <p>
-          These are proposed content areas for the final website
-          and should be updated with the school's confirmed information.
-        </p>
-      </div>
+      <p>
+        The proposed website is designed to give parents, students,
+        visitors and prospective families one clear place to discover
+        the schools, understand their academic pathways and contact
+        the administration.
+      </p>
 
-      <div class="features">
+      <p>
+        Rather than presenting the institutions as a basic school
+        directory, the website creates a premium digital experience
+        that reflects the importance of education, community and
+        student development.
+      </p>
 
-        <div class="feature">
-          <div class="feature-icon">🎓</div>
-          <h3>Academic Excellence</h3>
-          <p>
-            Present the school's academic programmes,
-            curriculum and learning opportunities.
-          </p>
+      <div class="about-points">
+
+        <div class="about-point">
+          <div class="check">✓</div>
+          <div>
+            <strong>Clear academic pathways</strong>
+            <p>Separate information for Cambridge and Uganda curriculum programmes.</p>
+          </div>
         </div>
 
-        <div class="feature">
-          <div class="feature-icon">🌱</div>
-          <h3>Student Development</h3>
-          <p>
-            Showcase activities supporting students'
-            personal and academic development.
-          </p>
+        <div class="about-point">
+          <div class="check">✓</div>
+          <div>
+            <strong>Parent-friendly admissions</strong>
+            <p>Important admissions information can be accessed from any device.</p>
+          </div>
         </div>
 
-        <div class="feature">
-          <div class="feature-icon">🏫</div>
-          <h3>Learning Environment</h3>
-          <p>
-            Give parents a visual introduction to the
-            school's learning environment and facilities.
-          </p>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">🤝</div>
-          <h3>Parent Connection</h3>
-          <p>
-            Make it easier for prospective parents to
-            ask questions and begin the admissions process.
-          </p>
+        <div class="about-point">
+          <div class="check">✓</div>
+          <div>
+            <strong>Professional school presence</strong>
+            <p>A polished online identity for prospective families and the wider community.</p>
+          </div>
         </div>
 
       </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Talk to the School
+      </a>
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- ADMISSIONS -->
-  <section class="admissions" id="admissions">
+</section>
 
-    <div class="container">
+<!-- ACADEMICS -->
+<section class="programmes" id="academics">
 
-      <div class="section-heading">
-        <div class="small-title">Admissions</div>
-        <h2>Take the next step toward your child's education.</h2>
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">Academic Pathways</div>
+
+      <h2 class="section-title">
+        Education pathways designed for different journeys.
+      </h2>
+
+      <p>
+        The final website can contain the school's official year groups,
+        subjects, departments, examination information and curriculum details.
+      </p>
+
+    </div>
+
+    <div class="programme-grid">
+
+      <article class="programme">
+
+        <div class="programme-number">01</div>
+
+        <h3>Cambridge International Curriculum</h3>
+
         <p>
-          A simple admissions section can help prospective parents
-          understand how to make enquiries and begin the application process.
+          Dedicated information area for Dashan International School's
+          international curriculum pathway.
         </p>
+
+        <ul>
+          <li>Official year groups — to be supplied</li>
+          <li>Subjects — to be supplied</li>
+          <li>Assessment information — to be supplied</li>
+          <li>Academic calendar — to be supplied</li>
+        </ul>
+
+      </article>
+
+      <article class="programme">
+
+        <div class="programme-number">02</div>
+
+        <h3>Uganda National Curriculum</h3>
+
+        <p>
+          Dedicated information area for Haddash Christian High School's
+          national curriculum pathway.
+        </p>
+
+        <ul>
+          <li>Official classes — to be supplied</li>
+          <li>Subjects — to be supplied</li>
+          <li>Examination information — to be supplied</li>
+          <li>Academic calendar — to be supplied</li>
+        </ul>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ADMISSIONS -->
+<section class="admissions" id="admissions">
+
+  <div class="container">
+
+    <div class="admissions-grid">
+
+      <div>
+
+        <div class="section-head">
+
+          <div class="section-kicker">Admissions</div>
+
+          <h2 class="section-title">
+            Start your child's journey with us.
+          </h2>
+
+          <p>
+            The final admissions page can guide parents from their
+            first enquiry through application and school visit.
+          </p>
+
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Make an enquiry</h4>
+              <p>Parents contact the school for current admissions information.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>Choose the pathway</h4>
+              <p>Explore the Cambridge or Uganda National Curriculum pathway.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>Submit an application</h4>
+              <p>Official application requirements can be published here.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Visit the school</h4>
+              <p>Add the school's official visit and interview process here.</p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
       <div class="admission-box">
 
+        <h3>Request Admissions Information</h3>
+
         <p>
-          Interested parents can request information about
-          admissions, available classes, requirements, fees,
-          school visits and other important details.
+          Leave an enquiry and the school administration can
+          respond with current admissions requirements.
         </p>
 
-        <a href="#contact" class="btn btn-primary">
-          Request Admissions Information →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FACILITIES -->
-  <section class="gallery" id="facilities">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <div class="small-title">Facilities & School Life</div>
-        <h2>Show parents what life at school looks like.</h2>
-        <p>
-          Replace the demonstration images below with real,
-          high-quality photographs of the school.
-        </p>
-      </div>
-
-      <div class="gallery-grid">
-
-        <div class="gallery-item">
-          <span class="gallery-label">
-            Demo image — School learning environment
-          </span>
+        <div class="notice">
+          <strong>Demo:</strong> This form currently demonstrates
+          the website experience. Connect it to the school's official
+          email, WhatsApp or admissions system before launch.
         </div>
 
-        <div class="gallery-item">
-          <span class="gallery-label">
-            Demo image — Classroom
-          </span>
-        </div>
-
-        <div class="gallery-item">
-          <span class="gallery-label">
-            Demo image — Student activities
-          </span>
-        </div>
-
-        <div class="gallery-item">
-          <span class="gallery-label">
-            Demo image — School life
-          </span>
-        </div>
-
-        <div class="gallery-item">
-          <span class="gallery-label">
-            Demo image — Learning
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SCHOOL LIFE -->
-  <section>
-
-    <div class="container">
-
-      <div class="section-heading">
-        <div class="small-title">School Life</div>
-        <h2>More than the classroom.</h2>
-        <p>
-          The final website can showcase approved information
-          about clubs, sports, events, student activities,
-          leadership and community engagement.
-        </p>
-      </div>
-
-      <div class="programme-grid">
-
-        <div class="programme">
-          <div class="programme-icon">⚽</div>
-          <h3>Sports & Activities</h3>
-          <p>
-            Showcase approved sporting activities,
-            clubs and extracurricular opportunities.
-          </p>
-        </div>
-
-        <div class="programme">
-          <div class="programme-icon">🎭</div>
-          <h3>Events & Community</h3>
-          <p>
-            Publish school events, announcements,
-            celebrations and community activities.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <div class="small-title">Get in Touch</div>
-        <h2>Let's start the conversation.</h2>
-        <p>
-          Prospective parents can use this section to request
-          admissions information or ask questions.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="contact-card">
-
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div>
-              <strong>Location</strong>
-              <span>Opuyo, Soroti, Uganda</span>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">🏫</div>
-            <div>
-              <strong>Institutions</strong>
-              <span>
-                Dashan International School<br>
-                Haddash Christian High School
-              </span>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">📞</div>
-            <div>
-              <strong>Phone</strong>
-              <span>Demo contact — replace with official number</span>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <div>
-              <strong>Email</strong>
-              <span>Demo email — replace with official email</span>
-            </div>
-          </div>
-
-          <div class="demo-note">
-            <strong>Important:</strong>
-            Contact details shown here are placeholders for this
-            demonstration and should be replaced by the school.
-          </div>
-
-        </div>
-
-        <form class="contact-form" onsubmit="submitDemo(event)">
+        <form id="admissionForm">
 
           <div class="form-row">
 
@@ -1232,7 +1535,7 @@
 
             <div class="field">
               <label>Phone Number</label>
-              <input type="tel" placeholder="Your phone number" required>
+              <input type="tel" placeholder="Phone number" required>
             </div>
 
           </div>
@@ -1245,4 +1548,502 @@
               <option>Dashan International School</option>
               <option>Haddash Christian High School</option>
             </select>
+
           </div>
+
+          <div class="field">
+            <label>Message</label>
+
+            <textarea
+              placeholder="Tell us what information you would like..."
+              required
+            ></textarea>
+
+          </div>
+
+          <button class="btn btn-gold" type="submit">
+            Send Enquiry
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">Campus</div>
+
+      <h2 class="section-title">
+        Give parents a window into school life.
+      </h2>
+
+      <p>
+        Replace these concept images with real photographs of the
+        schools, classrooms, laboratories, sports areas, library
+        and other facilities.
+      </p>
+
+    </div>
+
+    <div class="facilities-grid">
+
+      <div class="facility">
+        <div class="facility-content">
+          <h3>Learning Spaces</h3>
+          <p>Replace with official classroom photographs.</p>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-content">
+          <h3>Science & Technology</h3>
+          <p>Replace with official laboratory photographs.</p>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-content">
+          <h3>Sports & Recreation</h3>
+          <p>Show the school's sporting environment.</p>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-content">
+          <h3>Student Community</h3>
+          <p>Show students participating in school activities.</p>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-content">
+          <h3>Campus</h3>
+          <p>Feature an official campus overview.</p>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-content">
+          <h3>Library & Reading</h3>
+          <p>Highlight learning resources available to students.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCHOOL LIFE -->
+<section class="life" id="life">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-kicker">Beyond the Classroom</div>
+
+      <h2 class="section-title">
+        School life is more than lessons.
+      </h2>
+
+      <p>
+        A modern school website should help prospective families
+        understand the wider student experience.
+      </p>
+
+    </div>
+
+    <div class="life-grid">
+
+      <div class="life-main">
+        <div>
+          <h3>Learning, leadership & community</h3>
+          <p>
+            Use this area for official information about clubs,
+            leadership, sports, cultural activities and student events.
+          </p>
+        </div>
+      </div>
+
+      <div class="life-side">
+
+        <div class="life-small">
+          <div>
+            <h3>Student Activities</h3>
+            <p>Clubs, sports and creative activities.</p>
+          </div>
+        </div>
+
+        <div class="life-small">
+          <div>
+            <h3>Community</h3>
+            <p>Celebrating students, families and school events.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- NEWS -->
+<section id="news">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-kicker">Latest Updates</div>
+
+      <h2 class="section-title">
+        News & Events
+      </h2>
+
+      <p>
+        Once launched, the administration can use this section for
+        school announcements, events, achievements and important dates.
+      </p>
+
+    </div>
+
+    <div class="news-grid">
+
+      <article class="news-card">
+
+        <div class="news-img"></div>
+
+        <div class="news-content">
+
+          <div class="news-date">School News</div>
+
+          <h3>Welcome to the new school website</h3>
+
+          <p>
+            A future article area for official announcements
+            and school communications.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="news-card">
+
+        <div class="news-img"></div>
+
+        <div class="news-content">
+
+          <div class="news-date">Admissions</div>
+
+          <h3>Admissions information</h3>
+
+          <p>
+            Publish official application dates, requirements
+            and important admissions notices here.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="news-card">
+
+        <div class="news-img"></div>
+
+        <div class="news-content">
+
+          <div class="news-date">School Life</div>
+
+          <h3>Upcoming school activities</h3>
+
+          <p>
+            Share official events, student activities,
+            celebrations and community updates.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+  <div class="container cta-inner">
+
+    <div>
+
+      <h2>
+        Looking for the right school?
+      </h2>
+
+      <p>
+        Explore the two academic pathways and contact the school
+        administration for official admissions information.
+      </p>
+
+    </div>
+
+    <a href="#contact" class="btn btn-gold">
+      Contact the School
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-kicker">Contact</div>
+
+      <h2 class="section-title">
+        We'd be happy to hear from you.
+      </h2>
+
+      <p>
+        Official school contact details can be inserted here before
+        the website goes live.
+      </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-details">
+
+        <div class="contact-item">
+          <small>Location</small>
+          <strong>Opuyo, Soroti, Uganda</strong>
+        </div>
+
+        <div class="contact-item">
+          <small>Phone</small>
+          <strong>Official school number — to be added</strong>
+        </div>
+
+        <div class="contact-item">
+          <small>Email</small>
+          <strong>Official school email — to be added</strong>
+        </div>
+
+        <div class="contact-item">
+          <small>WhatsApp</small>
+          <strong>Official WhatsApp number — to be added</strong>
+        </div>
+
+      </div>
+
+      <div class="contact-form">
+
+        <h3 style="font-family:Georgia,serif;color:#071b33;font-size:28px;margin-bottom:20px;">
+          Send an Enquiry
+        </h3>
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <div class="field">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="field">
+              <label>Phone</label>
+              <input type="tel" placeholder="Your phone number" required>
+            </div>
+
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="Your email address">
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea placeholder="How can we help?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="logo" style="margin-bottom:18px;">
+
+          <div class="logo-mark">D&H</div>
+
+          <div class="logo-text">
+            <strong style="color:#fff;">Dashan & Haddash</strong>
+            <span style="color:#9baaba;">
+              Education • Excellence • Character
+            </span>
+          </div>
+
+        </div>
+
+        <p>
+          Concept website for Dashan International School and
+          Haddash Christian High School, Opuyo, Soroti.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Schools</h3>
+
+        <ul>
+          <li><a href="#schools">Dashan International School</a></li>
+          <li><a href="#schools">Haddash Christian High School</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#facilities">Campus</a></li>
+          <li><a href="#news">News & Events</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <ul>
+          <li>Opuyo, Soroti, Uganda</li>
+          <li>School phone — to be added</li>
+          <li>School email — to be added</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span> Dashan International School &
+        Haddash Christian High School.
+      </span>
+
+      <span>
+        Website concept by
+        <span class="footer-brand">BridanX Tech LLC</span>
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- FLOATING CONTACT -->
+<div class="float-contact">
+
+  <a href="#contact" class="whatsapp" aria-label="WhatsApp">
+    ✆
+  </a>
+
+  <a href="#contact" class="call" aria-label="Contact">
+    ☎
+  </a>
+
+</div>
+
+<script>
+
+/* MOBILE MENU */
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+/* DEMO FORMS */
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  alert(
+    "Thank you for your enquiry.\n\n" +
+    "This is a website demonstration. " +
+    "The form will be connected to the school's official admissions contact before launch."
+  );
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  alert(
+    "Message received in this demonstration.\n\n" +
+    "The final website can send enquiries directly to the school's official email or WhatsApp."
+  );
+});
+
+/* YEAR */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
