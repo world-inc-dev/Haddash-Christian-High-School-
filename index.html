@@ -1,4535 +1,1248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  >
-
-  <title>
-    EarnQube — Online Earning Opportunities in Africa
-  </title>
-
-  <meta
-    name="description"
-    content="EarnQube helps users explore online earning opportunities through digital tasks, surveys, videos, music, gaming, referrals and more."
-  >
-
-  <meta
-    name="keywords"
-    content="EarnQube, earn money online Uganda, online earning Africa, online jobs Uganda, make money online, digital tasks, surveys Uganda, EarnQube Uganda"
-  >
-
-  <meta
-    name="robots"
-    content="index, follow"
-  >
-
-  <link
-    rel="canonical"
-    href="https://earnqube.site/"
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:title"
-    content="EarnQube — Online Earning Opportunities"
-  >
-
-  <meta
-    property="og:description"
-    content="Explore online earning opportunities through digital activities with EarnQube."
-  >
-
-  <meta
-    property="og:url"
-    content="https://earnqube.site/"
-  >
-
-  <meta
-    property="og:site_name"
-    content="EarnQube"
-  >
-
-  <meta
-    name="twitter:card"
-    content="summary"
-  >
-
-  <meta
-    name="twitter:title"
-    content="EarnQube — Online Earning Opportunities"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Explore online earning opportunities with EarnQube."
-  >
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"EarnQube",
-    "url":"https://earnqube.site/",
-    "description":"EarnQube helps users explore online earning opportunities through digital activities."
-  }
-  </script>
-
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-  background:
-    radial-gradient(
-      circle at 15% 10%,
-      rgba(60,255,130,.12),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 90% 20%,
-      rgba(0,255,190,.08),
-      transparent 28%
-    ),
-    #061011;
-
-  color:#fff;
-
-  min-height:100vh;
-
-  overflow-x:hidden;
-
-}
-
-
-body::before{
-
-  content:"";
-
-  position:fixed;
-
-  inset:0;
-
-  pointer-events:none;
-
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,.018) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.018) 1px,
-      transparent 1px
-    );
-
-  background-size:35px 35px;
-
-  mask-image:
-    linear-gradient(
-      to bottom,
-      black,
-      transparent 90%
-    );
-
-  z-index:-1;
-
-}
-
-
-/* =========================
-   VARIABLES
-========================= */
-
-:root{
-
-  --green:#70ff9a;
-  --green2:#24d96c;
-  --dark:#061011;
-  --card:rgba(12,27,29,.78);
-  --border:rgba(112,255,154,.14);
-  --muted:rgba(255,255,255,.63);
-
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-
-  position:sticky;
-
-  top:0;
-
-  z-index:1000;
-
-  background:
-    rgba(5,14,15,.82);
-
-  backdrop-filter:blur(18px);
-
-  -webkit-backdrop-filter:blur(18px);
-
-  border-bottom:
-    1px solid rgba(255,255,255,.06);
-
-}
-
-
-.nav-inner{
-
-  max-width:1150px;
-
-  margin:auto;
-
-  padding:
-    14px 20px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-}
-
-
-.logo{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:9px;
-
-  text-decoration:none;
-
-  color:#fff;
-
-  font-weight:900;
-
-  font-size:20px;
-
-}
-
-
-.logo-box{
-
-  width:34px;
-
-  height:34px;
-
-  border-radius:11px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--green),
-      #20b85b
-    );
-
-  color:#031007;
-
-  font-weight:1000;
-
-  box-shadow:
-    0 0 25px rgba(112,255,154,.2);
-
-}
-
-
-.nav-links{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:25px;
-
-}
-
-
-.nav-links a{
-
-  color:
-    rgba(255,255,255,.72);
-
-  text-decoration:none;
-
-  font-size:13px;
-
-  font-weight:700;
-
-}
-
-
-.nav-links a:hover{
-
-  color:var(--green);
-
-}
-
-
-.nav-actions{
-
-  display:flex;
-
-  gap:8px;
-
-}
-
-
-.btn{
-
-  display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border:0;
-
-  border-radius:12px;
-
-  padding:
-    11px 17px;
-
-  font-weight:800;
-
-  font-size:13px;
-
-  text-decoration:none;
-
-  cursor:pointer;
-
-  transition:.25s;
-
-}
-
-
-.btn-primary{
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--green),
-      var(--green2)
-    );
-
-  color:#031007;
-
-  box-shadow:
-    0 10px 30px rgba(52,255,120,.15);
-
-}
-
-
-.btn-primary:hover{
-
-  transform:translateY(-2px);
-
-}
-
-
-.btn-outline{
-
-  color:#fff;
-
-  border:
-    1px solid rgba(255,255,255,.12);
-
-  background:
-    rgba(255,255,255,.035);
-
-}
-
-
-.menu-btn{
-
-  display:none;
-
-  width:42px;
-
-  height:42px;
-
-  border-radius:12px;
-
-  border:
-    1px solid rgba(255,255,255,.1);
-
-  background:
-    rgba(255,255,255,.04);
-
-  color:#fff;
-
-  font-size:20px;
-
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-  max-width:1150px;
-
-  margin:auto;
-
-  padding:
-    75px 20px 45px;
-
-  display:grid;
-
-  grid-template-columns:
-    1.05fr .95fr;
-
-  gap:55px;
-
-  align-items:center;
-
-}
-
-
-.badge{
-
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  padding:
-    8px 12px;
-
-  border-radius:100px;
-
-  background:
-    rgba(112,255,154,.07);
-
-  border:
-    1px solid rgba(112,255,154,.16);
-
-  color:var(--green);
-
-  font-size:11px;
-
-  font-weight:900;
-
-  margin-bottom:20px;
-
-}
-
-
-.badge-dot{
-
-  width:7px;
-
-  height:7px;
-
-  border-radius:50%;
-
-  background:var(--green);
-
-  box-shadow:
-    0 0 12px var(--green);
-
-}
-
-
-.hero h1{
-
-  font-size:
-    clamp(43px,7vw,76px);
-
-  line-height:.96;
-
-  letter-spacing:-3px;
-
-  margin-bottom:24px;
-
-}
-
-
-.hero h1 span{
-
-  color:var(--green);
-
-}
-
-
-.hero p{
-
-  color:var(--muted);
-
-  font-size:17px;
-
-  line-height:1.7;
-
-  max-width:600px;
-
-}
-
-
-.hero-actions{
-
-  display:flex;
-
-  gap:12px;
-
-  flex-wrap:wrap;
-
-  margin-top:28px;
-
-}
-
-
-.hero-note{
-
-  margin-top:16px;
-
-  font-size:11px;
-
-  color:
-    rgba(255,255,255,.42);
-
-}
-
-
-/* =========================
-   DASHBOARD PREVIEW
-========================= */
-
-.dashboard{
-
-  position:relative;
-
-  border:
-    1px solid var(--border);
-
-  border-radius:28px;
-
-  padding:18px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(22,42,43,.88),
-      rgba(6,16,17,.9)
-    );
-
-  box-shadow:
-    0 35px 90px rgba(0,0,0,.45),
-    0 0 50px rgba(112,255,154,.05);
-
-  transform:
-    perspective(1000px)
-    rotateY(-4deg);
-
-}
-
-
-.dashboard-top{
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  margin-bottom:16px;
-
-}
-
-
-.dashboard-title{
-
-  font-size:13px;
-
-  font-weight:900;
-
-}
-
-
-.online{
-
-  font-size:9px;
-
-  color:var(--green);
-
-  background:
-    rgba(112,255,154,.07);
-
-  padding:
-    6px 9px;
-
-  border-radius:20px;
-
-}
-
-
-.balance{
-
-  padding:20px;
-
-  border-radius:20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(112,255,154,.14),
-      rgba(112,255,154,.03)
-    );
-
-  border:
-    1px solid rgba(112,255,154,.12);
-
-}
-
-
-.balance small{
-
-  color:
-    rgba(255,255,255,.5);
-
-  font-size:10px;
-
-}
-
-
-.balance strong{
-
-  display:block;
-
-  font-size:31px;
-
-  margin-top:7px;
-
-}
-
-
-.stats{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:10px;
-
-  margin-top:10px;
-
-}
-
-
-.stat{
-
-  padding:15px;
-
-  border-radius:17px;
-
-  background:
-    rgba(255,255,255,.035);
-
-  border:
-    1px solid rgba(255,255,255,.06);
-
-}
-
-
-.stat strong{
-
-  display:block;
-
-  font-size:16px;
-
-}
-
-
-.stat span{
-
-  display:block;
-
-  margin-top:5px;
-
-  font-size:9px;
-
-  color:
-    rgba(255,255,255,.45);
-
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-
-  max-width:1150px;
-
-  margin:auto;
-
-  padding:
-    75px 20px;
-
-}
-
-
-.section-head{
-
-  text-align:center;
-
-  max-width:700px;
-
-  margin:
-    0 auto 38px;
-
-}
-
-
-.section-head .eyebrow{
-
-  color:var(--green);
-
-  font-size:10px;
-
-  font-weight:900;
-
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-  margin-bottom:10px;
-
-}
-
-
-.section-head h2{
-
-  font-size:
-    clamp(30px,5vw,46px);
-
-  letter-spacing:-1.5px;
-
-}
-
-
-.section-head p{
-
-  margin-top:12px;
-
-  color:var(--muted);
-
-  line-height:1.7;
-
-  font-size:14px;
-
-}
-
-
-/* =========================
-   HOW IT WORKS
-========================= */
-
-.steps{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:15px;
-
-}
-
-
-.step{
-
-  background:var(--card);
-
-  border:
-    1px solid var(--border);
-
-  border-radius:21px;
-
-  padding:24px;
-
-}
-
-
-.step-number{
-
-  width:39px;
-
-  height:39px;
-
-  border-radius:13px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:
-    rgba(112,255,154,.1);
-
-  color:var(--green);
-
-  font-weight:900;
-
-  margin-bottom:18px;
-
-}
-
-
-.step h3{
-
-  font-size:16px;
-
-  margin-bottom:8px;
-
-}
-
-
-.step p{
-
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.7;
-
-}
-
-
-/* =========================
-   ACTIVITY CARDS
-========================= */
-
-.activity-grid{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:15px;
-
-}
-
-
-.activity-card{
-
-  position:relative;
-
-  overflow:hidden;
-
-  padding:23px;
-
-  min-height:190px;
-
-  border-radius:22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(16,35,37,.9),
-      rgba(8,18,19,.82)
-    );
-
-  border:
-    1px solid var(--border);
-
-  transition:.3s;
-
-}
-
-
-.activity-card:hover{
-
-  transform:translateY(-5px);
-
-  border-color:
-    rgba(112,255,154,.3);
-
-}
-
-
-.activity-icon{
-
-  width:48px;
-
-  height:48px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border-radius:15px;
-
-  background:
-    rgba(112,255,154,.08);
-
-  font-size:23px;
-
-  margin-bottom:18px;
-
-}
-
-
-.activity-card h3{
-
-  font-size:16px;
-
-  margin-bottom:8px;
-
-}
-
-
-.activity-card p{
-
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.65;
-
-}
-
-
-.activity-tag{
-
-  display:inline-block;
-
-  margin-top:16px;
-
-  font-size:9px;
-
-  color:var(--green);
-
-  background:
-    rgba(112,255,154,.07);
-
-  padding:
-    5px 8px;
-
-  border-radius:20px;
-
-}
-
-
-/* =========================
-   INTERACTIVE DEMO
-========================= */
-
-.demo-box{
-
-  border:
-    1px solid var(--border);
-
-  border-radius:27px;
-
-  overflow:hidden;
-
-  background:
-    rgba(8,19,20,.85);
-
-}
-
-
-.demo-tabs{
-
-  display:flex;
-
-  overflow-x:auto;
-
-  border-bottom:
-    1px solid rgba(255,255,255,.06);
-
-}
-
-
-.demo-tab{
-
-  flex:1;
-
-  min-width:100px;
-
-  padding:15px;
-
-  background:none;
-
-  border:0;
-
-  color:
-    rgba(255,255,255,.5);
-
-  font-weight:800;
-
-  font-size:11px;
-
-  cursor:pointer;
-
-}
-
-
-.demo-tab.active{
-
-  color:var(--green);
-
-  background:
-    rgba(112,255,154,.04);
-
-}
-
-
-.demo-content{
-
-  min-height:290px;
-
-  padding:25px;
-
-}
-
-
-/* CHAT */
-
-.chat-window{
-
-  max-width:500px;
-
-  margin:auto;
-
-}
-
-
-.message{
-
-  padding:12px 15px;
-
-  border-radius:16px;
-
-  margin-bottom:10px;
-
-  max-width:80%;
-
-  font-size:12px;
-
-  line-height:1.5;
-
-}
-
-
-.message.other{
-
-  background:
-    rgba(255,255,255,.05);
-
-}
-
-
-.message.me{
-
-  margin-left:auto;
-
-  background:
-    rgba(112,255,154,.1);
-
-  color:var(--green);
-
-}
-
-
-/* VIDEO */
-
-.video-demo{
-
-  max-width:520px;
-
-  margin:auto;
-
-}
-
-
-.video-screen{
-
-  height:190px;
-
-  border-radius:20px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(112,255,154,.18),
-      rgba(8,18,19,.9)
-    );
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  flex-direction:column;
-
-  gap:12px;
-
-}
-
-
-.play-button{
-
-  width:60px;
-
-  height:60px;
-
-  border-radius:50%;
-
-  border:0;
-
-  background:var(--green);
-
-  color:#06110a;
-
-  font-size:22px;
-
-  cursor:pointer;
-
-}
-
-
-.progress{
-
-  margin-top:14px;
-
-  height:7px;
-
-  border-radius:20px;
-
-  background:
-    rgba(255,255,255,.06);
-
-  overflow:hidden;
-
-}
-
-
-.progress-bar{
-
-  width:45%;
-
-  height:100%;
-
-  background:var(--green);
-
-}
-
-
-/* MUSIC */
-
-.music-demo{
-
-  max-width:500px;
-
-  margin:auto;
-
-  text-align:center;
-
-}
-
-
-.album{
-
-  width:120px;
-
-  height:120px;
-
-  border-radius:25px;
-
-  margin:auto;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:42px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(112,255,154,.18),
-      rgba(20,100,55,.2)
-    );
-
-}
-
-
-.music-demo h3{
-
-  margin-top:18px;
-
-}
-
-
-.music-controls{
-
-  margin-top:20px;
-
-  display:flex;
-
-  justify-content:center;
-
-  gap:10px;
-
-}
-
-
-.music-controls button{
-
-  width:42px;
-
-  height:42px;
-
-  border-radius:50%;
-
-  border:0;
-
-  cursor:pointer;
-
-  background:
-    rgba(255,255,255,.06);
-
-  color:#fff;
-
-}
-
-
-/* GAME */
-
-.game-screen{
-
-  max-width:520px;
-
-  margin:auto;
-
-  height:240px;
-
-  border-radius:22px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(30,110,60,.8),
-      rgba(10,70,40,.85)
-    );
-
-}
-
-
-.field-line{
-
-  position:absolute;
-
-  inset:15px;
-
-  border:
-    2px solid rgba(255,255,255,.3);
-
-  border-radius:10px;
-
-}
-
-
-.player{
-
-  position:absolute;
-
-  width:43px;
-
-  height:43px;
-
-  border-radius:50%;
-
-  background:
-    var(--green);
-
-  color:#06110a;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:10px;
-
-  font-weight:900;
-
-}
-
-
-.p1{
-  left:22%;
-  top:50%;
-}
-
-
-.p2{
-  left:55%;
-  top:30%;
-}
-
-
-.p3{
-  left:73%;
-  top:62%;
-}
-
-
-.ball{
-
-  position:absolute;
-
-  width:18px;
-
-  height:18px;
-
-  border-radius:50%;
-
-  background:#fff;
-
-  left:50%;
-
-  top:50%;
-
-}
-
-
-/* =========================
-   TRANSACTIONS
-========================= */
-
-.transaction-box{
-
-  max-width:850px;
-
-  margin:auto;
-
-  background:
-    rgba(9,22,23,.85);
-
-  border:
-    1px solid var(--border);
-
-  border-radius:25px;
-
-  padding:10px;
-
-}
-
-
-.transaction{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:13px;
-
-  padding:15px;
-
-  border-bottom:
-    1px solid rgba(255,255,255,.05);
-
-}
-
-
-.transaction:last-child{
-
-  border-bottom:0;
-
-}
-
-
-.transaction-icon{
-
-  width:42px;
-
-  height:42px;
-
-  min-width:42px;
-
-  border-radius:14px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:
-    rgba(112,255,154,.08);
-
-}
-
-
-.transaction-info{
-
-  flex:1;
-
-}
-
-
-.transaction-info strong{
-
-  display:block;
-
-  font-size:13px;
-
-}
-
-
-.transaction-info small{
-
-  display:block;
-
-  margin-top:4px;
-
-  color:
-    rgba(255,255,255,.42);
-
-  font-size:9px;
-
-}
-
-
-.transaction-amount{
-
-  text-align:right;
-
-}
-
-
-.transaction-amount strong{
-
-  display:block;
-
-  font-size:13px;
-
-}
-
-
-.transaction-amount small{
-
-  display:block;
-
-  margin-top:4px;
-
-  color:#ffc04d;
-
-  font-size:9px;
-
-  font-weight:900;
-
-}
-
-
-.demo-heading{
-
-  padding:
-    12px 15px;
-
-  color:#ffc04d;
-
-  font-size:10px;
-
-  font-weight:900;
-
-  letter-spacing:1px;
-
-}
-
-
-/* =========================
-   WHY EARNQUBE
-========================= */
-
-.features{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:15px;
-
-}
-
-
-.feature{
-
-  text-align:center;
-
-  padding:24px 15px;
-
-  border-radius:21px;
-
-  border:
-    1px solid var(--border);
-
-  background:
-    rgba(12,27,29,.65);
-
-}
-
-
-.feature-icon{
-
-  font-size:25px;
-
-  margin-bottom:14px;
-
-}
-
-
-.feature h3{
-
-  font-size:14px;
-
-  margin-bottom:7px;
-
-}
-
-
-.feature p{
-
-  color:var(--muted);
-
-  font-size:11px;
-
-  line-height:1.6;
-
-}
-
-
-/* =========================
-   TESTIMONIALS
-========================= */
-
-.testimonials{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:15px;
-
-}
-
-
-.testimonial{
-
-  padding:22px;
-
-  border-radius:22px;
-
-  border:
-    1px solid var(--border);
-
-  background:
-    rgba(12,27,29,.7);
-
-}
-
-
-.testimonial-top{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:11px;
-
-}
-
-
-.testimonial-avatar{
-
-  width:42px;
-
-  height:42px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--green),
-      #1e9d55
-    );
-
-  color:#031007;
-
-  font-weight:900;
-
-}
-
-
-.testimonial strong{
-
-  font-size:13px;
-
-}
-
-
-.stars{
-
-  color:var(--green);
-
-  font-size:10px;
-
-  letter-spacing:2px;
-
-  margin-top:4px;
-
-}
-
-
-.testimonial p{
-
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.7;
-
-  margin-top:16px;
-
-}
-
-
-/* =========================
-   FAQ
-========================= */
-
-.faq{
-
-  max-width:800px;
-
-  margin:auto;
-
-}
-
-
-details{
-
-  border:
-    1px solid var(--border);
-
-  border-radius:17px;
-
-  margin-bottom:10px;
-
-  background:
-    rgba(10,24,25,.7);
-
-  overflow:hidden;
-
-}
-
-
-summary{
-
-  cursor:pointer;
-
-  padding:18px;
-
-  font-size:13px;
-
-  font-weight:800;
-
-  list-style:none;
-
-}
-
-
-summary::-webkit-details-marker{
-
-  display:none;
-
-}
-
-
-details p{
-
-  padding:
-    0 18px 18px;
-
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.7;
-
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-
-  text-align:center;
-
-  padding:
-    75px 20px;
-
-}
-
-
-.cta-box{
-
-  max-width:850px;
-
-  margin:auto;
-
-  padding:
-    50px 25px;
-
-  border-radius:30px;
-
-  border:
-    1px solid rgba(112,255,154,.18);
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(112,255,154,.1),
-      rgba(8,20,21,.9)
-    );
-
-}
-
-
-.cta h2{
-
-  font-size:
-    clamp(30px,6vw,48px);
-
-  letter-spacing:-1.5px;
-
-}
-
-
-.cta p{
-
-  color:var(--muted);
-
-  max-width:570px;
-
-  margin:
-    13px auto 25px;
-
-  line-height:1.7;
-
-  font-size:13px;
-
-}
-
-
-/* =========================
-   SUPPORT
-========================= */
-
-.support-grid{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
-  gap:15px;
-
-}
-
-
-.support-card{
-
-  padding:25px;
-
-  border-radius:22px;
-
-  border:
-    1px solid var(--border);
-
-  background:
-    rgba(12,27,29,.7);
-
-}
-
-
-.support-card h3{
-
-  font-size:16px;
-
-  margin-bottom:8px;
-
-}
-
-
-.support-card p{
-
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.7;
-
-  margin-bottom:17px;
-
-}
-
-
-.support-link{
-
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:7px;
-
-  text-decoration:none;
-
-  color:var(--green);
-
-  font-size:12px;
-
-  font-weight:900;
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-  border-top:
-    1px solid rgba(255,255,255,.06);
-
-  padding:
-    30px 20px;
-
-}
-
-
-.footer-inner{
-
-  max-width:1150px;
-
-  margin:auto;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  gap:20px;
-
-  flex-wrap:wrap;
-
-}
-
-
-.footer-brand{
-
-  font-weight:900;
-
-}
-
-
-.footer-text{
-
-  color:
-    rgba(255,255,255,.4);
-
-  font-size:10px;
-
-  margin-top:7px;
-
-}
-
-
-.footer-links{
-
-  display:flex;
-
-  gap:18px;
-
-  flex-wrap:wrap;
-
-}
-
-
-.footer-links a{
-
-  color:
-    rgba(255,255,255,.5);
-
-  text-decoration:none;
-
-  font-size:10px;
-
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-
-  position:fixed;
-
-  right:18px;
-
-  bottom:18px;
-
-  width:56px;
-
-  height:56px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:#25D366;
-
-  color:#fff;
-
-  text-decoration:none;
-
-  font-size:27px;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.35);
-
-  z-index:9999;
-
-}
-
-
-/* =========================
-   FLOATING DEMO ACTIVITY
-========================= */
-
-#eqActivityContainer{
-
-  position:fixed;
-
-  left:0;
-
-  right:0;
-
-  bottom:86px;
-
-  z-index:9990;
-
-  pointer-events:none;
-
-  display:flex;
-
-  justify-content:center;
-
-  overflow:hidden;
-
-  min-height:80px;
-
-}
-
-
-.eq-activity{
-
-  width:min(92%,430px);
-
-  background:
-    rgba(8,17,18,.97);
-
-  border:
-    1px solid rgba(255,190,70,.3);
-
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.45);
-
-  backdrop-filter:blur(18px);
-
-  -webkit-backdrop-filter:blur(18px);
-
-  border-radius:18px;
-
-  padding:12px 15px;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
-
-  transform:translateX(-120vw);
-
-  opacity:0;
-
-  animation:
-    eqDemoSlide 6.5s
-    ease-in-out
-    forwards;
-
-}
-
-
-@keyframes eqDemoSlide{
-
-  0%{
-    transform:translateX(-120vw);
-    opacity:0;
-  }
-
-  12%{
-    transform:translateX(0);
-    opacity:1;
-  }
-
-  70%{
-    transform:translateX(0);
-    opacity:1;
-  }
-
-  88%{
-    transform:translateX(120vw);
-    opacity:0;
-  }
-
-  100%{
-    transform:translateX(120vw);
-    opacity:0;
-  }
-
-}
-
-
-.eq-activity-icon{
-
-  width:45px;
-
-  height:45px;
-
-  min-width:45px;
-
-  border-radius:14px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:22px;
-
-  background:
-    rgba(112,255,154,.08);
-
-  border:
-    1px solid rgba(112,255,154,.18);
-
-}
-
-
-.eq-activity-content{
-
-  flex:1;
-
-  min-width:0;
-
-}
-
-
-.eq-activity-title{
-
-  color:#fff;
-
-  font-size:13px;
-
-  font-weight:800;
-
-  line-height:1.4;
-
-}
-
-
-.eq-activity-title span{
-
-  color:var(--green);
-
-}
-
-
-.eq-activity-meta{
-
-  margin-top:4px;
-
-  font-size:10px;
-
-  color:
-    rgba(255,255,255,.48);
-
-}
-
-
-.eq-activity-status{
-
-  color:#ffc04d;
-
-  font-size:10px;
-
-  font-weight:900;
-
-  white-space:nowrap;
-
-}
-
-
-/* =========================
-   FLOATING DEMO TESTIMONIAL
-========================= */
-
-.eq-testimonial{
-
-  width:min(92%,440px);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(18,27,30,.98),
-      rgba(8,17,19,.98)
-    );
-
-  border:
-    1px solid rgba(255,190,70,.28);
-
-  border-radius:20px;
-
-  padding:15px;
-
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.45);
-
-  transform:translateX(120vw);
-
-  opacity:0;
-
-  animation:
-    eqDemoTestimonial
-    8s
-    ease-in-out
-    forwards;
-
-}
-
-
-@keyframes eqDemoTestimonial{
-
-  0%{
-    transform:translateX(120vw);
-    opacity:0;
-  }
-
-  12%{
-    transform:translateX(0);
-    opacity:1;
-  }
-
-  72%{
-    transform:translateX(0);
-    opacity:1;
-  }
-
-  90%{
-    transform:translateX(-120vw);
-    opacity:0;
-  }
-
-  100%{
-    transform:translateX(-120vw);
-    opacity:0;
-  }
-
-}
-
-
-.eq-avatar{
-
-  width:42px;
-
-  height:42px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #70ff9a,
-      #1c9d55
-    );
-
-  color:#06110a;
-
-  font-weight:900;
-
-}
-
-
-.eq-testimonial-name{
-
-  color:#fff;
-
-  font-size:13px;
-
-  font-weight:800;
-
-}
-
-
-.eq-stars{
-
-  color:#70ff9a;
-
-  letter-spacing:2px;
-
-  font-size:11px;
-
-}
-
-
-.eq-testimonial-text{
-
-  color:
-    rgba(255,255,255,.72);
-
-  font-size:11px;
-
-  line-height:1.55;
-
-  margin-top:10px;
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-  .hero{
-
-    grid-template-columns:1fr;
-
-    padding-top:55px;
-
-  }
-
-  .dashboard{
-
-    transform:none;
-
-  }
-
-  .activity-grid{
-
-    grid-template-columns:
-      repeat(2,1fr);
-
-  }
-
-  .features{
-
-    grid-template-columns:
-      repeat(2,1fr);
-
-  }
-
-}
-
-
-@media(max-width:700px){
-
-  .nav-links,
-  .nav-actions{
-
-    display:none;
-
-  }
-
-  .menu-btn{
-
-    display:block;
-
-  }
-
-  .mobile-menu{
-
-    display:none;
-
-    padding:
-      10px 20px 20px;
-
-  }
-
-  .mobile-menu.open{
-
-    display:block;
-
-  }
-
-  .mobile-menu a{
-
-    display:block;
-
-    padding:13px 0;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-bottom:
-      1px solid rgba(255,255,255,.05);
-
-    font-size:13px;
-
-  }
-
-  .steps,
-  .activity-grid,
-  .testimonials,
-  .support-grid{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .stats{
-
-    grid-template-columns:
-      repeat(3,1fr);
-
-  }
-
-  .hero h1{
-
-    letter-spacing:-2px;
-
-  }
-
-  section{
-
-    padding:
-      55px 15px;
-
-  }
-
-}
-
-
-@media(max-width:500px){
-
-  .hero{
-
-    padding:
-      45px 15px 30px;
-
-  }
-
-  .hero h1{
-
-    font-size:44px;
-
-  }
-
-  .hero p{
-
-    font-size:14px;
-
-  }
-
-  .features{
-
-    grid-template-columns:1fr 1fr;
-
-  }
-
-  .transaction{
-
-    padding:13px 8px;
-
-  }
-
-  .transaction-info small{
-
-    font-size:8px;
-
-  }
-
-  .transaction-amount strong{
-
-    font-size:11px;
-
-  }
-
-  .eq-activity{
-
-    width:
-      calc(100% - 28px);
-
-  }
-
-}
-
-
-.mobile-menu{
-
-  display:none;
-
-}
-
-</style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashan International School | Haddash Christian High School</title>
+  <meta name="description" content="Website concept demo for Dashan International School and Haddash Christian High School in Opuyo, Soroti, Uganda.">
+
+  <style>
+    :root {
+      --navy: #09233f;
+      --blue: #0b4f8a;
+      --sky: #eaf5ff;
+      --gold: #d8a928;
+      --gold-light: #f7e5a3;
+      --white: #ffffff;
+      --dark: #17202a;
+      --text: #526170;
+      --light: #f7f9fc;
+      --border: #e5eaf0;
+      --shadow: 0 15px 45px rgba(9, 35, 63, .10);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .demo-bar {
+      background: #111827;
+      color: #fff;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 12px;
+      letter-spacing: .2px;
+    }
+
+    .demo-bar strong {
+      color: #f7d76b;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand-logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .brand-text span {
+      font-size: 11px;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #394957;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: var(--navy);
+      color: #fff;
+      width: 43px;
+      height: 43px;
+      border-radius: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(4,25,46,.96), rgba(4,25,46,.72), rgba(4,25,46,.28)),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 1180px;
+      width: 100%;
+      margin: auto;
+      padding: 80px 20px;
+      color: white;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 50px;
+      background: rgba(255,255,255,.10);
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      max-width: 750px;
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      color: #e7eef5;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 0 21px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #17202a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #e6bd40;
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.55);
+      color: white;
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    .school-cards {
+      max-width: 1180px;
+      margin: -80px auto 0;
+      position: relative;
+      z-index: 3;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .school-card {
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .school-card .number {
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .school-card h3 {
+      color: var(--navy);
+      font-size: 24px;
+      margin: 8px 0;
+    }
+
+    .school-card p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .school-card .tag {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 7px 11px;
+      border-radius: 7px;
+      background: var(--sky);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading .small-title {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 430px;
+      border-radius: 24px;
+      background:
+        linear-gradient(rgba(9,35,63,.15), rgba(9,35,63,.15)),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .about-copy h3 {
+      color: var(--navy);
+      font-size: 29px;
+      margin-bottom: 15px;
+    }
+
+    .about-copy p {
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .demo-note {
+      margin-top: 20px;
+      padding: 14px 16px;
+      background: #fff9e7;
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      font-size: 13px;
+      color: #66521a;
+    }
+
+    .programmes {
+      background: var(--light);
+    }
+
+    .programme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .programme {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(9,35,63,.05);
+    }
+
+    .programme-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: var(--sky);
+      color: var(--blue);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .programme h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 23px;
+    }
+
+    .programme p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .programme ul {
+      margin: 18px 0 0 18px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .admissions {
+      background:
+        linear-gradient(100deg, rgba(9,35,63,.97), rgba(11,79,138,.90)),
+        url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .admissions .section-heading h2,
+    .admissions .section-heading p {
+      color: white;
+    }
+
+    .admission-box {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.20);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 800px;
+    }
+
+    .admission-box p {
+      color: #e6edf4;
+      margin-bottom: 22px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 25px 20px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: white;
+    }
+
+    .feature-icon {
+      font-size: 27px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .feature p {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .gallery {
+      background: var(--light);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-rows: 210px 210px;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+      background-image: url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .gallery-item:nth-child(2) {
+      background-image: url("https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(3) {
+      background-image: url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(4) {
+      background-image: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(5) {
+      background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      padding: 8px 10px;
+      background: rgba(0,0,0,.62);
+      color: white;
+      border-radius: 7px;
+      font-size: 11px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 23px;
+    }
+
+    .contact-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 10px;
+      background: var(--sky);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .contact-item span {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .contact-form {
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      border: 1px solid #dce3ea;
+      border-radius: 9px;
+      padding: 13px;
+      font-family: inherit;
+      outline: none;
+      font-size: 14px;
+      background: white;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--blue);
+    }
+
+    .form-message {
+      display: none;
+      margin-top: 14px;
+      padding: 12px;
+      background: #eef9f1;
+      color: #25643b;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    footer {
+      background: #061a2d;
+      color: white;
+      padding: 55px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p,
+    footer li,
+    footer a {
+      color: #b9c7d4;
+      font-size: 13px;
+    }
+
+    footer h4 {
+      margin-bottom: 13px;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      max-width: 1180px;
+      margin: auto;
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 20px;
+      text-align: center;
+      color: #91a1b1;
+      font-size: 11px;
+    }
+
+    .floating {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .float-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      box-shadow: 0 8px 25px rgba(0,0,0,.20);
+      font-size: 22px;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .call {
+      background: var(--blue);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        top: 72px;
+        background: white;
+        border-radius: 13px;
+        padding: 15px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 180px 180px;
+      }
+
+      .gallery-item:first-child {
+        grid-row: span 2;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        min-height: 590px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .school-cards,
+      .programme-grid,
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .school-cards {
+        margin-top: -50px;
+      }
+
+      section {
+        padding: 65px 17px;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px 180px;
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: auto;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- DEMO NOTICE -->
+  <div class="demo-bar">
+    <strong>WEBSITE CONCEPT DEMO</strong> — School information, contacts, fees and images should be replaced with official details.
+  </div>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
 
-<header class="navbar">
-
-  <div class="nav-inner">
-
-    <a
-      href="#home"
-      class="logo"
-    >
-
-      <span class="logo-box">
-        E
-      </span>
-
-      EarnQube
-
-    </a>
-
-
-    <nav class="nav-links">
-
-      <a href="#how">
-        How It Works
+      <a href="#home" class="brand">
+        <div class="brand-logo">D&H</div>
+        <div class="brand-text">
+          <strong>Dashan & Haddash</strong>
+          <span>Opuyo, Soroti, Uganda</span>
+        </div>
       </a>
 
-      <a href="#activities">
-        Activities
-      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-      <a href="#transactions">
-        Transactions
-      </a>
-
-      <a href="#faq">
-        FAQ
-      </a>
-
-      <a href="#support">
-        Support
-      </a>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
     </nav>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
 
-    <div class="nav-actions">
+      <span class="eyebrow">A WEBSITE CONCEPT FOR TWO EDUCATIONAL PATHWAYS</span>
 
-      <a
-        class="btn btn-outline"
-        href="https://stateflix.com/user/login.php"
-        target="_blank"
-      >
-        Login
-      </a>
-
-      <a
-        class="btn btn-primary"
-        href="https://stateflix.com/user/register.php?ref=EarnQubesite"
-        target="_blank"
-      >
-        Create Account
-      </a>
-
-    </div>
-
-
-    <button
-      class="menu-btn"
-      onclick="toggleMenu()"
-      aria-label="Open menu"
-    >
-      ☰
-    </button>
-
-  </div>
-
-
-  <div
-    class="mobile-menu"
-    id="mobileMenu"
-  >
-
-    <a href="#how">
-      How It Works
-    </a>
-
-    <a href="#activities">
-      Activities
-    </a>
-
-    <a href="#transactions">
-      Transactions
-    </a>
-
-    <a href="#faq">
-      FAQ
-    </a>
-
-    <a href="#support">
-      Support
-    </a>
-
-    <a
-      href="https://stateflix.com/user/login.php"
-      target="_blank"
-    >
-      Login
-    </a>
-
-    <a
-      href="https://stateflix.com/user/register.php?ref=EarnQubesite"
-      target="_blank"
-    >
-      Create Account
-    </a>
-
-  </div>
-
-</header>
-
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<main id="home">
-
-<section class="hero">
-
-  <div>
-
-    <div class="badge">
-
-      <span class="badge-dot"></span>
-
-      DIGITAL EARNING PLATFORM
-
-    </div>
-
-
-    <h1>
-
-      Turn time
-      <span>
-        into money.
-      </span>
-
-    </h1>
-
-
-    <p>
-
-      EarnQube helps you explore digital activities
-      and online earning opportunities from your
-      phone — wherever you are.
-
-    </p>
-
-
-    <div class="hero-actions">
-
-      <a
-        href="https://stateflix.com/user/register.php?ref=EarnQubesite"
-        target="_blank"
-        class="btn btn-primary"
-      >
-        Create Account →
-      </a>
-
-
-      <a
-        href="#activities"
-        class="btn btn-outline"
-      >
-        Explore Activities
-      </a>
-
-    </div>
-
-
-    <div class="hero-note">
-
-      Explore activities • Track your progress •
-      Discover opportunities
-
-    </div>
-
-  </div>
-
-
-
-  <div class="dashboard">
-
-    <div class="dashboard-top">
-
-      <div class="dashboard-title">
-        EarnQube Dashboard
-      </div>
-
-      <div class="online">
-        ● ONLINE
-      </div>
-
-    </div>
-
-
-    <div class="balance">
-
-      <small>
-        Available balance
-      </small>
-
-      <strong>
-        UGX 125,000
-      </strong>
-
-    </div>
-
-
-    <div class="stats">
-
-      <div class="stat">
-
-        <strong>
-          24
-        </strong>
-
-        <span>
-          Activities
-        </span>
-
-      </div>
-
-
-      <div class="stat">
-
-        <strong>
-          18
-        </strong>
-
-        <span>
-          Completed
-        </span>
-
-      </div>
-
-
-      <div class="stat">
-
-        <strong>
-          6
-        </strong>
-
-        <span>
-          Available
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     HOW IT WORKS
-========================= -->
-
-<section id="how">
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      SIMPLE PROCESS
-    </div>
-
-    <h2>
-      How EarnQube works
-    </h2>
-
-    <p>
-      Start exploring digital opportunities
-      through a simple process designed for
-      mobile users.
-    </p>
-
-  </div>
-
-
-  <div class="steps">
-
-    <div class="step">
-
-      <div class="step-number">
-        01
-      </div>
-
-      <h3>
-        Create your account
-      </h3>
+      <h1>
+        Inspiring <span>Excellence.</span><br>
+        Building Tomorrow.
+      </h1>
 
       <p>
-        Register and access the platform
-        from your phone.
+        A modern digital home designed to help parents discover,
+        understand and connect with Dashan International School and
+        Haddash Christian High School.
       </p>
 
-    </div>
+      <div class="hero-buttons">
+        <a href="#admissions" class="btn btn-primary">
+          Request Admissions Information →
+        </a>
 
-
-    <div class="step">
-
-      <div class="step-number">
-        02
+        <a href="#schools" class="btn btn-outline">
+          Explore Our Schools
+        </a>
       </div>
 
-      <h3>
-        Explore activities
-      </h3>
+    </div>
+  </section>
 
+  <!-- SCHOOL CARDS -->
+  <div class="school-cards" id="schools">
+
+    <div class="school-card">
+      <span class="number">01 · International Pathway</span>
+      <h3>Dashan International School</h3>
       <p>
-        Browse available chats, videos,
-        music, surveys, games and other
-        digital activities.
+        A proposed digital presentation for a school offering
+        the Cambridge International Curriculum.
       </p>
-
+      <span class="tag">Cambridge International Curriculum</span>
     </div>
 
-
-    <div class="step">
-
-      <div class="step-number">
-        03
-      </div>
-
-      <h3>
-        Track your progress
-      </h3>
-
+    <div class="school-card">
+      <span class="number">02 · National Pathway</span>
+      <h3>Haddash Christian High School</h3>
       <p>
-        Complete eligible activities and
-        monitor your account through the
-        platform.
+        A proposed digital presentation for a school following
+        Uganda's national curriculum pathway.
       </p>
-
+      <span class="tag">Uganda National Curriculum</span>
     </div>
 
   </div>
 
-</section>
-
-
-
-<!-- =========================
-     ACTIVITIES
-========================= -->
-
-<section id="activities">
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      OPPORTUNITIES
-    </div>
-
-    <h2>
-      Explore different activities
-    </h2>
-
-    <p>
-      Your time can be used in different
-      digital ways.
-    </p>
-
-  </div>
-
-
-  <div class="activity-grid">
-
-
-    <div class="activity-card">
-
-      <div class="activity-icon">
-        💬
-      </div>
-
-      <h3>
-        Chat Activities
-      </h3>
-
-      <p>
-        Explore conversation-based digital
-        activities and interact through
-        supported chat experiences.
-      </p>
-
-      <span class="activity-tag">
-        CHAT
-      </span>
-
-    </div>
-
-
-    <div class="activity-card">
-
-      <div class="activity-icon">
-        🎬
-      </div>
-
-      <h3>
-        Video Activities
-      </h3>
-
-      <p>
-        Discover video-based activities
-        and spend time engaging with
-        digital content.
-      </p>
-
-      <span class="activity-tag">
-        VIDEO
-      </span>
-
-    </div>
-
-
-    <div class="activity-card">
-
-      <div class="activity-icon">
-        🎵
-      </div>
-
-      <h3>
-        Music
-      </h3>
-
-      <p>
-        Listen to music and explore
-        supported audio activities.
-      </p>
-
-      <span class="activity-tag">
-        MUSIC
-      </span>
-
-    </div>
-
-
-    <div class="activity-card">
-
-      <div class="activity-icon">
-        📋
-      </div>
-
-      <h3>
-        Surveys & Offers
-      </h3>
-
-      <p>
-        Explore surveys and available
-        online offers when they are
-        provided.
-      </p>
-
-      <span class="activity-tag">
-        SURVEYS
-      </span>
-
-    </div>
-
-
-    <div class="activity-card">
-
-      <div class="activity-icon">
-        ⚽
-      </div>
-
-      <h3>
-        Gaming
-      </h3>
-
-      <p>
-        Explore interactive gaming
-        experiences and digital challenges.
-      </p>
-
-      <span class="activity-tag">
-        GAMING
-      </span>
-
-    </div>
-
-
-    <div class="activity-card">
-
-      <div class="activity-icon">
-        🔗
-      </div>
-
-      <h3>
-        Referrals
-      </h3>
-
-      <p>
-        Share your referral link and
-        explore available referral
-        opportunities.
-      </p>
-
-      <span class="activity-tag">
-        REFERRALS
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     INTERACTIVE DEMO
-========================= -->
-
-<section>
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      EXPERIENCE
-    </div>
-
-    <h2>
-      See how the platform feels
-    </h2>
-
-    <p>
-      Try a small interactive preview
-      of some of the experiences.
-    </p>
-
-  </div>
-
-
-  <div class="demo-box">
-
-
-    <div class="demo-tabs">
-
-      <button
-        class="demo-tab active"
-        onclick="showDemo('chat',this)"
-      >
-        💬 Chat
-      </button>
-
-      <button
-        class="demo-tab"
-        onclick="showDemo('video',this)"
-      >
-        🎬 Video
-      </button>
-
-      <button
-        class="demo-tab"
-        onclick="showDemo('music',this)"
-      >
-        🎵 Music
-      </button>
-
-      <button
-        class="demo-tab"
-        onclick="showDemo('game',this)"
-      >
-        ⚽ Game
-      </button>
-
-    </div>
-
-
-    <div
-      class="demo-content"
-      id="demoContent"
-    >
-
-      <div class="chat-window">
-
-        <div class="message other">
-          Hi! Welcome to the EarnQube
-          chat experience.
-        </div>
-
-        <div class="message me">
-          Hello! I'm exploring EarnQube.
-        </div>
-
-        <div class="message other">
-          Great! Explore the available
-          activities and learn how they work.
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     TRANSACTIONS
-========================= -->
-
-<section id="transactions">
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      ACTIVITY FEED
-    </div>
-
-    <h2>
-      Recent activity
-    </h2>
-
-    <p>
-      The records below are demonstration
-      examples showing how a future
-      transaction feed can appear.
-    </p>
-
-  </div>
-
-
-  <div class="transaction-box">
-
-    <div class="demo-heading">
-
-      DEMO TRANSACTIONS — SIMULATED DATA
-
-    </div>
-
-
-    <div class="transaction">
-
-      <div class="transaction-icon">
-        💸
-      </div>
-
-      <div class="transaction-info">
-
-        <strong>
-          Sarah M.
-        </strong>
-
-        <small>
-          Withdrawal • Completed • Just now
-        </small>
-
-      </div>
-
-      <div class="transaction-amount">
-
-        <strong>
-          UGX 50,000
-        </strong>
-
-        <small>
-          DEMO
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="transaction">
-
-      <div class="transaction-icon">
-        💰
-      </div>
-
-      <div class="transaction-info">
-
-        <strong>
-          David K.
-        </strong>
-
-        <small>
-          Payment • Completed • 2 mins ago
-        </small>
-
-      </div>
-
-      <div class="transaction-amount">
-
-        <strong>
-          UGX 25,000
-        </strong>
-
-        <small>
-          DEMO
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="transaction">
-
-      <div class="transaction-icon">
-        💸
-      </div>
-
-      <div class="transaction-info">
-
-        <strong>
-          Brenda N.
-        </strong>
-
-        <small>
-          Withdrawal • Completed • 5 mins ago
-        </small>
-
-      </div>
-
-      <div class="transaction-amount">
-
-        <strong>
-          UGX 85,000
-        </strong>
-
-        <small>
-          DEMO
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="transaction">
-
-      <div class="transaction-icon">
-        💰
-      </div>
-
-      <div class="transaction-info">
-
-        <strong>
-          Michael A.
-        </strong>
-
-        <small>
-          Payment • Completed • 8 mins ago
-        </small>
-
-      </div>
-
-      <div class="transaction-amount">
-
-        <strong>
-          UGX 10,000
-        </strong>
-
-        <small>
-          DEMO
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="transaction">
-
-      <div class="transaction-icon">
-        💸
-      </div>
-
-      <div class="transaction-info">
-
-        <strong>
-          Daniel O.
-        </strong>
-
-        <small>
-          Withdrawal • Completed • 11 mins ago
-        </small>
-
-      </div>
-
-      <div class="transaction-amount">
-
-        <strong>
-          UGX 40,000
-        </strong>
-
-        <small>
-          DEMO
-        </small>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     WHY EARNQUBE
-========================= -->
-
-<section>
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      WHY EARNQUBE
-    </div>
-
-    <h2>
-      Built for mobile users
-    </h2>
-
-    <p>
-      EarnQube is designed around a
-      simple, modern mobile experience.
-    </p>
-
-  </div>
-
-
-  <div class="features">
-
-
-    <div class="feature">
-
-      <div class="feature-icon">
-        📱
-      </div>
-
-      <h3>
-        Mobile First
-      </h3>
-
-      <p>
-        Designed to work comfortably
-        on smartphones.
-      </p>
-
-    </div>
-
-
-    <div class="feature">
-
-      <div class="feature-icon">
-        ⚡
-      </div>
-
-      <h3>
-        Simple
-      </h3>
-
-      <p>
-        Clear navigation and easy-to-use
-        activity sections.
-      </p>
-
-    </div>
-
-
-    <div class="feature">
-
-      <div class="feature-icon">
-        🌍
-      </div>
-
-      <h3>
-        Africa Focused
-      </h3>
-
-      <p>
-        Created with African users and
-        mobile access in mind.
-      </p>
-
-    </div>
-
-
-    <div class="feature">
-
-      <div class="feature-icon">
-        🔐
-      </div>
-
-      <h3>
-        Account Access
-      </h3>
-
-      <p>
-        Manage your account through the
-        supported platform.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     TESTIMONIALS
-========================= -->
-
-<section>
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      COMMUNITY
-    </div>
-
-    <h2>
-      What users might say
-    </h2>
-
-    <p>
-      The testimonials below are examples
-      used for demonstration of the website
-      design.
-    </p>
-
-  </div>
-
-
-  <div class="testimonials">
-
-
-    <div class="testimonial">
-
-      <div class="testimonial-top">
-
-        <div class="testimonial-avatar">
-          G
-        </div>
-
-        <div>
-
-          <strong>
-            Grace
-          </strong>
-
-          <div class="stars">
-            ★★★★★
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-image"></div>
+
+        <div class="about-copy">
+
+          <div class="section-heading">
+            <div class="small-title">About the Institutions</div>
+            <h2>One digital home for your school community.</h2>
+          </div>
+
+          <h3>Education. Character. Opportunity.</h3>
+
+          <p>
+            This website concept is designed to give parents,
+            students and visitors a clear way to discover the
+            educational opportunities available at the institutions.
+          </p>
+
+          <p>
+            The final website can be customized with the school's
+            real history, leadership, academic programmes,
+            facilities, achievements, school calendar, news and
+            admissions information.
+          </p>
+
+          <div class="demo-note">
+            <strong>Demo information:</strong>
+            This section contains proposed website wording and is
+            not an official statement from the school.
           </div>
 
         </div>
 
       </div>
 
-      <p>
-        “I really enjoy exploring the
-        activities on EarnQube.”
-      </p>
-
     </div>
+  </section>
 
+  <!-- ACADEMICS -->
+  <section class="programmes" id="academics">
 
-    <div class="testimonial">
+    <div class="container">
 
-      <div class="testimonial-top">
+      <div class="section-heading">
+        <div class="small-title">Academic Programmes</div>
+        <h2>Different pathways. A focus on learning.</h2>
+        <p>
+          The final website can present the exact subjects,
+          classes and programmes offered by each institution.
+        </p>
+      </div>
 
-        <div class="testimonial-avatar">
-          D
+      <div class="programme-grid">
+
+        <div class="programme">
+
+          <div class="programme-icon">🌍</div>
+
+          <h3>Dashan International School</h3>
+
+          <p>
+            Cambridge International Curriculum pathway.
+            Official programme details can be added after
+            confirmation by the school.
+          </p>
+
+          <ul>
+            <li>Curriculum information</li>
+            <li>Subjects and learning areas</li>
+            <li>Academic stages</li>
+            <li>Assessment information</li>
+          </ul>
+
         </div>
 
-        <div>
+        <div class="programme">
 
-          <strong>
-            Daniel
-          </strong>
+          <div class="programme-icon">📚</div>
 
-          <div class="stars">
-            ★★★★★
-          </div>
+          <h3>Haddash Christian High School</h3>
+
+          <p>
+            Uganda National Curriculum pathway.
+            Exact classes, subjects and examination details
+            can be added after confirmation.
+          </p>
+
+          <ul>
+            <li>Curriculum information</li>
+            <li>Subjects and combinations</li>
+            <li>Academic stages</li>
+            <li>Examination information</li>
+          </ul>
 
         </div>
 
       </div>
 
-      <p>
-        “The platform is simple to
-        navigate and easy to understand.”
-      </p>
-
     </div>
 
+  </section>
 
-    <div class="testimonial">
+  <!-- WHY CHOOSE US -->
+  <section>
 
-      <div class="testimonial-top">
+    <div class="container">
 
-        <div class="testimonial-avatar">
-          S
+      <div class="section-heading">
+        <div class="small-title">Why Choose Us</div>
+        <h2>A school website built around what parents need.</h2>
+        <p>
+          These are proposed content areas for the final website
+          and should be updated with the school's confirmed information.
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="feature-icon">🎓</div>
+          <h3>Academic Excellence</h3>
+          <p>
+            Present the school's academic programmes,
+            curriculum and learning opportunities.
+          </p>
         </div>
 
-        <div>
+        <div class="feature">
+          <div class="feature-icon">🌱</div>
+          <h3>Student Development</h3>
+          <p>
+            Showcase activities supporting students'
+            personal and academic development.
+          </p>
+        </div>
 
-          <strong>
-            Sarah
-          </strong>
+        <div class="feature">
+          <div class="feature-icon">🏫</div>
+          <h3>Learning Environment</h3>
+          <p>
+            Give parents a visual introduction to the
+            school's learning environment and facilities.
+          </p>
+        </div>
 
-          <div class="stars">
-            ★★★★★
-          </div>
-
+        <div class="feature">
+          <div class="feature-icon">🤝</div>
+          <h3>Parent Connection</h3>
+          <p>
+            Make it easier for prospective parents to
+            ask questions and begin the admissions process.
+          </p>
         </div>
 
       </div>
 
-      <p>
-        “I like having different digital
-        activities available in one place.”
-      </p>
-
     </div>
 
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     FAQ
-========================= -->
-
-<section id="faq">
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      QUESTIONS
-    </div>
-
-    <h2>
-      Frequently asked questions
-    </h2>
-
-  </div>
-
-
-  <div class="faq">
-
-
-    <details>
-
-      <summary>
-        What is EarnQube?
-      </summary>
-
-      <p>
-        EarnQube is a digital platform that
-        helps users explore online activities
-        and earning opportunities.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        How do I create an account?
-      </summary>
-
-      <p>
-        Select Create Account and follow the
-        registration process on the supported
-        account platform.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        What activities are available?
-      </summary>
-
-      <p>
-        Activities can include chats, videos,
-        music, surveys, offers, gaming and
-        referrals depending on availability.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        Are the transactions shown on this page real?
-      </summary>
-
-      <p>
-        No. The transaction feed and floating
-        activity notifications on this landing
-        page are clearly marked DEMO and are
-        simulated examples for the website
-        interface.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        Can I use EarnQube on my phone?
-      </summary>
-
-      <p>
-        Yes. The website is designed with a
-        mobile-first interface for smartphone
-        users.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        How can I get support?
-      </summary>
-
-      <p>
-        Contact the EarnQube support team through
-        WhatsApp or email using the support
-        options below.
-      </p>
-
-    </details>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta">
-
-  <div class="cta-box">
-
-    <h2>
-      Ready to explore?
-    </h2>
-
-    <p>
-      Create your account and start exploring
-      the digital activities available through
-      EarnQube.
-    </p>
-
-
-    <a
-      href="https://stateflix.com/user/register.php?ref=EarnQubesite"
-      target="_blank"
-      class="btn btn-primary"
-    >
-      Create Your Account →
-    </a>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     SUPPORT
-========================= -->
-
-<section id="support">
-
-  <div class="section-head">
-
-    <div class="eyebrow">
-      SUPPORT
-    </div>
-
-    <h2>
-      Need help?
-    </h2>
-
-    <p>
-      Reach out to EarnQube support whenever
-      you need assistance.
-    </p>
-
-  </div>
-
-
-  <div class="support-grid">
-
-
-    <div class="support-card">
-
-      <h3>
-        💬 WhatsApp Support
-      </h3>
-
-      <p>
-        Contact EarnQube support directly
-        through WhatsApp.
-      </p>
-
-      <a
-        class="support-link"
-        href="https://wa.me/256746673971?text=Hello%20EarnQube,%20I%20need%20assistance%20with%20my%20account."
-        target="_blank"
-      >
-        Chat on WhatsApp →
-      </a>
-
-    </div>
-
-
-    <div class="support-card">
-
-      <h3>
-        ✉️ Email Support
-      </h3>
-
-      <p>
-        Send an email for account or
-        platform assistance.
-      </p>
-
-      <a
-        class="support-link"
-        href="mailto:support@earnqube.site"
-      >
-        support@earnqube.site →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-  <div class="footer-inner">
-
-    <div>
-
-      <div class="footer-brand">
-        EarnQube
+  </section>
+
+  <!-- ADMISSIONS -->
+  <section class="admissions" id="admissions">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="small-title">Admissions</div>
+        <h2>Take the next step toward your child's education.</h2>
+        <p>
+          A simple admissions section can help prospective parents
+          understand how to make enquiries and begin the application process.
+        </p>
       </div>
 
-      <div class="footer-text">
-        Turn time into money.
-      </div>
-
-    </div>
-
-
-    <div class="footer-links">
-
-      <a href="#home">
-        Home
-      </a>
-
-      <a href="#activities">
-        Activities
-      </a>
-
-      <a href="#faq">
-        FAQ
-      </a>
-
-      <a href="#support">
-        Support
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
-
-
-
-<!-- =========================
-     FLOATING DEMO ACTIVITY
-========================= -->
-
-<div id="eqActivityContainer"></div>
-
-
-
-<!-- =========================
-     WHATSAPP BUTTON
-========================= -->
-
-<a
-  class="whatsapp"
-  href="https://wa.me/256746673971?text=Hello%20EarnQube,%20I%20need%20assistance%20with%20my%20account."
-  target="_blank"
-  aria-label="EarnQube WhatsApp support"
->
-  ☎
-</a>
-
-
-
-<script>
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-function toggleMenu(){
-
-  const menu =
-    document.getElementById(
-      "mobileMenu"
-    );
-
-  menu.classList.toggle(
-    "open"
-  );
-
-}
-
-
-/* =========================
-   INTERACTIVE DEMO
-========================= */
-
-function showDemo(
-  type,
-  button
-){
-
-  document
-    .querySelectorAll(".demo-tab")
-    .forEach(
-      tab =>
-        tab.classList.remove(
-          "active"
-        )
-    );
-
-
-  button.classList.add(
-    "active"
-  );
-
-
-  const content =
-    document.getElementById(
-      "demoContent"
-    );
-
-
-  if(type === "chat"){
-
-    content.innerHTML=`
-
-      <div class="chat-window">
-
-        <div class="message other">
-          Hi! Welcome to the
-          EarnQube chat experience.
-        </div>
-
-        <div class="message me">
-          Hello! I'm exploring EarnQube.
-        </div>
-
-        <div class="message other">
-          Great! Explore the available
-          activities and learn how they work.
-        </div>
-
-      </div>
-
-    `;
-
-  }
-
-
-  if(type === "video"){
-
-    content.innerHTML=`
-
-      <div class="video-demo">
-
-        <div class="video-screen">
-
-          <button
-            class="play-button"
-            onclick="playVideo()"
-          >
-            ▶
-          </button>
-
-          <span
-            id="videoText"
-            style="
-              font-size:11px;
-              color:rgba(255,255,255,.55);
-            "
-          >
-            Tap to play demo
-          </span>
-
-        </div>
-
-        <div class="progress">
-
-          <div
-            class="progress-bar"
-            id="videoProgress"
-          ></div>
-
-        </div>
-
-      </div>
-
-    `;
-
-  }
-
-
-  if(type === "music"){
-
-    content.innerHTML=`
-
-      <div class="music-demo">
-
-        <div class="album">
-          🎵
-        </div>
-
-        <h3>
-          EarnQube Music
-        </h3>
-
-        <p
-          style="
-            margin-top:7px;
-            color:rgba(255,255,255,.5);
-            font-size:11px;
-          "
-        >
-          Interactive music preview
+      <div class="admission-box">
+
+        <p>
+          Interested parents can request information about
+          admissions, available classes, requirements, fees,
+          school visits and other important details.
         </p>
 
-        <div class="music-controls">
-
-          <button>
-            ⏮
-          </button>
-
-          <button
-            onclick="toggleMusic(this)"
-            style="
-              background:#70ff9a;
-              color:#06110a;
-            "
-          >
-            ▶
-          </button>
-
-          <button>
-            ⏭
-          </button>
-
-        </div>
-
-      </div>
-
-    `;
-
-  }
-
-
-  if(type === "game"){
-
-    content.innerHTML=`
-
-      <div class="game-screen">
-
-        <div class="field-line"></div>
-
-        <div class="player p1">
-          MB
-        </div>
-
-        <div class="player p2">
-          JB
-        </div>
-
-        <div class="player p3">
-          VH
-        </div>
-
-        <div class="ball"></div>
-
-      </div>
-
-      <div
-        style="
-          text-align:center;
-          margin-top:12px;
-          color:rgba(255,255,255,.45);
-          font-size:10px;
-        "
-      >
-        Interactive football demo
-      </div>
-
-    `;
-
-  }
-
-}
-
-
-/* =========================
-   VIDEO DEMO
-========================= */
-
-function playVideo(){
-
-  const text =
-    document.getElementById(
-      "videoText"
-    );
-
-  const progress =
-    document.getElementById(
-      "videoProgress"
-    );
-
-
-  if(!text || !progress)
-    return;
-
-
-  text.textContent =
-    "Playing demo...";
-
-
-  let value=0;
-
-
-  const timer =
-    setInterval(
-      ()=>{
-
-        value += 2;
-
-        progress.style.width =
-          value + "%";
-
-
-        if(value >= 100){
-
-          clearInterval(timer);
-
-          text.textContent =
-            "Demo completed";
-
-        }
-
-      },
-      100
-    );
-
-}
-
-
-/* =========================
-   MUSIC DEMO
-========================= */
-
-function toggleMusic(button){
-
-  if(
-    button.textContent
-      .trim() === "▶"
-  ){
-
-    button.textContent =
-      "Ⅱ";
-
-  }else{
-
-    button.textContent =
-      "▶";
-
-  }
-
-}
-
-
-/* =========================================================
-   DEMO LIVE ACTIVITY SYSTEM
-========================================================= */
-
-const DEMO_ACTIVITIES = [
-
-  {
-    type:"activated",
-    name:"Sarah M.",
-    time:"Just now"
-  },
-
-  {
-    type:"withdrew",
-    name:"David K.",
-    amount:50000,
-    currency:"UGX",
-    time:"2 mins ago"
-  },
-
-  {
-    type:"watched",
-    name:"Michael A.",
-    time:"3 mins ago"
-  },
-
-  {
-    type:"listened",
-    name:"Brenda N.",
-    time:"4 mins ago"
-  },
-
-  {
-    type:"chatted",
-    name:"Daniel O.",
-    time:"5 mins ago"
-  },
-
-  {
-    type:"withdrew",
-    name:"Grace T.",
-    amount:85000,
-    currency:"UGX",
-    time:"7 mins ago"
-  },
-
-  {
-    type:"activated",
-    name:"James P.",
-    time:"9 mins ago"
-  },
-
-  {
-    type:"watched",
-    name:"Kevin R.",
-    time:"11 mins ago"
-  },
-
-  {
-    type:"listened",
-    name:"Aisha M.",
-    time:"13 mins ago"
-  },
-
-  {
-    type:"chatted",
-    name:"Brian S.",
-    time:"15 mins ago"
-  },
-
-  {
-    type:"testimonial",
-    name:"Grace",
-    text:
-      "I really enjoy exploring the activities on EarnQube."
-  },
-
-  {
-    type:"testimonial",
-    name:"Daniel",
-    text:
-      "The platform is simple to navigate and easy to understand."
-  }
-
-];
-
-
-const DEMO_ACTIVITY_TYPES = {
-
-  activated:{
-    icon:"⚡",
-    text:"activated their account"
-  },
-
-  withdrew:{
-    icon:"💸",
-    text:"completed a withdrawal"
-  },
-
-  watched:{
-    icon:"🎬",
-    text:"watched a video"
-  },
-
-  listened:{
-    icon:"🎵",
-    text:"listened to music"
-  },
-
-  chatted:{
-    icon:"💬",
-    text:"completed a chat activity"
-  }
-
-};
-
-
-function demoEscape(value){
-
-  return String(value ?? "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-function demoMoney(
-  amount,
-  currency="UGX"
-){
-
-  return new Intl.NumberFormat(
-    "en-UG",
-    {
-      style:"currency",
-      currency:currency,
-      maximumFractionDigits:0
-    }
-  ).format(
-    Number(amount)
-  );
-
-}
-
-
-function showDemoActivity(
-  activity
-){
-
-  const container =
-    document.getElementById(
-      "eqActivityContainer"
-    );
-
-
-  if(!container)
-    return;
-
-
-  container.innerHTML="";
-
-
-  if(
-    activity.type ===
-    "testimonial"
-  ){
-
-    const card =
-      document.createElement("div");
-
-
-    card.className =
-      "eq-testimonial";
-
-
-    const initial =
-      activity.name
-        .charAt(0)
-        .toUpperCase();
-
-
-    card.innerHTML=`
-
-      <div
-        style="
-          display:flex;
-          align-items:center;
-          gap:11px;
-        "
-      >
-
-        <div class="eq-avatar">
-
-          ${demoEscape(initial)}
-
-        </div>
-
-        <div>
-
-          <div
-            style="
-              color:#ffc04d;
-              font-size:9px;
-              font-weight:900;
-              letter-spacing:1px;
-            "
-          >
-            DEMO TESTIMONIAL
-          </div>
-
-          <div class="eq-testimonial-name">
-
-            ${demoEscape(
-              activity.name
-            )}
-
-          </div>
-
-          <div class="eq-stars">
-            ★★★★★
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="eq-testimonial-text">
-
-        “${demoEscape(
-          activity.text
-        )}”
-
-      </div>
-
-    `;
-
-
-    container.appendChild(
-      card
-    );
-
-
-    setTimeout(
-      ()=>{
-        card.remove();
-      },
-      8000
-    );
-
-
-    return;
-
-  }
-
-
-  const config =
-    DEMO_ACTIVITY_TYPES[
-      activity.type
-    ];
-
-
-  if(!config)
-    return;
-
-
-  let action =
-    config.text;
-
-
-  if(
-    activity.type ===
-    "withdrew"
-  ){
-
-    action =
-      "withdrew " +
-      `<span>${demoEscape(
-        demoMoney(
-          activity.amount,
-          activity.currency
-        )
-      )}</span>`;
-
-  }
-
-
-  const card =
-    document.createElement("div");
-
-
-  card.className =
-    "eq-activity";
-
-
-  card.innerHTML=`
-
-    <div class="eq-activity-icon">
-
-      ${config.icon}
-
-    </div>
-
-
-    <div class="eq-activity-content">
-
-      <div
-        style="
-          color:#ffc04d;
-          font-size:9px;
-          font-weight:900;
-          letter-spacing:1px;
-          margin-bottom:3px;
-        "
-      >
-
-        DEMO ACTIVITY
-
-      </div>
-
-
-      <div class="eq-activity-title">
-
-        <span>
-          ${demoEscape(
-            activity.name
-          )}
-        </span>
-
-        ${action}
-
-      </div>
-
-
-      <div class="eq-activity-meta">
-
-        ${demoEscape(
-          activity.time
-        )}
+        <a href="#contact" class="btn btn-primary">
+          Request Admissions Information →
+        </a>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="eq-activity-status">
+  <!-- FACILITIES -->
+  <section class="gallery" id="facilities">
 
-      DEMO
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="small-title">Facilities & School Life</div>
+        <h2>Show parents what life at school looks like.</h2>
+        <p>
+          Replace the demonstration images below with real,
+          high-quality photographs of the school.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <span class="gallery-label">
+            Demo image — School learning environment
+          </span>
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">
+            Demo image — Classroom
+          </span>
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">
+            Demo image — Student activities
+          </span>
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">
+            Demo image — School life
+          </span>
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">
+            Demo image — Learning
+          </span>
+        </div>
+
+      </div>
 
     </div>
 
-  `;
+  </section>
 
+  <!-- SCHOOL LIFE -->
+  <section>
 
-  container.appendChild(
-    card
-  );
+    <div class="container">
 
+      <div class="section-heading">
+        <div class="small-title">School Life</div>
+        <h2>More than the classroom.</h2>
+        <p>
+          The final website can showcase approved information
+          about clubs, sports, events, student activities,
+          leadership and community engagement.
+        </p>
+      </div>
 
-  setTimeout(
-    ()=>{
-      card.remove();
-    },
-    6500
-  );
+      <div class="programme-grid">
 
-}
+        <div class="programme">
+          <div class="programme-icon">⚽</div>
+          <h3>Sports & Activities</h3>
+          <p>
+            Showcase approved sporting activities,
+            clubs and extracurricular opportunities.
+          </p>
+        </div>
 
+        <div class="programme">
+          <div class="programme-icon">🎭</div>
+          <h3>Events & Community</h3>
+          <p>
+            Publish school events, announcements,
+            celebrations and community activities.
+          </p>
+        </div>
 
-let demoActivityIndex=0;
+      </div>
 
+    </div>
 
-function startDemoActivities(){
+  </section>
 
-  function nextActivity(){
+  <!-- CONTACT -->
+  <section id="contact">
 
-    const activity =
-      DEMO_ACTIVITIES[
-        demoActivityIndex %
-        DEMO_ACTIVITIES.length
-      ];
+    <div class="container">
 
+      <div class="section-heading">
+        <div class="small-title">Get in Touch</div>
+        <h2>Let's start the conversation.</h2>
+        <p>
+          Prospective parents can use this section to request
+          admissions information or ask questions.
+        </p>
+      </div>
 
-    demoActivityIndex++;
+      <div class="contact-grid">
 
+        <div class="contact-card">
 
-    showDemoActivity(
-      activity
-    );
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Location</strong>
+              <span>Opuyo, Soroti, Uganda</span>
+            </div>
+          </div>
 
+          <div class="contact-item">
+            <div class="contact-icon">🏫</div>
+            <div>
+              <strong>Institutions</strong>
+              <span>
+                Dashan International School<br>
+                Haddash Christian High School
+              </span>
+            </div>
+          </div>
 
-    const duration =
-      activity.type ===
-      "testimonial"
-        ? 9000
-        : 7000;
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span>Demo contact — replace with official number</span>
+            </div>
+          </div>
 
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span>Demo email — replace with official email</span>
+            </div>
+          </div>
 
-    setTimeout(
-      nextActivity,
-      duration
-    );
+          <div class="demo-note">
+            <strong>Important:</strong>
+            Contact details shown here are placeholders for this
+            demonstration and should be replaced by the school.
+          </div>
 
-  }
+        </div>
 
+        <form class="contact-form" onsubmit="submitDemo(event)">
 
-  nextActivity();
+          <div class="form-row">
 
-}
+            <div class="field">
+              <label>Parent / Guardian Name</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
 
+            <div class="field">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Your phone number" required>
+            </div>
 
-startDemoActivities();
+          </div>
 
-</script>
+          <div class="field">
+            <label>School of Interest</label>
 
-</body>
-</html>
+            <select required>
+              <option value="">Select a school</option>
+              <option>Dashan International School</option>
+              <option>Haddash Christian High School</option>
+            </select>
+          </div>
