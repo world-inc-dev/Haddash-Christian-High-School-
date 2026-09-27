@@ -459,6 +459,68 @@ section{
   font-size:14px;
 }
 
+/* DIGITAL LEARNING */
+.digital{
+  background:#fff;
+}
+
+.digital-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:55px;
+  align-items:center;
+}
+
+.digital-image{
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.digital-image img{
+  height:430px;
+  object-fit:cover;
+}
+
+.digital-content .label{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.digital-content h2{
+  color:var(--green);
+  font-size:42px;
+  line-height:1.1;
+  margin:9px 0 18px;
+}
+
+.digital-content p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.digital-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.digital-list li{
+  padding:10px 0;
+  color:#40534b;
+  border-bottom:1px solid var(--border);
+  font-weight:700;
+}
+
+.digital-list li::before{
+  content:"✓";
+  color:var(--gold);
+  font-weight:900;
+  margin-right:10px;
+}
+
 /* SCHOOL LIFE */
 .life{
   background:var(--light);
@@ -717,6 +779,7 @@ footer a{
 
   .about-grid,
   .curriculum-grid,
+  .digital-grid,
   .contact-grid{
     grid-template-columns:1fr;
   }
@@ -762,12 +825,17 @@ footer a{
     font-size:31px;
   }
 
-  .about-content h2{
+  .about-content h2,
+  .digital-content h2{
     font-size:32px;
   }
 
   .about-image img{
     height:330px;
+  }
+
+  .digital-image img{
+    height:300px;
   }
 
   .facts{
@@ -830,6 +898,7 @@ footer a{
   <a href="#about">About</a>
   <a href="#curriculum">Curriculum</a>
   <a href="#academics">Academics</a>
+  <a href="#digital">ICT</a>
   <a href="#life">School Life</a>
   <a href="#gallery">Gallery</a>
   <a href="#admissions">Admissions</a>
@@ -1150,533 +1219,3 @@ footer a{
 </p>
 
 </div>
-
-
-<div class="academic-card">
-
-<div class="academic-number">
-  03
-</div>
-
-<h3>
-  Cambridge
-</h3>
-
-<p>
-  An international curriculum pathway
-  for Cambridge learners.
-</p>
-
-</div>
-
-
-<div class="academic-card">
-
-<div class="academic-number">
-  04
-</div>
-
-<h3>
-  French
-</h3>
-
-<p>
-  French is included among the school's
-  educational offerings.
-</p>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- SCHOOL LIFE -->
-<section class="life" id="life">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="label">
-  School Experience
-</div>
-
-<h2>
-  More Than the Classroom
-</h2>
-
-<p>
-  A school environment designed to support
-  learning, growth and preparation for the future.
-</p>
-
-</div>
-
-
-<div class="life-grid">
-
-<div class="life-card">
-
-<h3>
-  Day & Boarding
-</h3>
-
-<p>
-  Students can choose a Day or Boarding
-  school experience.
-</p>
-
-</div>
-
-
-<div class="life-card">
-
-<h3>
-  Arts & Science
-</h3>
-
-<p>
-  Students have access to Arts and Science
-  subject pathways.
-</p>
-
-</div>
-
-
-<div class="life-card">
-
-<h3>
-  French
-</h3>
-
-<p>
-  French forms part of the school's
-  educational offering.
-</p>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- GALLERY -->
-<section id="gallery">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="label">
-  Our Environment
-</div>
-
-<h2>
-  School Life Gallery
-</h2>
-
-<p>
-  A glimpse of students and the school community
-  at Dashan International School.
-</p>
-
-</div>
-
-
-<div class="gallery-grid">
-
-
-<div class="gallery-item">
-
-<img
-  src="IMG-20260924-WA0050.jpg"
-  alt="Students at Dashan International School">
-
-<span>
-  Students on Campus
-</span>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-  src="IMG-20260924-WA0052.jpg"
-  alt="Students of Dashan International School">
-
-<span>
-  School Community
-</span>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-  src="IMG-20260924-WA0050.jpg"
-  alt="Student life at Dashan International School">
-
-<span>
-  Student Life
-</span>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-  src="IMG-20260924-WA0052.jpg"
-  alt="Dashan International School students">
-
-<span>
-  School Identity
-</span>
-
-</div>
-
-
-</div>
-</div>
-</section>
-
-
-<!-- ADMISSIONS -->
-<section class="admissions" id="admissions">
-
-<div class="container">
-
-<div class="admission-box">
-
-<div class="label">
-  ADMISSIONS
-</div>
-
-<h2>
-  Admissions Are Open
-</h2>
-
-<p>
-  Looking for a school in Soroti offering both
-  Uganda National and Cambridge International
-  curricula? Contact Dashan International School
-  to learn more about admission and available programmes.
-</p>
-
-<div
-  class="hero-buttons"
-  style="justify-content:center"
->
-
-<a
-  href="tel:+256782316738"
-  class="btn btn-gold">
-  Call 0782 316 738
-</a>
-
-<a
-  href="https://wa.me/256782316738"
-  target="_blank"
-  class="btn btn-outline">
-  WhatsApp Us
-</a>
-
-<a
-  href="mailto:Dashaninternationalschool@gmail.com"
-  class="btn btn-outline">
-  Email School
-</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="label">
-  Contact Us
-</div>
-
-<h2>
-  Get in Touch
-</h2>
-
-<p>
-  Contact Dashan International School
-  for admissions and further information.
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>
-  School Information
-</h3>
-
-<div class="contact-line">
-<strong>School</strong>
-Dashan International School
-</div>
-
-<div class="contact-line">
-<strong>Location</strong>
-Opuyo – Soroti East Division
-</div>
-
-<div class="contact-line">
-<strong>Curriculum</strong>
-Uganda National & Cambridge International
-</div>
-
-<div class="contact-line">
-<strong>School Type</strong>
-Day & Boarding
-</div>
-
-<div class="contact-line">
-<strong>Admissions</strong>
-Open
-</div>
-
-<div class="contact-line">
-<strong>Opening Hours</strong>
-Monday – Saturday, 8:00 AM – 5:00 PM
-</div>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-  Contact Details
-</h3>
-
-<div class="contact-line">
-
-<strong>
-  Phone
-</strong>
-
-<a
-  class="contact-link"
-  href="tel:+256782316738">
-  0782 316 738
-</a>
-
-<br>
-
-<a
-  class="contact-link"
-  href="tel:+256706648711">
-  0706 648 711
-</a>
-
-</div>
-
-
-<div class="contact-line">
-
-<strong>
-  Email
-</strong>
-
-<a
-  class="contact-link"
-  href="mailto:Dashaninternationalschool@gmail.com">
-  Dashaninternationalschool@gmail.com
-</a>
-
-</div>
-
-
-<div class="contact-line">
-
-<strong>
-  Location
-</strong>
-
-Opuyo, Soroti East Division
-
-</div>
-
-
-<div class="contact-line">
-
-<strong>
-  Motto
-</strong>
-
-“And stand we shall”
-
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-<div class="footer-grid">
-
-
-<div>
-
-<h3>
-  Dashan International School
-</h3>
-
-<p>
-  A school offering both Uganda National
-  Curriculum and Cambridge International Curriculum.
-</p>
-
-<p class="footer-motto">
-  “And stand we shall”
-</p>
-
-</div>
-
-
-<div>
-
-<h3>
-  Quick Links
-</h3>
-
-<a href="#home">
-  Home
-</a>
-
-<a href="#about">
-  About Us
-</a>
-
-<a href="#curriculum">
-  Curriculum
-</a>
-
-<a href="#academics">
-  Academics
-</a>
-
-<a href="#gallery">
-  Gallery
-</a>
-
-<a href="#admissions">
-  Admissions
-</a>
-
-</div>
-
-
-<div>
-
-<h3>
-  Contact
-</h3>
-
-<a href="tel:+256782316738">
-  0782 316 738
-</a>
-
-<a href="tel:+256706648711">
-  0706 648 711
-</a>
-
-<a href="mailto:Dashaninternationalschool@gmail.com">
-  Dashaninternationalschool@gmail.com
-</a>
-
-<p>
-  Opuyo – Soroti East Division
-</p>
-
-</div>
-
-</div>
-
-
-<div class="copyright">
-  © 2026 Dashan International School. All rights reserved.
-</div>
-
-</footer>
-
-
-<!-- FLOATING CONTACT BUTTONS -->
-<div class="floating">
-
-<a
-  class="whatsapp"
-  href="https://wa.me/256782316738"
-  target="_blank"
-  aria-label="WhatsApp">
-  WA
-</a>
-
-<a
-  class="call"
-  href="tel:+256782316738"
-  aria-label="Call school">
-  ☎
-</a>
-
-</div>
-
-
-<!-- MOBILE MENU SCRIPT -->
-<script>
-
-function toggleMenu(){
-
-  document
-    .getElementById("navLinks")
-    .classList
-    .toggle("active");
-
-}
-
-document
-  .querySelectorAll(".nav-links a")
-  .forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-      document
-        .getElementById("navLinks")
-        .classList
-        .remove("active");
-
-    });
-
-  });
-
-</script>
-
-</body>
-</html>
