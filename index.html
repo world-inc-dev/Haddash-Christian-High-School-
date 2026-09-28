@@ -1,1679 +1,1472 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Dashan International School | Soroti, Uganda</title>
-
-  <meta name="description" content="Dashan International School in Opuyo, Soroti offers Cambridge International Curriculum and Uganda National Curriculum, Day and Boarding, O' and A' Level education.">
-  <meta name="keywords" content="Dashan International School, Soroti schools, Opuyo school, Cambridge curriculum Uganda, Uganda National Curriculum, Day Boarding School Soroti">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    :root {
-      --primary: #0b5d3b;
-      --primary-dark: #063c28;
-      --accent: #d8a91f;
-      --light: #f6f8f5;
-      --dark: #10231b;
-      --white: #ffffff;
-      --text: #37443e;
-      --border: #e2e8e4;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1150px, 92%);
-      margin: auto;
-    }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(6, 60, 40, 0.97);
-      color: white;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
-    }
-
-    .nav {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      font-size: 18px;
-    }
-
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: var(--primary-dark);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 16px;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: 14px;
-      font-weight: 600;
-      opacity: .95;
-      transition: .25s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .nav-apply {
-      background: var(--accent);
-      color: var(--primary-dark);
-      padding: 11px 17px;
-      border-radius: 25px;
-    }
-
-    .menu-btn {
-      display: none;
-      border: none;
-      background: transparent;
-      color: white;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 680px;
-      display: grid;
-      align-items: center;
-      background:
-        linear-gradient(rgba(3,31,21,.73), rgba(3,31,21,.78)),
-        url("IMG-20260924-WA0050.jpg") center/cover;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 780px;
-      padding: 90px 0;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      background: rgba(216,169,31,.18);
-      border: 1px solid rgba(216,169,31,.55);
-      color: #ffe38b;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(40px, 7vw, 76px);
-      line-height: 1.03;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero-motto {
-      font-size: clamp(18px, 2.4vw, 25px);
-      color: #ffe38b;
-      font-weight: 700;
-      font-style: italic;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      font-size: clamp(17px, 2vw, 21px);
-      max-width: 680px;
-      color: #edf5f0;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 21px;
-      border-radius: 7px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: .25s;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--primary-dark);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border-color: white;
-      color: white;
-      background: rgba(255,255,255,.08);
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--primary-dark);
-    }
-
-    /* STATS */
-    .stats {
-      background: white;
-      box-shadow: 0 5px 25px rgba(0,0,0,.06);
-      position: relative;
-      margin-top: -55px;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .stat {
-      padding: 28px 15px;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-
-    .stat:last-child {
-      border-right: none;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--primary);
-      font-size: 27px;
-      margin-bottom: 5px;
-    }
-
-    .stat span {
-      font-size: 13px;
-      color: #68756f;
-      font-weight: 600;
-    }
-
-    /* GENERAL SECTIONS */
-    section {
-      padding: 90px 0;
-    }
-
-    .section-heading {
-      max-width: 700px;
-      margin-bottom: 45px;
-    }
-
-    .section-heading.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: var(--primary);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 12px;
-      margin-bottom: 9px;
-    }
-
-    h2 {
-      color: var(--dark);
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
-      color: #69756f;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-image {
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 18px 45px rgba(0,0,0,.12);
-    }
-
-    .about-image img {
-      height: 470px;
-      object-fit: cover;
-    }
-
-    .about-text p {
-      margin-bottom: 17px;
-    }
-
-    .feature-list {
-      list-style: none;
-      display: grid;
-      gap: 11px;
-      margin: 25px 0;
-    }
-
-    .feature-list li {
-      background: white;
-      padding: 14px 17px;
-      border-radius: 9px;
-      border-left: 4px solid var(--accent);
-      box-shadow: 0 4px 16px rgba(0,0,0,.04);
-      font-weight: 600;
-    }
-
-    /* CURRICULUM */
-    .curriculum {
-      background: #edf3ef;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.06);
-      border: 1px solid var(--border);
-    }
-
-    .card-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 12px;
-      background: #e5f0e9;
-      color: var(--primary);
-      display: grid;
-      place-items: center;
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-
-    .card h3 {
-      color: var(--dark);
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #65716b;
-    }
-
-    /* ACADEMICS */
-    .academic-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .academic-box {
-      background: var(--primary-dark);
-      color: white;
-      border-radius: 14px;
-      padding: 28px;
-    }
-
-    .academic-box h3 {
-      color: var(--accent);
-      margin-bottom: 9px;
-    }
-
-    .academic-box p {
-      color: #d9e8df;
-      font-size: 14px;
-    }
-
-    /* SCHOOL LIFE */
-    .life-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .life-image {
-      border-radius: 17px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,.1);
-    }
-
-    .life-image img {
-      height: 430px;
-      object-fit: cover;
-    }
-
-    .life-items {
-      display: grid;
-      gap: 15px;
-    }
-
-    .life-item {
-      background: white;
-      padding: 20px;
-      border-radius: 11px;
-      border: 1px solid var(--border);
-    }
-
-    .life-item h3 {
-      color: var(--primary);
-      margin-bottom: 5px;
-    }
-
-    /* GALLERY */
-    .gallery {
-      background: #f0f4f1;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .gallery-item {
-      border-radius: 13px;
-      overflow: hidden;
-      background: white;
-      min-height: 240px;
-    }
-
-    .gallery-item img {
-      height: 100%;
-      min-height: 240px;
-      object-fit: cover;
-      transition: transform .4s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.04);
-    }
-
-    /* ADMISSIONS */
-    .admissions {
-      background:
-        linear-gradient(135deg, rgba(6,60,40,.98), rgba(11,93,59,.96));
-      color: white;
-    }
-
-    .admissions-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 45px;
-      align-items: start;
-    }
-
-    .admissions h2 {
-      color: white;
-    }
-
-    .admissions-intro {
-      color: #dcebe3;
-      margin-bottom: 25px;
-    }
-
-    .admission-info {
-      display: grid;
-      gap: 13px;
-    }
-
-    .admission-info div {
-      padding: 15px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      border-radius: 9px;
-    }
-
-    .admission-info strong {
-      display: block;
-      color: var(--accent);
-      margin-bottom: 3px;
-    }
-
-    .form-card {
-      background: white;
-      color: var(--text);
-      padding: 30px;
-      border-radius: 17px;
-      box-shadow: 0 15px 45px rgba(0,0,0,.18);
-    }
-
-    .form-card h3 {
-      color: var(--dark);
-      font-size: 25px;
-      margin-bottom: 7px;
-    }
-
-    .form-card > p {
-      color: #68746e;
-      font-size: 14px;
-      margin-bottom: 22px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-size: 13px;
-      font-weight: 700;
-      color: #26352e;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #d8e0db;
-      border-radius: 8px;
-      outline: none;
-      font: inherit;
-      background: #fbfcfb;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(11,93,59,.09);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .form-note {
-      font-size: 12px;
-      color: #69756f;
-      margin-top: 15px;
-      background: #f1f5f2;
-      padding: 12px;
-      border-radius: 7px;
-    }
-
-    .submit-btn {
-      width: 100%;
-      margin-top: 17px;
-      border: none;
-      font-size: 15px;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .contact-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 30px;
-    }
-
-    .contact-card h3 {
-      color: var(--dark);
-      margin-bottom: 15px;
-    }
-
-    .contact-line {
-      margin: 11px 0;
-    }
-
-    .contact-line strong {
-      color: var(--primary);
-    }
-
-    .contact-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #041f15;
-      color: #cbd9d2;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 35px;
-      margin-bottom: 35px;
-    }
-
-    footer h3 {
-      color: white;
-      margin-bottom: 12px;
-    }
-
-    footer p,
-    footer a {
-      font-size: 14px;
-      color: #b9c9c1;
-    }
-
-    footer a:hover {
-      color: var(--accent);
-    }
-
-    .footer-motto {
-      display: inline-block;
-      margin-top: 13px;
-      color: var(--accent);
-      font-weight: 800;
-      font-style: italic;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.1);
-      padding-top: 20px;
-      text-align: center;
-      font-size: 12px;
-      color: #92a59b;
-    }
-
-    /* FLOATING BUTTONS */
-    .floating {
-      position: fixed;
-      right: 17px;
-      bottom: 18px;
-      z-index: 900;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-    }
-
-    .float-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.2);
-    }
-
-    .float-call {
-      background: #1769aa;
-    }
-
-    .float-whatsapp {
-      background: #128c4a;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      nav {
-        display: none;
-        position: absolute;
-        top: 74px;
-        left: 0;
-        width: 100%;
-        background: var(--primary-dark);
-        padding: 20px;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        padding: 10px 5px;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stat:nth-child(2) {
-        border-right: none;
-      }
-
-      .stat {
-        border-bottom: 1px solid var(--border);
-      }
-
-      .about-grid,
-      .life-grid,
-      .admissions-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .academic-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      section {
-        padding: 65px 0;
-      }
-
-      .hero {
-        min-height: 620px;
-      }
-
-      .hero-content {
-        padding: 70px 0;
-      }
-
-      .stats {
-        margin-top: -35px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .stat {
-        padding: 20px 8px;
-      }
-
-      .stat strong {
-        font-size: 21px;
-      }
-
-      .cards,
-      .academic-grid,
-      .gallery-grid,
-      .form-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-group.full {
-        grid-column: auto;
-      }
-
-      .about-image img,
-      .life-image img {
-        height: 330px;
-      }
-
-      .gallery-item,
-      .gallery-item img {
-        min-height: 260px;
-      }
-
-      .form-card {
-        padding: 21px;
-      }
-    }
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashan International School | Soroti</title>
+<meta name="description" content="Dashan International School in Opuyo, Soroti offering Cambridge International Curriculum and Uganda National Curriculum. Day and Boarding. Admissions Open.">
+
+<style>
+:root{
+  --navy:#071a3d;
+  --navy2:#0d2b5c;
+  --red:#c8102e;
+  --red2:#e21b3c;
+  --white:#ffffff;
+  --light:#f5f7fb;
+  --text:#172033;
+  --muted:#667085;
+  --border:#e3e8f0;
+  --shadow:0 15px 40px rgba(7,26,61,.12);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--navy);
+  color:white;
+  box-shadow:0 4px 20px rgba(0,0,0,.15);
+}
+
+.navbar{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  font-size:18px;
+}
+
+.logo-mark{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:white;
+  color:var(--navy);
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  border:3px solid var(--red);
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+nav a{
+  color:white;
+  font-size:14px;
+  font-weight:600;
+  transition:.2s;
+}
+
+nav a:hover{
+  color:#ffccd4;
+}
+
+.menu-btn{
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:650px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(7,26,61,.94),rgba(7,26,61,.70),rgba(7,26,61,.42)),
+    url("IMG-20260924-WA0050.jpg") center/cover;
+}
+
+.hero-content{
+  max-width:720px;
+  padding:80px 0;
+}
+
+.badge{
+  display:inline-block;
+  background:var(--red);
+  color:white;
+  padding:8px 15px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.7px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(42px,7vw,72px);
+  line-height:1.04;
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:#ff304f;
+}
+
+.hero-motto{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:28px;
+}
+
+.hero p{
+  max-width:650px;
+  font-size:17px;
+  color:#f0f4fa;
+  margin-bottom:30px;
+}
+
+.btns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px 22px;
+  border-radius:8px;
+  font-weight:800;
+  border:2px solid transparent;
+  transition:.25s;
+}
+
+.btn-primary{
+  background:var(--red);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--red2);
+  transform:translateY(-2px);
+}
+
+.btn-light{
+  background:white;
+  color:var(--navy);
+}
+
+.btn-light:hover{
+  background:#edf1f7;
+}
+
+/* STATS */
+.stats{
+  margin-top:-45px;
+  position:relative;
+  z-index:5;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:white;
+  border-radius:15px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.stat{
+  padding:25px 15px;
+  text-align:center;
+  border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  color:var(--navy);
+  font-size:27px;
+}
+
+.stat span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  max-width:700px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.section-head .eyebrow{
+  color:var(--red);
+  text-transform:uppercase;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:1.5px;
+}
+
+.section-head h2{
+  color:var(--navy);
+  font-size:clamp(30px,5vw,45px);
+  margin:8px 0 12px;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.about-image{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:6px solid white;
+}
+
+.about-text h2{
+  color:var(--navy);
+  font-size:40px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.info-list{
+  display:grid;
+  gap:10px;
+  margin:20px 0;
+}
+
+.info-item{
+  padding:13px 15px;
+  background:var(--light);
+  border-left:4px solid var(--red);
+  border-radius:5px;
+}
+
+.info-item strong{
+  color:var(--navy);
+}
+
+/* CURRICULUM */
+.curriculum{
+  background:var(--light);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 8px 30px rgba(7,26,61,.07);
+  border-top:5px solid var(--navy);
+}
+
+.card.red{
+  border-top-color:var(--red);
+}
+
+.card-icon{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  background:#edf2fa;
+  color:var(--navy);
+  border-radius:12px;
+  font-size:25px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  color:var(--navy);
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+.card ul{
+  margin:15px 0 0 20px;
+  color:var(--muted);
+}
+
+/* ACADEMICS */
+.academic-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.academic-card{
+  padding:28px;
+  background:var(--navy);
+  color:white;
+  border-radius:14px;
+}
+
+.academic-card:nth-child(2){
+  background:var(--red);
+}
+
+.academic-card:nth-child(3){
+  background:#102f62;
+}
+
+.academic-card h3{
+  margin-bottom:10px;
+}
+
+.academic-card p{
+  color:#e8edf5;
+}
+
+/* SCHOOL LIFE */
+.life-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.life-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  min-height:260px;
+  box-shadow:var(--shadow);
+}
+
+.life-card img{
+  height:100%;
+  min-height:260px;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.life-card:hover img{
+  transform:scale(1.05);
+}
+
+.life-overlay{
+  position:absolute;
+  inset:auto 0 0;
+  padding:25px;
+  color:white;
+  background:linear-gradient(transparent,rgba(7,26,61,.9));
+}
+
+.life-overlay h3{
+  font-size:21px;
+}
+
+/* GALLERY */
+.gallery{
+  background:var(--light);
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.gallery-grid img{
+  height:230px;
+  object-fit:cover;
+  border-radius:12px;
+  transition:.3s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.02);
+}
+
+/* ADMISSIONS */
+.admission{
+  background:var(--navy);
+  color:white;
+}
+
+.admission-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:45px;
+  align-items:start;
+}
+
+.admission-info h2{
+  font-size:40px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
+
+.admission-info p{
+  color:#dbe4f2;
+  margin-bottom:25px;
+}
+
+.admission-details{
+  display:grid;
+  gap:13px;
+}
+
+.admission-detail{
+  padding:15px;
+  background:rgba(255,255,255,.08);
+  border-left:4px solid var(--red);
+  border-radius:5px;
+}
+
+.admission-detail strong{
+  display:block;
+  color:white;
+}
+
+.form-box{
+  background:white;
+  color:var(--text);
+  padding:30px;
+  border-radius:15px;
+  box-shadow:var(--shadow);
+}
+
+.form-box h3{
+  color:var(--navy);
+  font-size:25px;
+  margin-bottom:20px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  font-size:13px;
+  font-weight:700;
+  color:var(--navy);
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:7px;
+  font:inherit;
+  outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--red);
+  box-shadow:0 0 0 3px rgba(200,16,46,.08);
+}
+
+.field textarea{
+  min-height:110px;
+  resize:vertical;
+}
+
+.form-note{
+  font-size:12px;
+  color:var(--muted);
+  margin:15px 0;
+}
+
+.submit-btn{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:8px;
+  background:var(--red);
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.submit-btn:hover{
+  background:var(--red2);
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.contact-card{
+  text-align:center;
+  padding:28px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.contact-icon{
+  width:55px;
+  height:55px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:var(--navy);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:23px;
+}
+
+.contact-card h3{
+  color:var(--navy);
+  margin-bottom:7px;
+}
+
+.contact-card p{
+  color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+  background:#040f25;
+  color:white;
+  padding:45px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:35px;
+  padding-bottom:35px;
+}
+
+footer h3{
+  margin-bottom:12px;
+}
+
+footer p,
+footer a{
+  color:#bfc9d9;
+  font-size:14px;
+}
+
+footer a:hover{
+  color:white;
+}
+
+.footer-links{
+  display:grid;
+  gap:7px;
+}
+
+.footer-motto{
+  color:#ff405c;
+  font-weight:800;
+  display:block;
+  margin-top:10px;
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:20px;
+  text-align:center;
+  color:#98a5b8;
+  font-size:13px;
+}
+
+/* FLOATING BUTTONS */
+.float-buttons{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:900;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float-btn{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:22px;
+  box-shadow:0 7px 20px rgba(0,0,0,.2);
+}
+
+.call{
+  background:var(--navy);
+}
+
+.whatsapp{
+  background:#168c45;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+  nav{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:var(--navy);
+    padding:20px;
+    flex-direction:column;
+    align-items:flex-start;
+    border-top:1px solid rgba(255,255,255,.1);
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat:nth-child(-n+2){
+    border-bottom:1px solid var(--border);
+  }
+
+  .about-grid,
+  .admission-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .academic-grid{
+    grid-template-columns:1fr;
+  }
+
+  .life-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:560px){
+  .hero{
+    min-height:590px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .hero-motto{
+    font-size:17px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .stats{
+    margin-top:-30px;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    padding:18px 8px;
+  }
+
+  .stat strong{
+    font-size:21px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid img{
+    height:260px;
+  }
+
+  .about-text h2,
+  .admission-info h2{
+    font-size:32px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
+  <div class="container navbar">
 
-  <header>
-    <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">DI</div>
+      <div>Dashan International School</div>
+    </a>
 
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-  <a href="#home" class="logo">
-    <div class="logo-mark">DI</div>
-    <div>Dashan International School</div>
-  </a>
-
-  <button
-    class="menu-btn"
-    onclick="toggleMenu()"
-    aria-label="Open menu"
-  >
-    ☰
-  </button>
-
-  <nav id="mainNav">
-    <a href="#home" onclick="closeMenu()">Home</a>
-    <a href="#about" onclick="closeMenu()">About</a>
-    <a href="#curriculum" onclick="closeMenu()">Curriculum</a>
-    <a href="#academics" onclick="closeMenu()">Academics</a>
-    <a href="#life" onclick="closeMenu()">School Life</a>
-    <a href="#gallery" onclick="closeMenu()">Gallery</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
-    <a href="#admissions" class="nav-apply" onclick="closeMenu()">Apply Online</a>
-  </nav>
-
-</div>
-
-
-  </header>
-
-  <!-- HERO -->
-
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-
-
-    <span class="badge">ADMISSIONS OPEN</span>
-
-    <h1>
-      Building <span>Bright Minds</span><br>
-      For A Better Future
-    </h1>
-
-    <div class="hero-motto">
-      “Grace to Grow, Space to Thrive”
-    </div>
-
-    <p>
-      Dashan International School provides quality education through both
-      the Cambridge International Curriculum and Uganda National Curriculum,
-      preparing learners for academic excellence, leadership and responsible citizenship.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#admissions" class="btn btn-primary">
-        Apply Online
-      </a>
-
-      <a href="#about" class="btn btn-outline">
-        Discover Our School
-      </a>
-    </div>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#academics">Academics</a>
+      <a href="#life">School Life</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
   </div>
-</div>
+</header>
 
+<main>
 
-  </section>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
 
-  <!-- STATS -->
+      <span class="badge">ADMISSIONS OPEN</span>
 
-  <div class="container stats">
+      <h1>
+        Building <span>Bright Minds</span><br>
+        For A Better Future
+      </h1>
+
+      <div class="hero-motto">
+        “Grace to Grow, Space to Thrive”
+      </div>
+
+      <p>
+        Welcome to Dashan International School, Opuyo – Soroti.
+        A learning community offering both Cambridge International
+        Curriculum and Uganda National Curriculum in a supportive
+        Day & Boarding environment.
+      </p>
+
+      <div class="btns">
+        <a href="#admissions" class="btn btn-primary">
+          Apply Online
+        </a>
+
+        <a href="#about" class="btn btn-light">
+          Explore Our School
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container">
     <div class="stats-grid">
 
+      <div class="stat">
+        <strong>2</strong>
+        <span>Curriculum Options</span>
+      </div>
 
-  <div class="stat">
-    <strong>Cambridge</strong>
-    <span>International Curriculum</span>
+      <div class="stat">
+        <strong>O' & A'</strong>
+        <span>Level Education</span>
+      </div>
+
+      <div class="stat">
+        <strong>Day &</strong>
+        <span>Boarding</span>
+      </div>
+
+      <div class="stat">
+        <strong>French</strong>
+        <span>Inclusive</span>
+      </div>
+
+    </div>
   </div>
-
-  <div class="stat">
-    <strong>Uganda</strong>
-    <span>National Curriculum</span>
-  </div>
-
-  <div class="stat">
-    <strong>Day & Boarding</strong>
-    <span>Flexible Schooling</span>
-  </div>
-
-  <div class="stat">
-    <strong>O' & A' Level</strong>
-    <span>Arts & Science</span>
-  </div>
-
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
 
-  </div>
+    <div class="about-grid">
 
-  <!-- ABOUT -->
+      <div class="about-image">
+        <img src="IMG-20260924-WA0052.jpg"
+             alt="Dashan International School">
+      </div>
 
-  <section id="about">
-    <div class="container">
+      <div class="about-text">
 
-
-  <div class="about-grid">
-
-    <div class="about-image">
-      <img
-        src="IMG-20260924-WA0052.jpg"
-        alt="Dashan International School"
-      >
-    </div>
-
-    <div class="about-text">
-
-      <div class="section-heading">
-        <div class="eyebrow">About Our School</div>
+        <span class="section-head" style="display:block;text-align:left;margin:0 0 10px;">
+          <span class="eyebrow">ABOUT US</span>
+        </span>
 
         <h2>Education With Purpose</h2>
 
         <p>
-          Dashan International School is committed to providing an
+          Dashan International School is a school community in
+          Opuyo – Soroti East Division committed to creating an
           environment where learners can develop academically,
           socially and personally.
         </p>
-      </div>
-
-      <p>
-        Located in Opuyo – Soroti East Division, the school offers
-        both Cambridge International Curriculum and Uganda National
-        Curriculum pathways.
-      </p>
-
-      <p>
-        Our approach combines academic learning with discipline,
-        character development, practical skills and preparation for
-        future opportunities.
-      </p>
-
-      <ul class="feature-list">
-        <li>✓ Cambridge International Curriculum</li>
-        <li>✓ Uganda National Curriculum</li>
-        <li>✓ Day & Boarding</li>
-        <li>✓ Arts & Science</li>
-        <li>✓ French Inclusive</li>
-      </ul>
-
-      <a href="#admissions" class="btn btn-primary">
-        Start Admission Application
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- CURRICULUM -->
-
-  <section class="curriculum" id="curriculum">
-    <div class="container">
-
-
-  <div class="section-heading center">
-    <div class="eyebrow">Our Curriculum</div>
-
-    <h2>Two Curriculum Pathways</h2>
-
-    <p>
-      Families can choose an educational pathway that suits the
-      learner's academic goals and future plans.
-    </p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="card-icon">🌍</div>
-
-      <h3>Cambridge International Curriculum</h3>
-
-      <p>
-        An internationally recognised curriculum designed to develop
-        strong academic foundations, independent thinking,
-        problem-solving and preparation for further education.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="card-icon">🇺🇬</div>
-
-      <h3>Uganda National Curriculum</h3>
-
-      <p>
-        A Uganda-based curriculum pathway supporting learners through
-        the national education system while developing academic
-        knowledge, practical abilities and character.
-      </p>
-    </div>
-
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- ACADEMICS -->
-
-  <section id="academics">
-    <div class="container">
-
-
-  <div class="section-heading center">
-    <div class="eyebrow">Academic Programme</div>
-
-    <h2>Learning For Every Stage</h2>
-
-    <p>
-      Our academic programme supports learners across O' and A' Level,
-      with both Arts and Science options.
-    </p>
-  </div>
-
-  <div class="academic-grid">
-
-    <div class="academic-box">
-      <h3>O' Level</h3>
-      <p>
-        Strong foundations in academic subjects, skills development
-        and preparation for advanced study.
-      </p>
-    </div>
-
-    <div class="academic-box">
-      <h3>A' Level</h3>
-      <p>
-        Advanced study designed to prepare learners for higher
-        education and future professional pathways.
-      </p>
-    </div>
-
-    <div class="academic-box">
-      <h3>Arts & Science</h3>
-      <p>
-        Learners can pursue academic interests across Arts and
-        Science subject pathways.
-      </p>
-    </div>
-
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- SCHOOL LIFE -->
-
-  <section id="life">
-    <div class="container">
-
-
-  <div class="life-grid">
-
-    <div class="life-image">
-      <img
-        src="IMG-20260924-WA0058.jpg"
-        alt="Students and school life at Dashan International School"
-      >
-    </div>
-
-    <div>
-
-      <div class="section-heading">
-        <div class="eyebrow">School Life</div>
-
-        <h2>More Than The Classroom</h2>
 
         <p>
-          We aim to create a school environment where learners can
-          grow in confidence, responsibility and character.
+          The school combines the Cambridge International Curriculum
+          with the Uganda National Curriculum, giving families
+          flexibility while maintaining a strong focus on academic
+          growth and character development.
+        </p>
+
+        <div class="info-list">
+
+          <div class="info-item">
+            <strong>Location:</strong>
+            Opuyo – Soroti East Division, Uganda
+          </div>
+
+          <div class="info-item">
+            <strong>Registration:</strong>
+            MOES Reg. No. PSS/H/153
+          </div>
+
+          <div class="info-item">
+            <strong>School Arrangement:</strong>
+            Day & Boarding
+          </div>
+
+        </div>
+
+        <a href="#admissions" class="btn btn-primary">
+          Start Application
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum" id="curriculum">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">OUR CURRICULUM</div>
+      <h2>Two Curriculum Pathways</h2>
+      <p>
+        Learners can pursue either the Cambridge International
+        Curriculum or Uganda National Curriculum.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">🌍</div>
+        <h3>Cambridge International Curriculum</h3>
+
+        <p>
+          An internationally recognised pathway designed to develop
+          strong academic foundations, independent thinking and
+          preparation for further education.
+        </p>
+
+        <ul>
+          <li>International learning pathway</li>
+          <li>Academic development</li>
+          <li>Critical thinking</li>
+          <li>Preparation for further studies</li>
+        </ul>
+      </div>
+
+      <div class="card red">
+        <div class="card-icon">🇺🇬</div>
+        <h3>Uganda National Curriculum</h3>
+
+        <p>
+          A Uganda-based curriculum pathway supporting learners
+          through the national education system and preparing them
+          for continued academic progress.
+        </p>
+
+        <ul>
+          <li>Uganda National Curriculum</li>
+          <li>O' & A' Level</li>
+          <li>Arts & Science</li>
+          <li>Strong academic foundation</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ACADEMICS -->
+<section id="academics">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">ACADEMICS</div>
+      <h2>Learning For The Future</h2>
+      <p>
+        We support learners through academics, practical skills,
+        languages and personal development.
+      </p>
+    </div>
+
+    <div class="academic-grid">
+
+      <div class="academic-card">
+        <h3>Arts</h3>
+        <p>
+          A learning pathway supporting communication, creativity,
+          humanities and broad academic development.
         </p>
       </div>
 
-      <div class="life-items">
-
-        <div class="life-item">
-          <h3>📚 Academic Growth</h3>
-          <p>
-            Encouraging learners to develop strong study habits and
-            a positive attitude toward learning.
-          </p>
-        </div>
-
-        <div class="life-item">
-          <h3>💡 Practical Skills</h3>
-          <p>
-            Supporting learners to develop useful skills alongside
-            their academic studies.
-          </p>
-        </div>
-
-        <div class="life-item">
-          <h3>🤝 Character & Leadership</h3>
-          <p>
-            Promoting discipline, responsibility, teamwork and
-            leadership.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-    
-
-  </section>
-
-  <!-- GALLERY -->
-
-  <section class="gallery" id="gallery">
-    <div class="container">
-
-
-  <div class="section-heading center">
-    <div class="eyebrow">School Gallery</div>
-
-    <h2>See Our School</h2>
-
-    <p>
-      A glimpse into the learning environment and school experience
-      at Dashan International School.
-    </p>
-  </div>
-
-  <div class="gallery-grid">
-
-    <div class="gallery-item">
-      <img
-        src="IMG-20260924-WA0050.jpg"
-        alt="Dashan International School campus"
-        loading="lazy"
-      >
-    </div>
-
-    <div class="gallery-item">
-      <img
-        src="IMG-20260924-WA0052.jpg"
-        alt="Dashan International School"
-        loading="lazy"
-      >
-    </div>
-
-    <div class="gallery-item">
-      <img
-        src="IMG-20260924-WA0054.jpg"
-        alt="ICT and learning at Dashan International School"
-        loading="lazy"
-      >
-    </div>
-
-    <div class="gallery-item">
-      <img
-        src="IMG-20260924-WA0058.jpg"
-        alt="School life at Dashan International School"
-        loading="lazy"
-      >
-    </div>
-
-  </div>
-
-</div>
-```
-
-  </section>
-
-  <!-- ONLINE ADMISSIONS -->
-
-  <section class="admissions" id="admissions">
-
-    
-<div class="container">
-
-  <div class="admissions-grid">
-
-    <div>
-
-      <div class="section-heading">
-        <div class="eyebrow" style="color:#ffe38b;">
-          Online Admissions
-        </div>
-
-        <h2>Start Your Application Online</h2>
-
-        <p class="admissions-intro">
-          Parents and guardians can submit an admission application
-          online. The school will review the application and contact
-          you regarding the next steps.
+      <div class="academic-card">
+        <h3>Science</h3>
+        <p>
+          A strong foundation for learners interested in science,
+          technology and related future opportunities.
         </p>
       </div>
+
+      <div class="academic-card">
+        <h3>French Inclusive</h3>
+        <p>
+          French is incorporated as part of the school's broader
+          language and learning experience.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCHOOL LIFE -->
+<section id="life">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">SCHOOL LIFE</div>
+      <h2>Learn. Grow. Thrive.</h2>
+      <p>
+        A school environment designed to give learners space to
+        learn, participate and grow.
+      </p>
+    </div>
+
+    <div class="life-grid">
+
+      <div class="life-card">
+        <img src="IMG-20260924-WA0058.jpg"
+             alt="Dashan International School life">
+        <div class="life-overlay">
+          <h3>School Community</h3>
+        </div>
+      </div>
+
+      <div class="life-card">
+        <img src="IMG-20260924-WA0054.jpg"
+             alt="Learning at Dashan International School">
+        <div class="life-overlay">
+          <h3>Learning Environment</h3>
+        </div>
+      </div>
+
+      <div class="life-card">
+        <img src="IMG-20260924-WA0052.jpg"
+             alt="Dashan International School students">
+        <div class="life-overlay">
+          <h3>Growing Together</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">GALLERY</div>
+      <h2>Our School</h2>
+      <p>
+        A glimpse into Dashan International School.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <img src="IMG-20260924-WA0050.jpg"
+           alt="Dashan International School">
+
+      <img src="IMG-20260924-WA0052.jpg"
+           alt="Dashan International School">
+
+      <img src="IMG-20260924-WA0054.jpg"
+           alt="Dashan International School">
+
+      <img src="IMG-20260924-WA0058.jpg"
+           alt="Dashan International School">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ADMISSIONS -->
+<section class="admission" id="admissions">
+
+  <div class="container">
+
+    <div class="admission-grid">
 
       <div class="admission-info">
 
-        <div>
-          <strong>School</strong>
-          Dashan International School
+        <span class="eyebrow">ONLINE ADMISSIONS</span>
+
+        <h2>Start Your Application Online</h2>
+
+        <p>
+          Parents and guardians can submit an online admission
+          application for consideration by the school.
+        </p>
+
+        <div class="admission-details">
+
+          <div class="admission-detail">
+            <strong>Admissions</strong>
+            Open
+          </div>
+
+          <div class="admission-detail">
+            <strong>School</strong>
+            Day & Boarding
+          </div>
+
+          <div class="admission-detail">
+            <strong>Levels</strong>
+            Senior One – Senior Six
+          </div>
+
+          <div class="admission-detail">
+            <strong>Motto</strong>
+            Grace to Grow, Space to Thrive
+          </div>
+
+          <div class="admission-detail">
+            <strong>Opening Hours</strong>
+            Monday – Saturday, 8:00 AM – 5:00 PM
+          </div>
+
         </div>
 
-        <div>
-          <strong>Motto</strong>
-          Grace to Grow, Space to Thrive
-        </div>
+      </div>
 
-        <div>
-          <strong>Location</strong>
-          Opuyo – Soroti East Division, Uganda
-        </div>
+      <div class="form-box">
 
-        <div>
-          <strong>School Arrangement</strong>
-          Day & Boarding
-        </div>
+        <h3>Online Admission Application</h3>
 
-        <div>
-          <strong>Curriculum</strong>
-          Cambridge International & Uganda National Curriculum
-        </div>
+        <form action="https://formspree.io/f/xppwogpb"
+              method="POST">
 
-        <div>
-          <strong>Levels</strong>
-          O' & A' Level — Arts & Science
-        </div>
+          <input type="hidden"
+                 name="_subject"
+                 value="New Online Admission Application - Dashan International School">
+
+          <input type="text"
+                 name="_gotcha"
+                 style="display:none"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="form-grid">
+
+            <div class="field full">
+              <label>Student Full Name *</label>
+              <input type="text"
+                     name="student_name"
+                     required>
+            </div>
+
+            <div class="field">
+              <label>Date of Birth *</label>
+              <input type="date"
+                     name="date_of_birth"
+                     required>
+            </div>
+
+            <div class="field">
+              <label>Gender *</label>
+              <select name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Class / Level *</label>
+              <select name="class_level" required>
+                <option value="">Select</option>
+                <option>Senior One</option>
+                <option>Senior Two</option>
+                <option>Senior Three</option>
+                <option>Senior Four</option>
+                <option>Senior Five</option>
+                <option>Senior Six</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Preferred Curriculum *</label>
+              <select name="curriculum" required>
+                <option value="">Select</option>
+                <option>Cambridge International Curriculum</option>
+                <option>Uganda National Curriculum</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>School Arrangement *</label>
+              <select name="school_arrangement" required>
+                <option value="">Select</option>
+                <option>Day</option>
+                <option>Boarding</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Previous School</label>
+              <input type="text"
+                     name="previous_school">
+            </div>
+
+            <div class="field">
+              <label>Parent / Guardian Name *</label>
+              <input type="text"
+                     name="guardian_name"
+                     required>
+            </div>
+
+            <div class="field">
+              <label>Phone Number *</label>
+              <input type="tel"
+                     name="phone"
+                     required>
+            </div>
+
+            <div class="field">
+              <label>Email Address</label>
+              <input type="email"
+                     name="email">
+            </div>
+
+            <div class="field full">
+              <label>Parent / Guardian Location</label>
+              <input type="text"
+                     name="guardian_location"
+                     placeholder="Town / District">
+            </div>
+
+            <div class="field full">
+              <label>Additional Information</label>
+              <textarea name="additional_information"
+                        placeholder="Tell us anything else the school should know..."></textarea>
+            </div>
+
+          </div>
+
+          <p class="form-note">
+            Submitting this form sends an application request to the
+            school for consideration. Submission does not automatically
+            guarantee admission.
+          </p>
+
+          <button type="submit" class="submit-btn">
+            Submit Admission Application
+          </button>
+
+        </form>
 
       </div>
 
     </div>
 
+  </div>
 
-    <!-- FORMSPREE FORM -->
-    <div class="form-card">
+</section>
 
-      <h3>Admission Application</h3>
+<!-- CONTACT -->
+<section id="contact">
 
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">CONTACT US</div>
+      <h2>Let's Talk About Your Child's Future</h2>
       <p>
-        Complete the form below and submit your application to
-        Dashan International School.
+        Contact Dashan International School for admissions and
+        further information.
       </p>
+    </div>
 
-      <form
-        action="https://formspree.io/f/xppwogpb"
-        method="POST"
-      >
+    <div class="contact-grid">
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Online Admission Application - Dashan International School"
-        >
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>Location</h3>
+        <p>
+          Opuyo – Soroti East Division<br>
+          Uganda
+        </p>
+      </div>
 
-        <input
-          type="text"
-          name="_gotcha"
-          style="display:none"
-          tabindex="-1"
-          autocomplete="off"
-        >
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3>Call Us</h3>
+        <p>
+          0782 316 738<br>
+          0706 648 711
+        </p>
+      </div>
 
-        <div class="form-grid">
-
-          <div class="form-group full">
-            <label for="studentName">
-              Student Full Name *
-            </label>
-
-            <input
-              id="studentName"
-              type="text"
-              name="Student Full Name"
-              placeholder="Enter student's full name"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="dob">
-              Date of Birth *
-            </label>
-
-            <input
-              id="dob"
-              type="date"
-              name="Date of Birth"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="gender">
-              Gender *
-            </label>
-
-            <select
-              id="gender"
-              name="Gender"
-              required
-            >
-              <option value="">Select gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="class">
-              Class / Level *
-            </label>
-
-            <select
-              id="class"
-              name="Class or Level"
-              required
-            >
-              <option value="">Select level</option>
-              <option value="Senior One">Senior One</option>
-              <option value="Senior Two">Senior Two</option>
-              <option value="Senior Three">Senior Three</option>
-              <option value="Senior Four">Senior Four</option>
-              <option value="Senior Five">Senior Five</option>
-              <option value="Senior Six">Senior Six</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="curriculum">
-              Preferred Curriculum *
-            </label>
-
-            <select
-              id="curriculum"
-              name="Preferred Curriculum"
-              required
-            >
-              <option value="">Select curriculum</option>
-              <option value="Cambridge International Curriculum">
-                Cambridge International Curriculum
-              </option>
-              <option value="Uganda National Curriculum">
-                Uganda National Curriculum
-              </option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="arrangement">
-              School Arrangement *
-            </label>
-
-            <select
-              id="arrangement"
-              name="School Arrangement"
-              required
-            >
-              <option value="">Select arrangement</option>
-              <option value="Day">Day</option>
-              <option value="Boarding">Boarding</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="previousSchool">
-              Previous School
-            </label>
-
-            <input
-              id="previousSchool"
-              type="text"
-              name="Previous School"
-              placeholder="Previous school"
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="guardian">
-              Parent / Guardian Name *
-            </label>
-
-            <input
-              id="guardian"
-              type="text"
-              name="Parent or Guardian Name"
-              placeholder="Parent or guardian name"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="phone">
-              Phone Number *
-            </label>
-
-            <input
-              id="phone"
-              type="tel"
-              name="Phone Number"
-              placeholder="e.g. 0782 316 738"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="email">
-              Email Address
-            </label>
-
-            <input
-              id="email"
-              type="email"
-              name="Email Address"
-              placeholder="Parent/guardian email"
-            >
-          </div>
-
-          <div class="form-group full">
-            <label for="location">
-              Parent / Guardian Location
-            </label>
-
-            <input
-              id="location"
-              type="text"
-              name="Parent or Guardian Location"
-              placeholder="Town / district"
-            >
-          </div>
-
-          <div class="form-group full">
-            <label for="message">
-              Additional Information
-            </label>
-
-            <textarea
-              id="message"
-              name="Additional Information"
-              placeholder="Tell us anything else the school should know..."
-            ></textarea>
-          </div>
-
-        </div>
-
-        <div class="form-note">
-          <strong>Important:</strong>
-          Submitting this form is an application for consideration.
-          It does not automatically guarantee admission. The school
-          will review the information and contact the parent or guardian.
-        </div>
-
-        <button
-          type="submit"
-          class="btn btn-primary submit-btn"
-        >
-          Submit Admission Application →
-        </button>
-
-      </form>
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <h3>Email</h3>
+        <p>
+          Dashaninternationalschool@gmail.com
+        </p>
+      </div>
 
     </div>
 
   </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>Dashan International School</h3>
+
+        <p>
+          Opuyo – Soroti East Division, Uganda.
+          Offering Cambridge International Curriculum and
+          Uganda National Curriculum.
+        </p>
+
+        <span class="footer-motto">
+          “Grace to Grow, Space to Thrive”
+        </span>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#academics">Academics</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#admissions">Admissions</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Admissions</h3>
+
+        <p>Monday – Saturday</p>
+        <p>8:00 AM – 5:00 PM</p>
+        <p>Day & Boarding</p>
+        <p>O' & A' Level</p>
+        <p>Arts & Science</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Dashan International School. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="float-buttons">
+
+  <a class="float-btn call"
+     href="tel:+256782316738"
+     aria-label="Call Dashan International School">
+    ☎
+  </a>
+
+  <a class="float-btn whatsapp"
+     href="https://wa.me/256782316738"
+     target="_blank"
+     aria-label="WhatsApp Dashan International School">
+    ✆
+  </a>
 
 </div>
 
-  </section>
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("active");
+}
 
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-<div class="container">
-
-  <div class="section-heading center">
-    <div class="eyebrow">Contact Us</div>
-
-    <h2>Let's Talk About Your Child's Future</h2>
-
-    <p>
-      Contact Dashan International School for admissions,
-      curriculum information and other enquiries.
-    </p>
-  </div>
-
-  <div class="contact-grid">
-
-    <div class="contact-card">
-
-      <h3>School Information</h3>
-
-      <div class="contact-line">
-        <strong>📍 Location:</strong><br>
-        Opuyo – Soroti East Division, Uganda
-      </div>
-
-      <div class="contact-line">
-        <strong>📞 Phone:</strong><br>
-        0782 316 738<br>
-        0706 648 711
-      </div>
-
-      <div class="contact-line">
-        <strong>✉️ Email:</strong><br>
-        Dashaninternationalschool@gmail.com
-      </div>
-
-      <div class="contact-line">
-        <strong>🕐 Opening Hours:</strong><br>
-        Monday – Saturday, 8:00 AM – 5:00 PM
-      </div>
-
-    </div>
-
-    <div class="contact-card">
-
-      <h3>Admissions Are Open</h3>
-
-      <p>
-        Interested in joining Dashan International School?
-        Start your application online or contact the school directly.
-      </p>
-
-      <div class="contact-buttons">
-
-        <a
-          href="#admissions"
-          class="btn btn-primary"
-        >
-          Apply Online
-        </a>
-
-        <a
-          href="tel:+256782316738"
-          class="btn"
-          style="background:#edf3ef;color:#0b5d3b;"
-        >
-          Call School
-        </a>
-
-        <a
-          href="mailto:Dashaninternationalschool@gmail.com"
-          class="btn"
-          style="background:#edf3ef;color:#0b5d3b;"
-        >
-          Email Us
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-<div class="container">
-
-  <div class="footer-grid">
-
-    <div>
-      <h3>Dashan International School</h3>
-
-      <p>
-        Quality education through Cambridge International and
-        Uganda National Curriculum pathways.
-      </p>
-
-      <span class="footer-motto">
-        “Grace to Grow, Space to Thrive”
-      </span>
-    </div>
-
-    <div>
-      <h3>Quick Links</h3>
-
-      <p><a href="#about">About Us</a></p>
-      <p><a href="#curriculum">Curriculum</a></p>
-      <p><a href="#academics">Academics</a></p>
-      <p><a href="#life">School Life</a></p>
-      <p><a href="#gallery">Gallery</a></p>
-      <p><a href="#admissions">Admissions</a></p>
-    </div>
-
-    <div>
-      <h3>Contact</h3>
-
-      <p>Opuyo – Soroti East Division</p>
-      <p>0782 316 738</p>
-      <p>0706 648 711</p>
-      <p>Dashaninternationalschool@gmail.com</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © <span id="year"></span> Dashan International School.
-    All Rights Reserved.
-  </div>
-
-</div>
-
-  </footer>
-
-  <!-- FLOATING CONTACT BUTTONS -->
-
-  <div class="floating">
-
-    
-<a
-  class="float-btn float-call"
-  href="tel:+256782316738"
-  aria-label="Call Dashan International School"
->
-  ☎
-</a>
-
-<a
-  class="float-btn float-whatsapp"
-  href="https://wa.me/256782316738?text=Hello%20Dashan%20International%20School%2C%20I%20would%20like%20to%20inquire%20about%20admissions."
-  target="_blank"
-  rel="noopener"
-  aria-label="WhatsApp Dashan International School"
->
-  ◉
-</a>
-
-  </div>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("mainNav").classList.toggle("active");
-    }
-
-    function closeMenu() {
-      document.getElementById("mainNav").classList.remove("active");
-    }
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+document.querySelectorAll("nav a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    document.getElementById("nav").classList.remove("active");
+  });
+});
+</script>
 
 </body>
 </html>
