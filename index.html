@@ -79,14 +79,17 @@
       min-width:0;
     }
 
+    /* STANDALONE BADGE — NO FRAME */
     .logo img{
       width:58px;
       height:58px;
       object-fit:contain;
       background:transparent;
+      border:0;
       border-radius:0;
       padding:0;
       box-shadow:none;
+      outline:none;
       flex:none;
     }
 
@@ -180,8 +183,12 @@
       padding:80px 0;
     }
 
+    /* HERO BADGE — COMPLETELY FREE-STANDING */
     .hero-badge{
       margin-bottom:20px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
     }
 
     .hero-badge img{
@@ -189,9 +196,12 @@
       height:150px;
       object-fit:contain;
       background:transparent;
+      border:0;
       border-radius:0;
       padding:0;
       box-shadow:none;
+      outline:none;
+      filter:none;
     }
 
     .eyebrow{
@@ -849,13 +859,17 @@
       gap:12px;
     }
 
+    /* FOOTER BADGE — NO FRAME */
     .footer-brand img{
       width:58px;
       height:58px;
       object-fit:contain;
       background:transparent;
+      border:0;
       border-radius:0;
       padding:0;
+      box-shadow:none;
+      outline:none;
     }
 
     .footer-brand strong{
@@ -1079,6 +1093,8 @@
 
     <div class="container">
       <div class="hero-content">
+
+        <!-- STANDALONE BADGE -->
         <div class="hero-badge">
           <img src="dashan-badge.jpg" alt="Dashan International School Uganda">
         </div>
