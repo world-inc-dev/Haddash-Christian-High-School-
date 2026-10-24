@@ -1106,7 +1106,83 @@ footer{background:#061631}
   .stats{margin-top:-24px}
 }
 
-  </style>
+  
+/* Compact layout and readability pass */
+:root{
+  --text:#172033;
+  --muted:#4e5b70;
+  --light:#f1f4f9;
+  --border:#d8e0ec;
+}
+html{scroll-padding-top:88px}
+body{font-size:16px;line-height:1.55;color:#172033}
+.container{width:min(1120px,92%)}
+section{padding:44px 0}
+.section-heading{max-width:780px;margin:0 auto 22px;text-align:center}
+.section-heading h2{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.2;margin-bottom:8px;letter-spacing:-.02em}
+.section-heading p{font-size:1rem;line-height:1.55;color:#4e5b70}
+.hero{min-height:570px}
+.hero-content{padding:64px 0}
+.hero h1,h1{line-height:1.12;letter-spacing:-.025em}
+.hero-lead{max-width:700px;line-height:1.55}
+.hero-buttons{gap:10px;margin-top:20px}
+.stats{margin-top:-26px;position:relative;z-index:2}
+.stats-grid{padding:4px}
+.stat{padding:18px 14px}
+.stat h3,.stat strong{line-height:1.2}
+.curriculum-grid,.cards,.language-grid,.life-grid,.contact-grid{gap:16px}
+.curriculum-grid .card,.cards .card,.language-grid .card,.life-grid .card,.curriculum-card,
+.contact-card,.contact-grid>div{padding:20px;border-radius:15px}
+.curriculum-grid .card h3,.cards .card h3,.language-grid .card h3,.life-grid .card h3,
+.curriculum-card h3{font-size:1.15rem;line-height:1.3;margin-bottom:8px}
+.curriculum-grid .card p,.cards .card p,.language-grid .card p,.life-grid .card p,
+.curriculum-card p,.contact-card p,.contact-grid p{font-size:.96rem;line-height:1.55;color:#4e5b70}
+.curriculum-grid ul,.cards ul,.curriculum-card ul{padding-left:20px;margin-top:8px}
+.curriculum-grid li,.cards li,.curriculum-card li{margin-bottom:5px;line-height:1.5}
+.about-grid,.admissions-wrap{gap:28px;align-items:center}
+.about-image img{max-height:420px;object-fit:cover}
+.gallery-grid{gap:12px}
+.gallery-item{height:220px}
+.contact-grid{align-items:stretch}
+form{padding:20px}
+input,select,textarea{font:inherit;min-height:44px}
+textarea{min-height:110px}
+footer{padding-top:32px}
+.footer-main{gap:24px;padding-bottom:20px}
+footer p,footer li,footer a{line-height:1.5}
+@media(min-width:721px){
+  section{padding:48px 0}
+  .hero{min-height:590px}
+  .hero-content{padding:70px 0}
+  .section-heading{margin-bottom:24px}
+}
+@media(max-width:720px){
+  section{padding:34px 0}
+  .hero{min-height:0;padding-top:76px}
+  .hero-content{padding:42px 0 58px}
+  h1,.hero h1{font-size:clamp(2rem,8vw,2.65rem)}
+  .hero-lead{font-size:1rem}
+  .stats{margin-top:-18px}
+  .stat{padding:14px 10px}
+  .curriculum-grid,.cards,.language-grid,.life-grid,.contact-grid{gap:12px}
+  .curriculum-grid .card,.cards .card,.language-grid .card,.life-grid .card,
+  .curriculum-card,.contact-card,.contact-grid>div{padding:17px}
+  .about-grid,.admissions-wrap{gap:18px}
+  .about-image img{height:280px}
+  .gallery-item{height:170px}
+  form{padding:16px}
+}
+@media(max-width:460px){
+  body{font-size:15.5px}
+  .container{width:91%}
+  .hero-content{padding:34px 0 48px}
+  .section-heading{margin-bottom:18px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat{border-bottom:1px solid var(--border)}
+  .gallery-item{height:150px}
+}
+
+</style>
 </head>
 
 <body>
