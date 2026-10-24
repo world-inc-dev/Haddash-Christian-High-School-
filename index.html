@@ -1197,6 +1197,106 @@ footer p,footer li,footer a{line-height:1.5}
  .languages-list{justify-content:flex-start;margin-top:12px;gap:7px}
  .languages-list span{padding:7px 11px;font-size:.88rem}
 }
+
+/* Strong readability and prevent footer/contact text collisions */
+#contact.contact {
+  background: #fff !important;
+  color: #b00020 !important;
+  padding: 64px 0 72px !important;
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
+#contact .section-head,
+#contact .section-head h2,
+#contact .section-head p,
+#contact .section-kicker,
+#contact .contact-card h3,
+#contact .contact-card p,
+#contact .contact-card a {
+  color: #b00020 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  line-height: 1.65 !important;
+}
+#contact .section-head h2,
+#contact .contact-card h3 { font-weight: 800 !important; }
+#contact .contact-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)) !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+  margin-top: 28px !important;
+}
+#contact .contact-card {
+  min-width: 0 !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  background: #fff !important;
+  border: 2px solid #b00020 !important;
+  border-radius: 14px !important;
+  padding: 22px !important;
+  margin: 0 !important;
+}
+#contact .contact-card p { margin-bottom: 0 !important; overflow-wrap: anywhere !important; }
+#contact .contact-card a {
+  display: inline-block !important;
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+footer {
+  position: relative !important;
+  clear: both !important;
+  overflow: visible !important;
+  margin-top: 0 !important;
+  padding: 38px 0 28px !important;
+  z-index: 0 !important;
+}
+footer .container,
+footer .footer-main,
+footer .footer-brand,
+footer .footer-links,
+footer .developer-credit,
+footer .copyright {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+footer .footer-main {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+}
+footer .footer-brand { flex: 1 1 260px !important; }
+footer .footer-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px 18px !important;
+}
+footer .developer-credit,
+footer .copyright {
+  position: static !important;
+  display: block !important;
+  clear: both !important;
+  line-height: 1.8 !important;
+  margin-top: 22px !important;
+  white-space: normal !important;
+}
+@media (max-width: 600px) {
+  #contact.contact { padding: 46px 0 56px !important; }
+  #contact .contact-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  footer { padding: 30px 0 24px !important; }
+  footer .footer-main { display: flex !important; flex-direction: column !important; gap: 18px !important; }
+  footer .footer-links { gap: 10px 14px !important; }
+}
+
 </style>
 </head>
 
@@ -1855,50 +1955,3 @@ footer p,footer li,footer a{line-height:1.5}
 
 </body>
 </html>
-
-
-/* High-contrast contact section: heading, cards, phone and email */
-#contact.contact{
-  background:#f1f5fb !important;
-  color:#14233d !important;
-}
-#contact .section-head,
-#contact .section-head h2,
-#contact .section-head p,
-#contact .section-kicker{
-  color:#14233d !important;
-  opacity:1 !important;
-  text-shadow:none !important;
-}
-#contact .section-head h2{
-  font-weight:800;
-}
-#contact .section-head p{
-  color:#43516a !important;
-}
-#contact .contact-card,
-#contact .contact-grid>div{
-  background:#ffffff !important;
-  border:1px solid #d7e0ed !important;
-  box-shadow:0 8px 22px rgba(14,35,67,.08) !important;
-}
-#contact .contact-card h3,
-#contact .contact-grid h3{
-  color:#102b54 !important;
-}
-#contact .contact-card p,
-#contact .contact-grid p{
-  color:#34445e !important;
-}
-#contact .contact-card a,
-#contact .contact-grid a{
-  color:#064fa8 !important;
-  font-weight:700;
-  overflow-wrap:anywhere;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-#contact .contact-card a:hover,
-#contact .contact-grid a:hover{
-  color:#07346d !important;
-}
