@@ -1053,6 +1053,59 @@
 
       .gallery-item{height:245px}
     }
+  
+/* Professional visual refinement: balanced surfaces, tighter spacing and clearer pathway cards */
+:root{
+  --light:#f0f4fa;
+  --border:#dce4ef;
+  --shadow:0 14px 36px rgba(7,26,61,.09);
+}
+body{background:#f5f7fb}
+section{padding:68px 0}
+header,.navbar,.nav{box-shadow:0 4px 18px rgba(7,26,61,.06)}
+.hero{
+  background-image:linear-gradient(115deg,rgba(5,20,48,.94),rgba(13,43,92,.83) 58%,rgba(120,23,53,.68)),var(--hero-bg);
+  background-color:#071a3d;
+}
+.stats{
+  background:linear-gradient(135deg,#edf2f9,#f8f9fc);
+  border:1px solid #dce4ef;
+  border-radius:20px;
+  box-shadow:0 12px 28px rgba(7,26,61,.07);
+}
+.stat{border-color:#d8e0ec}
+.curriculum,.gallery,.contact{background:#f0f4fa}
+.curriculum-grid .card,.cards .card,.language-grid .card,.life-grid .card,
+.contact-card,.contact-grid>div,.curriculum-card{
+  border:1px solid #dce4ef;
+  box-shadow:0 8px 24px rgba(7,26,61,.06);
+}
+.curriculum-grid .card:hover,.cards .card:hover,.language-grid .card:hover,
+.life-grid .card:hover,.curriculum-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(7,26,61,.11);
+}
+.curriculum-grid .card,.curriculum-card{background:#fff}
+.curriculum-grid .card:first-child{border-top:4px solid #c8102e}
+.curriculum-grid .card:nth-child(2){border-top:4px solid #123b78}
+.curriculum-grid .card h3,.section-heading h2,.contact h3{color:#071a3d}
+.gallery-item{border:3px solid #fff;box-shadow:0 8px 20px rgba(7,26,61,.12)}
+input,select,textarea{border-color:#d4deeb!important;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(18,59,120,.18);border-color:#123b78!important}
+.btn{transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(7,26,61,.16)}
+footer{background:#061631}
+@media(min-width:721px){
+  section{padding:64px 0}
+  .section-heading{margin-bottom:30px}
+  .hero{min-height:610px}
+}
+@media(max-width:720px){
+  section{padding:50px 0}
+  .hero{min-height:650px}
+  .stats{margin-top:-24px}
+}
+
   </style>
 </head>
 
