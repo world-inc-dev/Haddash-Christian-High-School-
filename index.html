@@ -1182,6 +1182,21 @@ footer p,footer li,footer a{line-height:1.5}
   .gallery-item{height:150px}
 }
 
+
+/* Compact communication and languages section */
+.languages-compact{padding:22px 0!important;background:#f4f7fb}
+.languages-compact-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.languages-compact-copy .section-kicker{margin-bottom:4px}
+.languages-compact-copy h2{font-size:clamp(1.2rem,2.2vw,1.65rem);margin:0 0 5px;line-height:1.25}
+.languages-compact-copy p{margin:0;color:#4e5b70;font-size:.94rem;line-height:1.4}
+.languages-list{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+.languages-list span{display:inline-block;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid var(--border);color:var(--navy);font-weight:750;font-size:.92rem;white-space:nowrap}
+@media(max-width:720px){
+ .languages-compact{padding:20px 0!important}
+ .languages-compact-inner{display:block}
+ .languages-list{justify-content:flex-start;margin-top:12px;gap:7px}
+ .languages-list span{padding:7px 11px;font-size:.88rem}
+}
 </style>
 </head>
 
@@ -1441,33 +1456,16 @@ footer p,footer li,footer a{line-height:1.5}
     </div>
   </section>
 
-  <!-- LANGUAGES -->
-  <section>
-    <div class="container">
-      <div class="section-head">
+  <!-- COMPACT LANGUAGES -->
+  <section class="languages-compact">
+    <div class="container languages-compact-inner">
+      <div class="languages-compact-copy">
         <div class="section-kicker">Languages</div>
         <h2>Communication beyond the classroom.</h2>
-        <p>
-          Learners in both the Cambridge International and Uganda National curriculum pathways
-          can develop language skills in English, French and Chinese.
-        </p>
+        <p>Language opportunities for learners in both curriculum pathways:</p>
       </div>
-
-      <div class="language-grid">
-        <div class="language">
-          <div class="flag">🇬🇧</div>
-          <h3>English</h3>
-        </div>
-
-        <div class="language">
-          <div class="flag">🇫🇷</div>
-          <h3>French</h3>
-        </div>
-
-        <div class="language">
-          <div class="flag">🇨🇳</div>
-          <h3>Chinese</h3>
-        </div>
+      <div class="languages-list" aria-label="Languages offered">
+        <span>English</span><span>French</span><span>Chinese</span>
       </div>
     </div>
   </section>
