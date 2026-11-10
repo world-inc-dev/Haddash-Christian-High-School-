@@ -46,8 +46,47 @@
     body{
       font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
-      background:#fff;
+      background:transparent;
       line-height:1.6;
+    }
+
+    .site-background{
+      position:fixed;
+      inset:0;
+      z-index:0;
+      overflow:hidden;
+      pointer-events:none;
+      background:#f5f7fb;
+    }
+    .site-background-slide{
+      position:absolute;
+      inset:0;
+      background-position:center;
+      background-size:cover;
+      opacity:0;
+      transform:scale(1.035);
+      transition:opacity 1.8s ease,transform 8s ease;
+    }
+    .site-background-slide.active{
+      opacity:.34;
+      transform:scale(1);
+    }
+    .site-background::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(255,255,255,.70);
+    }
+    body > :not(.site-background){
+      position:relative;
+      z-index:1;
+    }
+    .stats,.curriculum,.gallery{
+      background:transparent;
+    }
+    .stats-grid,.card,.pathway,.language,.form-card{
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(7px);
     }
 
     a{text-decoration:none;color:inherit}
@@ -1477,6 +1516,15 @@ footer .footer-brand span{
 </head>
 
 <body>
+  <div class="site-background" aria-hidden="true">
+    <div class="site-background-slide active" style="background-image:url('IMG-20260924-WA0050.jpg')"></div>
+    <div class="site-background-slide" style="background-image:url('IMG-20260924-WA0052.jpg')"></div>
+    <div class="site-background-slide" style="background-image:url('IMG-20260924-WA0054.jpg')"></div>
+    <div class="site-background-slide" style="background-image:url('IMG-20260924-WA0058.jpg')"></div>
+    <div class="site-background-slide" style="background-image:url('IMG-20260924-WA0059.jpg')"></div>
+    <div class="site-background-slide" style="background-image:url('IMG-20260924-WA0060.jpg')"></div>
+    <div class="site-background-slide" style="background-image:url('IMG-20261027-WA0020.jpg')"></div>
+  </div>
 
   <!-- HEADER -->
   <header>
@@ -2070,6 +2118,20 @@ footer .footer-brand span{
     <a class="float-btn call" href="tel:+256782316738" aria-label="Call Hadassah Christian High School Uganda">☎</a>
     <a class="float-btn whatsapp" href="https://wa.me/256782316738" target="_blank" rel="noopener" aria-label="WhatsApp Hadassah Christian High School Uganda">☘</a>
   </div>
+
+  <script>
+    // Whole-site background photo carousel
+    (function(){
+      const slides = document.querySelectorAll('.site-background-slide');
+      if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let current = 0;
+      window.setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 6500);
+    })();
+  </script>
 
   <script>
     // Mobile navigation
