@@ -77,7 +77,7 @@
       inset:0;
       background:rgba(255,255,255,.70);
     }
-    body > :not(.site-background){
+    body > :not(.site-background):not(header):not(.school-live-bar){
       position:relative;
       z-index:1;
     }
@@ -105,7 +105,7 @@
       left:0;
       right:0;
       height:36px;
-      z-index:1001;
+      z-index:3100;
       display:flex;
       align-items:center;
       overflow:hidden;
@@ -169,8 +169,9 @@
       top:36px;
       left:0;
       right:0;
-      z-index:1000;
-      background:rgba(7,26,61,.96);
+      z-index:3000;
+      overflow:visible;
+      background:rgba(7,26,61,.98);
       backdrop-filter:blur(14px);
       box-shadow:0 5px 25px rgba(0,0,0,.14);
     }
@@ -1062,8 +1063,9 @@
         left:0;
         right:0;
         top:calc(100% + 6px);
-        z-index:1100;
-        max-height:calc(100vh - 150px);
+        z-index:3005;
+        max-height:calc(100dvh - 145px);
+        overscroll-behavior:contain;
         overflow-y:auto;
         background:var(--navy);
         padding:14px;
@@ -1632,9 +1634,9 @@ footer .footer-brand span{
         <span>Hadassah Christian High School Uganda</span>
       </a>
 
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="var n=document.getElementById('navLinks');var o=n.classList.toggle('show');this.setAttribute('aria-expanded',o?'true':'false');this.setAttribute('aria-label',o?'Close navigation':'Open navigation');this.textContent=o?'×':'☰'">☰</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
 
-      <ul class="nav-links" id="navLinks" onclick="if(event.target.closest('a')){this.classList.remove('show');var b=document.getElementById('menuBtn');b.textContent='☰';b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation')}">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#curriculum">Curriculum</a></li>
@@ -2236,13 +2238,35 @@ footer .footer-brand span{
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
 
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
+    if (menuBtn && navLinks) {
+      const closeMenu = () => {
+        navLinks.classList.remove('show');
+        menuBtn.textContent = '☰';
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open navigation');
+      };
 
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('show'));
-    });
+      menuBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const isOpen = navLinks.classList.toggle('show');
+        menuBtn.textContent = isOpen ? '×' : '☰';
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) closeMenu();
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 1000) closeMenu();
+      });
+    }
 
     // Hero slideshow
     const slides = document.querySelectorAll('.hero-slide');
