@@ -176,6 +176,7 @@
     }
 
     .nav{
+      position:relative;
       min-height:78px;
       display:flex;
       align-items:center;
@@ -1058,9 +1059,12 @@
     @media(max-width:1000px){
       .nav-links{
         position:absolute;
-        left:4%;
-        right:4%;
-        top:84px;
+        left:0;
+        right:0;
+        top:calc(100% + 6px);
+        z-index:1100;
+        max-height:calc(100vh - 150px);
+        overflow-y:auto;
         background:var(--navy);
         padding:14px;
         border-radius:14px;
@@ -1070,10 +1074,15 @@
         box-shadow:0 15px 40px rgba(0,0,0,.2);
       }
 
-      .nav-links.show{display:flex}
-      .nav-links a{display:block}
-
-      .menu-btn{display:block}
+      .nav-links.show{display:flex!important}
+      .nav-links a{display:block;padding:13px 14px}
+      .menu-btn{
+        display:flex!important;align-items:center;justify-content:center;
+        position:relative;z-index:1200;flex:0 0 46px;width:46px;height:46px;
+        margin-left:auto;border:1px solid rgba(255,255,255,.35);
+        border-radius:10px;background:rgba(255,255,255,.10);
+        color:#fff;font-size:1.8rem;line-height:1;visibility:visible;opacity:1;
+      }
 
       .stats-grid{grid-template-columns:repeat(2,1fr)}
       .stat:nth-child(2){border-right:0}
@@ -1271,7 +1280,7 @@ footer p,footer li,footer a{line-height:1.5}
 }
 @media(max-width:720px){
   section{padding:34px 0}
-  .hero{min-height:0;padding-top:140px}
+  .hero{min-height:0;padding-top:190px!important}
   .hero-content{padding:42px 0 58px}
   h1,.hero h1{font-size:clamp(2rem,8vw,2.65rem)}
   .hero-lead{font-size:1rem}
@@ -1623,9 +1632,9 @@ footer .footer-brand span{
         <span>Hadassah Christian High School Uganda</span>
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="var n=document.getElementById('navLinks');var o=n.classList.toggle('show');this.setAttribute('aria-expanded',o?'true':'false');this.setAttribute('aria-label',o?'Close navigation':'Open navigation');this.textContent=o?'×':'☰'">☰</button>
 
-      <ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks" onclick="if(event.target.closest('a')){this.classList.remove('show');var b=document.getElementById('menuBtn');b.textContent='☰';b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation')}">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#curriculum">Curriculum</a></li>
