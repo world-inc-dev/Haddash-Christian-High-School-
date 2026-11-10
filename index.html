@@ -1512,6 +1512,16 @@ footer .footer-brand span{
   footer .footer-links{margin-top:0!important}
 }
 
+
+/* Keep the rotating campus photos visible behind every page section. */
+.stats,.curriculum,.gallery{background:transparent!important}
+.stats-grid,.card,.pathway,.language,.form-card{
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(7px);
+}
+@media(prefers-reduced-motion:reduce){
+  .site-background-slide{transition:none}
+}
 </style>
 </head>
 
