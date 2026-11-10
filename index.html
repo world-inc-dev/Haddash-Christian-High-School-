@@ -2025,7 +2025,7 @@ footer .footer-brand span{
             Submit your details and the school can follow up with you about the application.
           </p>
 
-          <form action="https://formspree.io/f/xppwogpb" method="POST">
+          <form id="admissionForm" action="https://formspree.io/f/xppwogpb" method="POST">
             <input type="hidden" name="_subject" value="New Online Admission Application - Hadassah Christian High School Uganda">
             <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
 
@@ -2134,7 +2134,7 @@ footer .footer-brand span{
               </div>
 
               <div class="field full">
-                <button class="btn btn-primary" type="submit">Submit Admission Application</button>
+                <button class="btn btn-primary" type="submit" id="proceedAdmissionBtn">Proceed to Payment</button>
               </div>
             </div>
 
@@ -2143,6 +2143,18 @@ footer .footer-brand span{
               Final admission decisions are made by the school.
             </p>
           </form>
+          <div id="admissionPaymentPanel" hidden style="margin-top:22px;padding:22px;border:1px solid #cfe0f5;border-radius:16px;background:#f3f7ff">
+            <h3 style="font-size:1.35rem;margin-bottom:8px">Application received — complete your admission payment</h3>
+            <p style="color:#53627a;margin-bottom:14px">Your application has been submitted to the school. Use the payment details below to pay the admission fee:</p>
+            <div style="padding:16px;border-radius:12px;background:#fff;border:1px solid #dce5f2">
+              <p style="margin-bottom:7px"><strong>School payment number:</strong> <span>0782 316 738</span></p>
+              <p style="margin-bottom:7px"><strong>Admission fee:</strong> <span id="admissionPaymentFee"></span></p>
+              <p style="margin-bottom:7px"><strong>Payment reference:</strong> Use the student's full name exactly as entered in the application.</p>
+              <p style="color:#53627a;font-size:.9rem">After payment, keep the transaction confirmation and send the payment reference/transaction ID to the school on WhatsApp.</p>
+            </div>
+            <a id="sendPaymentReferenceBtn" class="btn btn-primary" href="https://wa.me/256782316738" target="_blank" rel="noopener" style="margin-top:15px">Send Payment Reference on WhatsApp</a>
+            <p style="margin-top:12px;color:#687386;font-size:.8rem">The school will verify the payment and communicate the next admission steps. Payment does not by itself guarantee admission.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2313,6 +2325,42 @@ footer .footer-brand span{
     });
 
     startSlideshow();
+
+    // Submit the admission application before revealing the payment instructions.
+    const admissionForm = document.getElementById('admissionForm');
+    if (admissionForm) {
+      admissionForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (!admissionForm.reportValidity()) return;
+        const proceedButton = document.getElementById('proceedAdmissionBtn');
+        const originalText = proceedButton.textContent;
+        proceedButton.disabled = true;
+        proceedButton.textContent = 'Submitting application...';
+        try {
+          const formData = new FormData(admissionForm);
+          const studentName = String(formData.get('student_full_name') || '').trim();
+          const curriculum = String(formData.get('preferred_curriculum') || '');
+          const fee = curriculum.includes('Cambridge') ? 'UGX 100,000' : 'UGX 20,000';
+          const response = await fetch(admissionForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (!response.ok) throw new Error('The application could not be submitted. Please try again.');
+          document.getElementById('admissionPaymentFee').textContent = fee;
+          const message = 'Hello Hadassah Christian High School Uganda. I have paid the admission fee for student: ' + studentName + '. My payment reference/transaction ID is: ';
+          document.getElementById('sendPaymentReferenceBtn').href = 'https://wa.me/256782316738?text=' + encodeURIComponent(message);
+          admissionForm.hidden = true;
+          const paymentPanel = document.getElementById('admissionPaymentPanel');
+          paymentPanel.hidden = false;
+          paymentPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } catch (error) {
+          alert(error.message || 'Unable to submit your application. Please check your connection and try again.');
+          proceedButton.disabled = false;
+          proceedButton.textContent = originalText;
+        }
+      });
+    }
 
     // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
