@@ -99,9 +99,73 @@
     }
 
     /* HEADER */
-    header{
+    .school-live-bar{
       position:fixed;
       top:0;
+      left:0;
+      right:0;
+      height:36px;
+      z-index:1001;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      background:#06142f;
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.16);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.055em;
+      white-space:nowrap;
+    }
+    .school-live-label{
+      position:relative;
+      z-index:2;
+      flex:none;
+      height:100%;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:0 13px;
+      background:#0b7b4b;
+      box-shadow:5px 0 14px rgba(0,0,0,.2);
+    }
+    .school-live-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#7dffb1;
+      box-shadow:0 0 0 4px rgba(125,255,177,.14);
+      animation:livePulse 1.5s infinite;
+    }
+    .school-live-track{
+      min-width:0;
+      flex:1;
+      overflow:hidden;
+    }
+    .school-live-text{
+      display:inline-flex;
+      align-items:center;
+      gap:24px;
+      padding-left:100%;
+      animation:schoolTicker 24s linear infinite;
+    }
+    .school-live-text span{display:inline-block}
+    .school-live-text .separator{color:#ffcf59}
+    @keyframes schoolTicker{
+      from{transform:translateX(0)}
+      to{transform:translateX(-100%)}
+    }
+    @keyframes livePulse{
+      50%{opacity:.45;transform:scale(.82)}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .school-live-text{animation:none;padding-left:12px}
+      .school-live-dot{animation:none}
+    }
+
+    header{
+      position:fixed;
+      top:36px;
       left:0;
       right:0;
       z-index:1000;
@@ -1526,6 +1590,20 @@ footer .footer-brand span{
 </head>
 
 <body>
+  <div class="school-live-bar" role="status" aria-label="School website live announcement">
+    <div class="school-live-label"><span class="school-live-dot"></span><span>SCHOOL LIVE</span></div>
+    <div class="school-live-track">
+      <div class="school-live-text">
+        <span>HADASSAH CHRISTIAN HIGH SCHOOL UGANDA</span>
+        <span class="separator">✦</span>
+        <span>AND STAND WE SHALL</span>
+        <span class="separator">✦</span>
+        <span>HADASSAH CHRISTIAN HIGH SCHOOL UGANDA</span>
+        <span class="separator">✦</span>
+        <span>AND STAND WE SHALL</span>
+      </div>
+    </div>
+  </div>
   <div class="site-background" aria-hidden="true">
     <div class="site-background-slide active" style="background-image:url('IMG-20260924-WA0050.jpg')"></div>
     <div class="site-background-slide" style="background-image:url('IMG-20260924-WA0052.jpg')"></div>
